@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Hα boost tool — COSMO Darkroom. Brings out the Hα regions: red minus its continuum.">
+  <meta property="og:title" content="Hα boost tool — COSMO Darkroom">
+  <meta property="og:description" content="Brings out the Hα regions: red minus its continuum.">
+  <meta property="og:image" content="https://yonafunu.github.io/cosmo-darkroom/assets/share.jpg">
+  <title>Hα boost tool — COSMO Darkroom</title>
+  <link rel="icon" href="../assets/logo-64.png">
+  <link rel="alternate" hreflang="fr" href="../fr/tools/h-alpha-boost.html">
+  <link rel="stylesheet" href="../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header scrolled">
+  <a class="brand" href="../index.html" aria-label="COSMO Darkroom, home">
+    <img src="../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO <em>Darkroom</em></span>
+  </a>
+  <button class="menu-toggle" aria-label="Open the menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Main navigation">
+    <a href="../index.html#software">Software</a>
+    <a href="../index.html#gallery">Gallery</a>
+    <a href="../guide.html">Guide</a>
+    <a class="nav-cta" href="../index.html#download">Download</a>
+    <a class="lang" href="../fr/tools/h-alpha-boost.html" hreflang="fr" lang="fr">Français</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow pink">Stretched image</p>
+  <h1>Hα boost tool</h1>
+  <p class="lead">Brings out the Hα regions: red minus its continuum.</p>
+  <h2>How to use it</h2>
+  <figure class="film use"><video src="../assets/use-halpha.mp4" poster="../assets/use-halpha.jpg" controls loop muted playsinline preload="none" aria-label="The Darkroom window while setting Hα boost"></video><figcaption>The Darkroom window, recorded while the settings are moved.</figcaption></figure>
+  <ol class="steps">
+    <li>Open <em>Tools</em> and click the tool: it is added after the selected step.</li>
+    <li>Move its settings: the image follows as you move them (<em>Live preview</em>).</li>
+    <li>Press <em>Apply</em> to keep the result. <em>Before / after</em> compares at any time.</li>
+  </ol>
+  <h2>Settings</h2>
+  <dl class="settings">
+    <div><dt>Amount</dt><dd>How much of the Hα found is added to the image.</dd></div>
+    <div><dt>Continuum</dt><dd>How red the continuum is taken to be. More: only the reddest regions count as Hα.</dd></div>
+    <div><dt>Pink / Red</dt><dd>Pink: Hα goes to red and its share of Hβ to blue. Red: Hα goes to red only.</dd></div>
+    <div><dt>Mask</dt><dd>Everywhere, Bright parts (the object, not the sky) or Dark parts. Stars are not in the mask.</dd></div>
+    <div><dt>Threshold</dt><dd>Where the mask starts, from the sky background (0 %) to the brightest part of the object (100 %).</dd></div>
+  </dl>
+  <h2>When to use it</h2>
+  <p>On emission nebulae taken with a colour camera, to make the hydrogen regions stand out.</p>
+  <h2>Image</h2>
+  <p>Works only on a stretched image.</p>
+  <h2>Example</h2>
+  <figure class="compare tall" style="--ratio: 620 / 1193">
+    <img src="../assets/ex-halpha-after.jpg" alt="with Hα boost" loading="lazy">
+    <img class="compare-top" src="../assets/ex-halpha-before.jpg" alt="without" loading="lazy">
+    <span class="tag left">without</span><span class="tag right">with Hα boost</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Compare : without / with Hα boost">
+    <figcaption>M 42, amount 150 %. Image taken with a Seestar S50 Pro.</figcaption>
+  </figure>
+  <div class="actions tool-links"><a class="button ghost" href="remove-green.html">← Remove green</a><a class="button ghost" href="../index.html#processing">All tools</a><a class="button ghost" href="hdr-multiscale.html">HDR multiscale →</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="../index.html"><img src="../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO <em>Darkroom</em></span></a>
+  <p>Stacking and processing of deep-sky images.<br>Free.</p>
+  <nav aria-label="Footer">
+    <a href="../guide.html">Getting started</a>
+    <a href="../privacy.html">Privacy</a>
+    <a href="../licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO Darkroom</small>
+</footer>
+<script src="../app.js?v=20261013"></script>
+</body>
+</html>

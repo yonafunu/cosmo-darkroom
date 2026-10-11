@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Recombine tool — COSMO Darkroom. Puts the stars back on the nebula, with an adjustable contribution.">
+  <meta property="og:title" content="Recombine tool — COSMO Darkroom">
+  <meta property="og:description" content="Puts the stars back on the nebula, with an adjustable contribution.">
+  <meta property="og:image" content="https://yonafunu.github.io/cosmo-darkroom/assets/share.jpg">
+  <title>Recombine tool — COSMO Darkroom</title>
+  <link rel="icon" href="../assets/logo-64.png">
+  <link rel="alternate" hreflang="fr" href="../fr/tools/recombine.html">
+  <link rel="stylesheet" href="../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header scrolled">
+  <a class="brand" href="../index.html" aria-label="COSMO Darkroom, home">
+    <img src="../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO <em>Darkroom</em></span>
+  </a>
+  <button class="menu-toggle" aria-label="Open the menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Main navigation">
+    <a href="../index.html#software">Software</a>
+    <a href="../index.html#gallery">Gallery</a>
+    <a href="../guide.html">Guide</a>
+    <a class="nav-cta" href="../index.html#download">Download</a>
+    <a class="lang" href="../fr/tools/recombine.html" hreflang="fr" lang="fr">Français</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow ">Stars</p>
+  <h1>Recombine tool</h1>
+  <p class="lead">Puts the stars back on the nebula, with an adjustable contribution.</p>
+  <h2>How to use it</h2>
+  <ol class="steps">
+    <li>Open <em>Tools</em> and click the tool: it is added after the selected step.</li>
+    <li>Move its settings: the image follows as you move them (<em>Live preview</em>).</li>
+    <li>Press <em>Apply</em> to keep the result. <em>Before / after</em> compares at any time.</li>
+  </ol>
+  <h2>Settings</h2>
+  <dl class="settings">
+    <div><dt>Screen / Add</dt><dd>Screen: for a stretched nebula (never clips). Add: for linear layers.</dd></div>
+    <div><dt>Star brightness</dt><dd>The contribution of the stars layer.</dd></div>
+  </dl>
+  <h2>When to use it</h2>
+  <p>After a separation, once the nebula and the stars are each as wanted.</p>
+  <h2>Image</h2>
+  <p>Works on a linear or a stretched image.</p>
+  <h2>Example</h2>
+  <figure class="compare tall" style="--ratio: 620 / 1193">
+    <img src="../assets/ex-recombine-after.jpg" alt="recombined" loading="lazy">
+    <img class="compare-top" src="../assets/ex-recombine-before.jpg" alt="nebula" loading="lazy">
+    <span class="tag left">nebula</span><span class="tag right">recombined</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Compare : nebula / recombined">
+    <figcaption>M 42: the stars layer is put back on the nebula. Image taken with a Seestar S50 Pro.</figcaption>
+  </figure>
+  <div class="actions tool-links"><a class="button ghost" href="separate-stars.html">← Separate stars</a><a class="button ghost" href="../index.html#processing">All tools</a><a class="button ghost" href="analysis.html">Analysis →</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="../index.html"><img src="../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO <em>Darkroom</em></span></a>
+  <p>Stacking and processing of deep-sky images.<br>Free.</p>
+  <nav aria-label="Footer">
+    <a href="../guide.html">Getting started</a>
+    <a href="../privacy.html">Privacy</a>
+    <a href="../licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO Darkroom</small>
+</footer>
+<script src="../app.js?v=20261013"></script>
+</body>
+</html>

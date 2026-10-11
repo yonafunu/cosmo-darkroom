@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Curves tool — COSMO Darkroom. Shapes contrast, brightness and colour: RGB curve, per channel, luminance and saturation.">
+  <meta property="og:title" content="Curves tool — COSMO Darkroom">
+  <meta property="og:description" content="Shapes contrast, brightness and colour: RGB curve, per channel, luminance and saturation.">
+  <meta property="og:image" content="https://yonafunu.github.io/cosmo-darkroom/assets/share.jpg">
+  <title>Curves tool — COSMO Darkroom</title>
+  <link rel="icon" href="../assets/logo-64.png">
+  <link rel="alternate" hreflang="fr" href="../fr/tools/curves.html">
+  <link rel="stylesheet" href="../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header scrolled">
+  <a class="brand" href="../index.html" aria-label="COSMO Darkroom, home">
+    <img src="../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO <em>Darkroom</em></span>
+  </a>
+  <button class="menu-toggle" aria-label="Open the menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Main navigation">
+    <a href="../index.html#software">Software</a>
+    <a href="../index.html#gallery">Gallery</a>
+    <a href="../guide.html">Guide</a>
+    <a class="nav-cta" href="../index.html#download">Download</a>
+    <a class="lang" href="../fr/tools/curves.html" hreflang="fr" lang="fr">Français</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow pink">Stretched image</p>
+  <h1>Curves tool</h1>
+  <p class="lead">Shapes contrast, brightness and colour: RGB curve, per channel, luminance and saturation.</p>
+  <h2>How to use it</h2>
+  <figure class="film use"><video src="../assets/use-curves.mp4" poster="../assets/use-curves.jpg" controls loop muted playsinline preload="none" aria-label="The Darkroom window while setting Curves"></video><figcaption>The Darkroom window, recorded while the settings are moved.</figcaption></figure>
+  <ol class="steps">
+    <li>Open <em>Tools</em> and click the tool: it is added after the selected step.</li>
+    <li>Move its settings: the image follows as you move them (<em>Live preview</em>).</li>
+    <li>Press <em>Apply</em> to keep the result. <em>Before / after</em> compares at any time.</li>
+  </ol>
+  <p class="proof">On the image: right-click a region to put a point at its level, keep the button down and drag up or down. On the curve: click to add a point, drag it, right-click to remove it.</p>
+  <h2>Settings</h2>
+  <dl class="settings">
+    <div><dt>RGB / R / G / B / L / S</dt><dd>The curve being edited: the three colours together, one colour, luminance (brightness without colour shift) or saturation.</dd></div>
+    <div><dt>Input / Output</dt><dd>The level of the selected point, before and after.</dd></div>
+    <div><dt>Open floating editor</dt><dd>The same curve in a larger window.</dd></div>
+    <div><dt>Mask</dt><dd>Everywhere, Bright parts (the object, not the sky) or Dark parts. Stars are not in the mask.</dd></div>
+    <div><dt>Threshold</dt><dd>Where the mask starts, from the sky background (0 %) to the brightest part of the object (100 %).</dd></div>
+  </dl>
+  <h2>When to use it</h2>
+  <p>After the stretch, for the overall contrast and brightness. Can act through a mask.</p>
+  <h2>Image</h2>
+  <p>Works only on a stretched image.</p>
+  <h2>Example</h2>
+  <figure class="compare tall" style="--ratio: 620 / 1193">
+    <img src="../assets/ex-curves-after.jpg" alt="with Curves" loading="lazy">
+    <img class="compare-top" src="../assets/ex-curves-before.jpg" alt="without" loading="lazy">
+    <span class="tag left">without</span><span class="tag right">with Curves</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Compare : without / with Curves">
+    <figcaption>M 42, an S-curve on the RGB channel. Image taken with a Seestar S50 Pro.</figcaption>
+  </figure>
+  <div class="actions tool-links"><a class="button ghost" href="stretch.html">← Stretch</a><a class="button ghost" href="../index.html#processing">All tools</a><a class="button ghost" href="saturation.html">Saturation →</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="../index.html"><img src="../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO <em>Darkroom</em></span></a>
+  <p>Stacking and processing of deep-sky images.<br>Free.</p>
+  <nav aria-label="Footer">
+    <a href="../guide.html">Getting started</a>
+    <a href="../privacy.html">Privacy</a>
+    <a href="../licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO Darkroom</small>
+</footer>
+<script src="../app.js?v=20261013"></script>
+</body>
+</html>

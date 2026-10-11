@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Outil Stretch — COSMO Darkroom. Fait sortir le signal faible : étirement hyperbolique généralisé (GHS), arcsinh ou histogramme, avec la courbe tracée sur l'histogramme.">
+  <meta property="og:title" content="Outil Stretch — COSMO Darkroom">
+  <meta property="og:description" content="Fait sortir le signal faible : étirement hyperbolique généralisé (GHS), arcsinh ou histogramme, avec la courbe tracée sur l'histogramme.">
+  <meta property="og:image" content="https://yonafunu.github.io/cosmo-darkroom/assets/share.jpg">
+  <title>Outil Stretch — COSMO Darkroom</title>
+  <link rel="icon" href="../../assets/logo-64.png">
+  <link rel="alternate" hreflang="en" href="../../tools/stretch.html">
+  <link rel="stylesheet" href="../../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="site-header scrolled">
+  <a class="brand" href="../index.html" aria-label="COSMO Darkroom, accueil">
+    <img src="../../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO <em>Darkroom</em></span>
+  </a>
+  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Navigation principale">
+    <a href="../index.html#logiciel">Le logiciel</a>
+    <a href="../index.html#galerie">Galerie</a>
+    <a href="../guide.html">Guide</a>
+    <a class="nav-cta" href="../index.html#telecharger">Télécharger</a>
+    <a class="lang" href="../../tools/stretch.html" hreflang="en" lang="en">English</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow ">Étirement</p>
+  <h1>Outil Stretch</h1>
+  <p class="lead">Fait sortir le signal faible : étirement hyperbolique généralisé (GHS), arcsinh ou histogramme, avec la courbe tracée sur l'histogramme.</p>
+  <h2>Comment s'en servir</h2>
+  <figure class="film use"><video src="../../assets/use-stretch.mp4" poster="../../assets/use-stretch.jpg" controls loop muted playsinline preload="none" aria-label="La fenêtre de Darkroom pendant le réglage de Stretch"></video><figcaption>La fenêtre de Darkroom, filmée pendant que les réglages bougent.</figcaption></figure>
+  <ol class="steps">
+    <li>Ouvrir <em>Tools</em> et cliquer l'outil : il s'ajoute après l'étape choisie.</li>
+    <li>Bouger ses réglages : l'image suit pendant le geste (<em>Live preview</em>).</li>
+    <li><em>Apply</em> garde le résultat. <em>Before / after</em> compare à tout moment.</li>
+  </ol>
+  <p class="proof">En GHS, clic droit sur une région de l'image : l'étirement se centre sur son niveau ; garder le bouton enfoncé et tirer vers le haut pour étirer plus fort.</p>
+  <h2>Réglages</h2>
+  <dl class="settings">
+    <div><dt>Histogram / GHS / Arcsinh</dt><dd>Histogram : point noir, tons moyens et point blanc. GHS : étirement hyperbolique généralisé. Arcsinh : un étirement doux qui garde la couleur des étoiles.</dd></div>
+    <div><dt>Auto</dt><dd>Les réglages sont calculés d'après l'image ; tout changement à la main prend le relais.</dd></div>
+    <div><dt>Stretch factor</dt><dd>La force de l'étirement.</dd></div>
+    <div><dt>Local intensity (b)</dt><dd>GHS : la concentration du contraste autour du point de symétrie. Les valeurs négatives sont douces (−0,8 par défaut).</dd></div>
+    <div><dt>Per channel / Luminance</dt><dd>Per channel : couleurs de nébuleuse plus fortes, les étoiles brillantes blanchissent. Luminance : les couleurs sont gardées.</dd></div>
+    <div><dt>Colour, Natural stars</dt><dd>Arcsinh : la part de couleur gardée, et la façon dont les étoiles blanchissent vers leur cœur.</dd></div>
+    <div><dt>Linked / Unlinked</dt><dd>Histogram : une courbe pour les trois couleurs, ou une par couleur.</dd></div>
+  </dl>
+  <h2>Quand s'en servir</h2>
+  <p>Le point de bascule de la séquence : avant lui l'image est linéaire, après lui c'est l'image que l'on voit. Les outils de l'image étirée viennent ensuite.</p>
+  <h2>Image</h2>
+  <p>Fait pour une image linéaire ; utilisable sur une image étirée.</p>
+  <h2>Exemple</h2>
+  <figure class="compare tall" style="--ratio: 620 / 1193">
+    <img src="../../assets/ex-stretch-after.jpg" alt="étirée" loading="lazy">
+    <img class="compare-top" src="../../assets/ex-stretch-before.jpg" alt="données linéaires" loading="lazy">
+    <span class="tag left">données linéaires</span><span class="tag right">étirée</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Comparer : données linéaires / étirée">
+    <figcaption>M 42 : les données linéaires telles quelles, puis après l'étirement GHS automatique. Image prise au Seestar S50 Pro.</figcaption>
+  </figure>
+  <div class="actions tool-links"><a class="button ghost" href="denoise.html">← Denoise</a><a class="button ghost" href="../index.html#traitement">Tous les outils</a><a class="button ghost" href="curves.html">Curves →</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="../index.html"><img src="../../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO <em>Darkroom</em></span></a>
+  <p>Empilement et traitement des images du ciel profond.<br>Gratuit.</p>
+  <nav aria-label="Pied de page">
+    <a href="../guide.html">Guide de démarrage</a>
+    <a href="../confidentialite.html">Confidentialité</a>
+    <a href="../licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO Darkroom</small>
+</footer>
+<script src="../../app.js?v=20261013"></script>
+</body>
+</html>

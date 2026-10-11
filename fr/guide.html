@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Votre première image avec COSMO Darkroom, pas à pas : ouvrir ou empiler, suivre le fil des étapes, ajouter un outil, exporter.">
+  <title>Guide de démarrage — COSMO Darkroom</title>
+  <link rel="icon" href="../assets/logo-64.png">
+  <link rel="alternate" hreflang="en" href="../guide.html">
+  <link rel="stylesheet" href="../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header scrolled">
+  <a class="brand" href="index.html" aria-label="COSMO Darkroom, accueil">
+    <img src="../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO <em>Darkroom</em></span>
+  </a>
+  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Navigation principale">
+    <a href="index.html#logiciel">Le logiciel</a>
+    <a href="index.html#galerie">Galerie</a>
+    <a href="guide.html">Guide</a>
+    <a class="nav-cta" href="index.html#telecharger">Télécharger</a>
+    <a class="lang" href="../guide.html" hreflang="en" lang="en">English</a>
+  </nav>
+</header>
+<main class="doc" id="contenu">
+  <p class="eyebrow">Documentation</p>
+  <h1>Guide de démarrage</h1>
+  <p class="lead">Du fichier ou du dossier de poses à l'export, en cinq étapes. Aucune étape n'est appliquée avant <strong>Apply</strong>.</p>
+
+  <figure><img src="../assets/app-fit.jpg" alt="La fenêtre de Darkroom : l'image entière entre le fil des étapes, à gauche, et les réglages, à droite" width="1600" height="960" loading="lazy"></figure>
+
+  <h2><span>01</span> Installer</h2>
+  <p>Télécharger l'installateur de votre système depuis la <a href="index.html#telecharger">section Téléchargement</a>. Sur macOS, ouvrir l'image disque et glisser <em>COSMO Darkroom</em> dans <em>Applications</em>. Sur Windows, lancer l'installateur. Le premier lancement demande un clic de plus, expliqué au même endroit : l'application n'est pas signée.</p>
+  <p>Les outils classiques fonctionnent seuls. Le fond du ciel peut passer par GraXpert s'il est installé. Les moteurs RC-Astro servent si vous en possédez les licences ; Darkroom les utilise depuis votre installation.</p>
+
+  <h2><span>02</span> Ouvrir une image, ou empiler</h2>
+  <p><strong>Open</strong> ouvre un FITS, un TIFF, un PNG ou un JPEG. <strong>Stack</strong> part d'un dossier de poses : COSMO les analyse, vous choisissez celles à garder, puis il les empile.</p>
+  <p>Une image linéaire paraît noire : Darkroom l'éclaircit à l'écran pour que vous la voyiez, sans toucher à ses données.</p>
+
+  <h2><span>03</span> Suivre le fil</h2>
+  <p>À gauche, les étapes du pipeline <strong>Classic</strong> sont déjà en place, reliées par un fil. En bleu, celles qui travaillent sur l'image linéaire ; en rose, celles qui viennent après l'étirement.</p>
+  <ol>
+    <li><strong>Crop</strong> retire les bords de la pile.</li>
+    <li><strong>Background</strong> enlève les gradients, puis <strong>Sharpen</strong> et <strong>Denoise</strong> affinent et nettoient.</li>
+    <li><strong>Stretch</strong> rend l'image visible : GHS, arcsinh ou histogramme.</li>
+    <li><strong>Curves</strong>, <strong>Saturation</strong> et les autres règlent le contraste et la couleur.</li>
+  </ol>
+  <p>Pour chaque étape : réglez, regardez avec <strong>Preview</strong>, gardez avec <strong>Apply</strong>. Le nœud de l'étape se remplit quand elle est appliquée.</p>
+
+  <h2><span>04</span> Ajouter un outil</h2>
+  <p>Le bouton <strong>Tools</strong>, en haut à droite, déploie tous les outils dans l'ordre du traitement. Pointez-en un : il dit ce qu'il fait et quand s'en servir. Un clic l'ajoute après l'étape choisie ; on peut aussi le glisser entre deux étapes.</p>
+  <figure><img src="../assets/app-tools.jpg" alt="Le panneau Tools ouvert sur l'image" width="1600" height="960" loading="lazy"></figure>
+  <p>Avec <strong>Separate stars</strong>, les étoiles deviennent une couche à part. Travaillez la nébuleuse et les étoiles chacune de leur côté, puis <strong>Recombine</strong> les réunit.</p>
+  <p>Une étape appliquée ne se modifie plus. <strong>Go back to this step</strong> ramène l'image juste avant elle : les suivantes sont alors à refaire, avec leurs réglages.</p>
+
+  <h2><span>05</span> Exporter</h2>
+  <p><strong>Export</strong> écrit l'image telle qu'elle est. Le FITS 32 bits sert à poursuivre un traitement, le TIFF 16 bits garde toute la précision, le PNG et le JPEG servent à montrer. TIFF, PNG et JPEG portent le profil sRGB.</p>
+  <p>Votre recette se garde dans un pipeline <code>.cosmopipe</code>, à rejouer sur une autre image. Un projet <code>.cosmo</code> garde les images ouvertes et leurs étapes ; les fichiers d'origine doivent rester à leur place.</p>
+
+  <div class="actions"><a class="button primary" href="index.html#telecharger">Voir le téléchargement</a><a class="button ghost" href="index.html">Retour à l'accueil</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="index.html"><img src="../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO <em>Darkroom</em></span></a>
+  <p>Empilement et traitement des images du ciel profond.<br>Gratuit.</p>
+  <nav aria-label="Pied de page">
+    <a href="index.html">Accueil</a>
+    <a href="guide.html">Guide de démarrage</a>
+    <a href="confidentialite.html">Confidentialité</a>
+    <a href="licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO Darkroom</small>
+</footer>
+<script src="../app.js?v=20261013"></script>
+</body>
+</html>

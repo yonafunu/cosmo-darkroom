@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Outil Stack — COSMO Darkroom. Empile un dossier de poses : stack standard, stack HDR automatique, stack comète automatique.">
+  <meta property="og:title" content="Outil Stack — COSMO Darkroom">
+  <meta property="og:description" content="Empile un dossier de poses : stack standard, stack HDR automatique, stack comète automatique.">
+  <meta property="og:image" content="https://yonafunu.github.io/cosmo-darkroom/assets/share.jpg">
+  <title>Outil Stack — COSMO Darkroom</title>
+  <link rel="icon" href="../../assets/logo-64.png">
+  <link rel="alternate" hreflang="en" href="../../tools/stack.html">
+  <link rel="stylesheet" href="../../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="site-header scrolled">
+  <a class="brand" href="../index.html" aria-label="COSMO Darkroom, accueil">
+    <img src="../../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO <em>Darkroom</em></span>
+  </a>
+  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Navigation principale">
+    <a href="../index.html#logiciel">Le logiciel</a>
+    <a href="../index.html#galerie">Galerie</a>
+    <a href="../guide.html">Guide</a>
+    <a class="nav-cta" href="../index.html#telecharger">Télécharger</a>
+    <a class="lang" href="../../tools/stack.html" hreflang="en" lang="en">English</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow blue">Empilement</p>
+  <h1>Outil Stack</h1>
+  <p class="lead">Empile un dossier de poses : stack standard, stack HDR automatique, stack comète automatique.</p>
+  <h2>Comment s'en servir</h2>
+  <figure><img src="../../assets/use-stack.jpg" alt="La fenêtre de l'outil Stack" loading="lazy"><figcaption>La fenêtre de l'outil Stack.</figcaption></figure>
+  <ol class="steps">
+    <li>Cliquer <em>Stack</em> et choisir le dossier de poses.</li>
+    <li>Cocher ce qui convient : plusieurs durées de pose (<em>Exposures</em>) pour le stack HDR, <em>Stack on a comet</em> pour une comète. Puis <em>Analyse</em>.</li>
+    <li>Choisir les poses à garder et la référence, puis <em>Stack</em>. <em>Open in Darkroom</em> ouvre le résultat.</li>
+  </ol>
+  <h2>Réglages</h2>
+  <dl class="settings">
+    <div><dt>Exposures</dt><dd>Une case par durée de pose trouvée dans le dossier ; cocher celles à empiler ensemble.</dd></div>
+    <div><dt>Stack on a comet</dt><dd>Cherche une comète par son déplacement et écrit l'image combinée, la pile cométaire et une animation.</dd></div>
+    <div><dt>Best 90 / 75 / 50 %, or a custom share</dt><dd>La part des meilleures poses à garder, au pour cent près.</dd></div>
+    <div><dt>Reference</dt><dd>La pose sur laquelle les autres sont alignées.</dd></div>
+  </dl>
+  <h2>Quand s'en servir</h2>
+  <p>En premier, pour passer des poses brutes à une pile. Le mode HDR combine les poses longues et courtes d'un même objet ; le mode comète trouve la comète par son déplacement et écrit l'image combinée, la pile cométaire et une animation.</p>
+  <h2>Image</h2>
+  <p>Travaille sur un dossier de poses brutes.</p>
+  <h2>Exemples</h2>
+  <figure class="compare" style="--ratio: 472 / 450">
+    <img src="../../assets/hdr-after.jpg" alt="stack HDR" loading="lazy">
+    <img class="compare-top" src="../../assets/hdr-before.jpg" alt="poses longues" loading="lazy">
+    <span class="tag left">poses longues</span><span class="tag right">stack HDR</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Comparer : poses longues / stack HDR">
+    <figcaption>Stack HDR automatique : le cœur de M 42 à 100 %. Image prise au Seestar S50 Pro.</figcaption>
+  </figure>
+  <figure class="compare" style="--ratio: 606 / 494">
+    <img src="../../assets/comet-both.jpg" alt="combinée" loading="lazy">
+    <img class="compare-top" src="../../assets/comet-trails.jpg" alt="alignée sur la comète" loading="lazy">
+    <span class="tag left">alignée sur la comète</span><span class="tag right">combinée</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Comparer : alignée sur la comète / combinée">
+    <figcaption>Stack comète automatique. Image prise au Seestar S50 Pro.</figcaption>
+  </figure>
+  <div class="actions tool-links"><a class="button ghost" href="../index.html#traitement">Tous les outils</a><a class="button ghost" href="crop.html">Crop →</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="../index.html"><img src="../../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO <em>Darkroom</em></span></a>
+  <p>Empilement et traitement des images du ciel profond.<br>Gratuit.</p>
+  <nav aria-label="Pied de page">
+    <a href="../guide.html">Guide de démarrage</a>
+    <a href="../confidentialite.html">Confidentialité</a>
+    <a href="../licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO Darkroom</small>
+</footer>
+<script src="../../app.js?v=20261013"></script>
+</body>
+</html>

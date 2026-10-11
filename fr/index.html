@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="COSMO Darkroom : empilement, calibration des couleurs sur Gaia DR3, traitement et mesure des images du ciel profond. Gratuit.">
+  <meta property="og:title" content="COSMO Darkroom — empilement et traitement des images du ciel profond">
+  <meta property="og:description" content="Empilement, calibration des couleurs, traitement et mesure. Gratuit.">
+  <meta property="og:image" content="https://yonafunu.github.io/cosmo-darkroom/assets/share.jpg">
+  <meta property="og:url" content="https://yonafunu.github.io/cosmo-darkroom/fr/">
+  <link rel="canonical" href="https://yonafunu.github.io/cosmo-darkroom/fr/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <title>COSMO Darkroom — empilement et traitement des images du ciel profond</title>
+  <link rel="icon" href="../assets/logo-64.png">
+  <link rel="preload" as="image" href="../assets/veil.jpg" imagesrcset="../assets/veil-1200.jpg 1200w, ../assets/veil.jpg 2400w" imagesizes="100vw">
+  <link rel="alternate" hreflang="en" href="../index.html">
+  <link rel="stylesheet" href="../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#logiciel">Aller au contenu</a>
+
+<header class="site-header" id="top">
+  <a class="brand" href="#top" aria-label="COSMO Darkroom, haut de page">
+    <img src="../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO <em>Darkroom</em></span>
+  </a>
+  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Navigation principale">
+    <a href="#logiciel">Le logiciel</a>
+    <a href="#empilement">Empilement</a>
+    <a href="#traitement">Traitement</a>
+    <a href="#mesure">Mesure</a>
+    <a href="#galerie">Galerie</a>
+    <a class="nav-cta" href="#telecharger">Télécharger</a>
+    <a class="lang" href="../index.html" hreflang="en" lang="en">English</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ───────────────────────── Héros ───────────────────────── -->
+<section class="hero" aria-labelledby="hero-title">
+  <img class="hero-image" src="../assets/veil.jpg" srcset="../assets/veil-1200.jpg 1200w, ../assets/veil.jpg 2400w" sizes="100vw"
+       alt="Les Dentelles du Cygne : des filaments rouges et turquoise sur un champ d'étoiles" fetchpriority="high">
+  <div class="hero-veil"></div>
+  <div class="hero-content">
+    <p class="eyebrow">Logiciel d'astrophotographie · gratuit</p>
+    <h1 id="hero-title">Empilement et traitement<br>des images du <em>ciel profond.</em></h1>
+    <p class="hero-copy">COSMO Darkroom réunit dans une seule application l'empilement des poses, la calibration des couleurs sur catalogue, le traitement de l'image linéaire puis étirée, et la mesure de la pile.</p>
+    <div class="actions">
+      <a class="button primary" href="#logiciel">Fonctions</a>
+      <a class="button ghost" href="#galerie">Images</a>
+    </div>
+  </div>
+  <p class="hero-caption"><strong>NGC 6960</strong> · Dentelles du Cygne · Seestar S50 Pro · traitement Darkroom</p>
+</section>
+
+<ul class="facts" aria-label="En bref">
+  <li><strong>Gratuit</strong><span>sans compte ni abonnement</span></li>
+  <li><strong>Seestar S50 Pro</strong><span>toutes les images de cette page</span></li>
+  <li><strong>Étape par étape</strong><span>aucun traitement appliqué sans validation</span></li>
+  <li><strong>FITS · TIFF · PNG · JPEG</strong><span>lecture et export</span></li>
+</ul>
+
+<!-- ───────────────────────── Interface ───────────────────────── -->
+<section id="logiciel" class="section">
+  <div class="heading reveal">
+    <p class="eyebrow">Interface</p>
+    <h2>Une fenêtre, de la pile à l'export.</h2>
+    <p class="lead">L'image occupe toute la fenêtre. La séquence de traitement est à gauche, les réglages de l'outil sélectionné à droite. <em>Fit</em> recadre l'image entière dans la zone libre ; au zoom, elle passe sous les panneaux.</p>
+  </div>
+
+  <figure class="window reveal">
+    <img src="../assets/app-zoom.jpg" alt="Fenêtre de COSMO Darkroom : M 42 à 100 % en plein écran, la séquence de traitement à gauche et les réglages de l'outil Curves à droite, en transparence sur l'image" width="1600" height="960" loading="lazy">
+    <figcaption>M 42 à 100 % dans Darkroom : l'image passe sous la séquence de traitement et sous les réglages.</figcaption>
+  </figure>
+
+  <div class="trio">
+    <article class="reveal">
+      <span class="trio-mark thread" aria-hidden="true"></span>
+      <h3>Domaine linéaire, domaine étiré</h3>
+      <p>La séquence sépare les étapes appliquées aux données linéaires (bleu) de celles appliquées après l'étirement (rose). Un outil placé dans le mauvais domaine est refusé, avec le motif.</p>
+    </article>
+    <article class="reveal">
+      <span class="trio-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg></span>
+      <h3>Preview, Apply, Go back</h3>
+      <p><em>Preview</em> calcule l'étape sans l'appliquer. <em>Apply</em> l'applique. <em>Go back to this step</em> ramène l'image à l'état précédant une étape déjà appliquée. Aucune étape n'est lancée automatiquement.</p>
+    </article>
+    <article class="reveal">
+      <span class="trio-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8Z"/></svg></span>
+      <h3>Pipelines</h3>
+      <p>Une séquence d'étapes et leurs réglages s'enregistrent dans un fichier <code>.cosmopipe</code>, réutilisable sur une autre image. Le pipeline <em>Classic</em> est chargé à l'ouverture.</p>
+    </article>
+  </div>
+
+  <figure class="window small reveal">
+    <img src="../assets/app-tools.jpg" alt="Panneau Tools ouvert : les outils classés par domaine, et la fiche de l'outil Faint nebulosity" width="1600" height="960" loading="lazy">
+    <figcaption>Panneau <em>Tools</em> : les outils classés dans l'ordre du traitement, avec la fonction et le domaine de chacun.</figcaption>
+  </figure>
+</section>
+
+<!-- ───────────────────────── Empilement ───────────────────────── -->
+<section id="empilement" class="section tinted-blue">
+  <div class="heading reveal">
+    <p class="eyebrow blue">Empilement</p>
+    <h2>Empilement des poses.</h2>
+    <p class="lead">L'outil <em>Stack</em> prend un dossier de poses et produit une pile. Trois modes.</p>
+  </div>
+
+  <div class="trio">
+    <article class="reveal">
+      <span class="pill blue">Outil Stack</span>
+      <h3>Stack standard</h3>
+      <ul class="ticks">
+        <li>analyse de chaque pose et tableau de qualité ;</li>
+        <li>choix de la pose de référence et des poses retenues, au pour cent près ;</li>
+        <li>alignement sur les étoiles et rejet des valeurs aberrantes ;</li>
+        <li>poses dont le fond de ciel dépasse deux fois celui des autres écartées, avec le motif affiché.</li>
+      </ul>
+    </article>
+    <article class="reveal">
+      <span class="pill blue">Outil Stack</span>
+      <h3>Stack HDR automatique</h3>
+      <ul class="ticks">
+        <li>combine des poses longues et des poses courtes du même objet ;</li>
+        <li>le seuil de saturation des poses longues est mesuré automatiquement ;</li>
+        <li>au-delà, les poses courtes prennent le relais.</li>
+      </ul>
+    </article>
+    <article class="reveal">
+      <span class="pill blue">Outil Stack</span>
+      <h3>Stack comète automatique</h3>
+      <ul class="ticks">
+        <li>détection de la comète par son déplacement, sans pointage manuel ;</li>
+        <li>image combinée : comète et étoiles nettes ;</li>
+        <li>pile alignée sur la comète ;</li>
+        <li>animation du déplacement devant les étoiles fixes.</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="feature reveal">
+    <div class="feature-copy">
+      <span class="pill blue">Stack HDR automatique</span>
+      <h3>Le cœur de M 42</h3>
+      <p>Avec les poses longues seules, le cœur de la nébuleuse est saturé. Avec le stack HDR, il est restitué. Le reste de l'image est inchangé.</p>
+    </div>
+    <figure class="compare" style="--ratio: 472 / 450">
+      <img src="../assets/hdr-after.jpg" alt="Cœur de M 42, stack HDR : le Trapèze et les filaments sont résolus" loading="lazy">
+      <img class="compare-top" src="../assets/hdr-before.jpg" alt="Cœur de M 42, poses longues seules : région centrale saturée" loading="lazy">
+      <span class="tag left">poses longues</span><span class="tag right">stack HDR</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparer les poses longues seules et le stack HDR">
+      <figcaption>Cœur de M 42 à 100 %, même chaîne de traitement.</figcaption>
+    </figure>
+  </div>
+
+  <div class="feature reverse reveal">
+    <div class="feature-copy">
+      <span class="pill blue">Stack comète automatique</span>
+      <h3>Comète et étoiles nettes</h3>
+      <p>La comète est trouvée automatiquement. À gauche, la pile alignée sur la comète : les étoiles filent. À droite, l'image combinée.</p>
+      <p class="proof">Sans déplacement mesurable, la fenêtre l'indique et produit une pile standard.</p>
+    </div>
+    <div class="comet">
+      <figure class="compare" style="--ratio: 606 / 494">
+      <img src="../assets/comet-both.jpg" alt="Image combinée : comète et étoiles nettes" loading="lazy">
+      <img class="compare-top" src="../assets/comet-trails.jpg" alt="Pile alignée sur la comète : étoiles filées" loading="lazy">
+      <span class="tag left">alignée sur la comète</span><span class="tag right">combinée</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparer la pile alignée sur la comète et l'image combinée">
+    </figure>
+      <figure class="film">
+        <video src="../assets/comet.mp4" poster="../assets/comet-frame.jpg" controls loop muted playsinline preload="none" aria-label="Animation du déplacement de la comète devant les étoiles fixes"></video>
+        <figcaption>Animation produite par l'outil Stack à partir des mêmes poses.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── Traitement ───────────────────────── -->
+<section id="traitement" class="section tinted-pink">
+  <div class="heading reveal">
+    <p class="eyebrow pink">Traitement</p>
+    <h2>Dix-neuf outils, classés par domaine.</h2>
+    <p class="lead">Chaque outil a un aperçu calculé sur l'image. Les outils de l'image étirée acceptent un masque (zones claires ou zones sombres).</p>
+  </div>
+
+  <div class="toolgrid reveal">
+    <div class="toolcol">
+      <h4 class="blue">Image linéaire</h4>
+      <ul>
+        <li><strong><a href="tools/crop.html">Crop</a></strong> recadrage, rotation, retournement</li>
+        <li><strong><a href="tools/background.html">Background</a></strong> soustraction des gradients de fond de ciel</li>
+        <li><strong><a href="tools/colour-calibration.html">Colour calibration</a></strong> gains des trois canaux d'après les étoiles ou le catalogue Gaia DR3</li>
+        <li><strong><a href="tools/sharpen.html">Sharpen</a></strong> déconvolution : étoiles et détails</li>
+        <li><strong><a href="tools/denoise.html">Denoise</a></strong> réduction du bruit avant étirement</li>
+      </ul>
+      <h4>Étirement</h4>
+      <ul>
+        <li><strong><a href="tools/stretch.html">Stretch</a></strong> étirement hyperbolique généralisé (GHS), arcsinh ou histogramme ; courbe affichée sur l'histogramme</li>
+      </ul>
+    </div>
+    <div class="toolcol">
+      <h4 class="pink">Image étirée</h4>
+      <ul>
+        <li><strong><a href="tools/curves.html">Curves</a></strong> courbes RVB, par canal, luminance et saturation</li>
+        <li><strong><a href="tools/saturation.html">Saturation</a></strong> saturation à teinte constante, globale ou par teinte</li>
+        <li><strong><a href="tools/temperature.html">Temperature</a></strong> balance chaud / froid, fond de ciel maintenu neutre</li>
+        <li><strong><a href="tools/remove-green.html">Remove green</a></strong> suppression du vert résiduel (SCNR)</li>
+        <li><strong><a href="tools/h-alpha-boost.html">Hα boost</a></strong> renforcement des régions Hα : rouge moins son continuum</li>
+        <li><strong><a href="tools/hdr-multiscale.html">HDR multiscale</a></strong> compression des grandes zones brillantes par ondelettes</li>
+        <li><strong><a href="tools/dark-structures.html">Dark structures</a></strong> renforcement des nébuleuses sombres et bandes de poussière</li>
+        <li><strong><a href="tools/faint-nebulosity.html">Faint nebulosity</a></strong> fait ressortir les nébulosités faibles, en un clic</li>
+        <li><strong><a href="tools/local-contrast.html">Local contrast</a></strong> contraste local par échelle (ondelettes à trous)</li>
+      </ul>
+    </div>
+    <div class="toolcol">
+      <h4>Étoiles</h4>
+      <ul>
+        <li><strong><a href="tools/reduce-stars.html">Reduce stars</a></strong> réduction du diamètre des étoiles, halos compris</li>
+        <li><strong><a href="tools/remove-halo.html">Remove halo</a></strong> retrait du halo d'une étoile brillante désignée sur l'image</li>
+        <li><strong><a href="tools/separate-stars.html">Separate stars</a></strong> séparation en deux couches : nébuleuse et étoiles</li>
+        <li><strong><a href="tools/recombine.html">Recombine</a></strong> recombinaison des couches, contribution des étoiles réglable</li>
+      </ul>
+      <h4>Réglage sur l'image</h4>
+      <ul>
+        <li><strong>Clic droit et glisser</strong> dans <em>Curves</em>, <em>Saturation</em> et <em>Stretch</em> : le réglage porte sur le niveau ou la teinte de la région pointée</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="feature reveal">
+    <div class="feature-copy">
+      <span class="pill pink">Outil Faint nebulosity</span>
+      <h3>Les nébulosités faibles, en un clic</h3>
+      <p>En un clic, l'outil fait ressortir les nébulosités faibles zone par zone, sans saturer les régions brillantes. Le réglage <em>Neutral black</em> maintient un fond neutre dans les nébuleuses sombres.</p>
+      <p class="proof">Exemple : M 42, mêmes poses. À droite, avec l'outil <em>Faint nebulosity</em>.</p>
+    </div>
+    <figure class="compare tall" style="--ratio: 476 / 884">
+      <img src="../assets/faint-after.jpg" alt="M 42 après Faint nebulosity : les nuages diffus périphériques sont visibles" loading="lazy">
+      <img class="compare-top" src="../assets/faint-before.jpg" alt="M 42 après étirement seul" loading="lazy">
+      <span class="tag left">sans</span><span class="tag right">avec Faint nebulosity</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparer M 42 avant et après Faint nebulosity">
+    </figure>
+  </div>
+
+  <div class="feature reverse reveal">
+    <div class="feature-copy">
+      <span class="pill pink">Outil Colour calibration</span>
+      <h3>Couleurs calibrées sur le catalogue Gaia</h3>
+      <p>L'outil identifie les étoiles de l'image dans le catalogue Gaia DR3 et règle les trois couleurs d'après la couleur connue de chaque étoile. Aucun logiciel d'astrométrie n'est nécessaire.</p>
+      <p>Le réglage est enregistré pour le capteur et le filtre, puis réutilisé sur les images suivantes.</p>
+    </div>
+    <dl class="numbers">
+      <div><dt>3 à 8 s</dt><dd>durée d'une calibration sur Gaia</dd></div>
+      <div><dt>262</dt><dd>étoiles identifiées sur M 42</dd></div>
+      <div><dt>2 %</dt><dd>écart des gains entre deux champs, même capteur et même filtre</dd></div>
+      <div><dt>0,2 s</dt><dd>avec le profil enregistré</dd></div>
+    </dl>
+  </div>
+
+  <div class="heading sub reveal">
+    <h3>Autres exemples</h3>
+    <p class="lead">Quatre autres outils, chacun sur une image réelle.</p>
+  </div>
+  <div class="examples reveal">
+    <figure class="compare" style="--ratio: 596 / 472">
+      <img src="../assets/localcontrast-after.jpg" alt="avec Local contrast" loading="lazy">
+      <img class="compare-top" src="../assets/localcontrast-before.jpg" alt="sans" loading="lazy">
+      <span class="tag left">sans</span><span class="tag right">avec Local contrast</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparer : sans / avec Local contrast">
+      <figcaption><a href="tools/local-contrast.html">Outil Local contrast</a></figcaption>
+    </figure>
+    <figure class="compare" style="--ratio: 640 / 624">
+      <img src="../assets/halo-after.jpg" alt="avec Remove halo" loading="lazy">
+      <img class="compare-top" src="../assets/halo-before.jpg" alt="sans" loading="lazy">
+      <span class="tag left">sans</span><span class="tag right">avec Remove halo</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparer : sans / avec Remove halo">
+      <figcaption><a href="tools/remove-halo.html">Outil Remove halo</a></figcaption>
+    </figure>
+    <figure class="compare" style="--ratio: 640 / 434">
+      <img src="../assets/dark-after.jpg" alt="Dark structures 100 %" loading="lazy">
+      <img class="compare-top" src="../assets/dark-before.jpg" alt="sans" loading="lazy">
+      <span class="tag left">sans</span><span class="tag right">Dark structures 100 %</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparer : sans / Dark structures 100 %">
+      <figcaption><a href="tools/dark-structures.html">Outil Dark structures</a></figcaption>
+    </figure>
+    <figure class="compare" style="--ratio: 640 / 587">
+      <img src="../assets/hdrms-after.jpg" alt="HDR multiscale 60 %" loading="lazy">
+      <img class="compare-top" src="../assets/hdrms-before.jpg" alt="sans" loading="lazy">
+      <span class="tag left">sans</span><span class="tag right">HDR multiscale 60 %</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="Comparer : sans / HDR multiscale 60 %">
+      <figcaption><a href="tools/hdr-multiscale.html">Outil HDR multiscale</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ───────────────────────── Mesure ───────────────────────── -->
+<section id="mesure" class="section">
+  <div class="heading reveal">
+    <p class="eyebrow">Mesure</p>
+    <h2>Mesure de la pile.</h2>
+    <p class="lead">Deux outils mesurent la pile sans la modifier.</p>
+  </div>
+
+  <div class="duo">
+    <figure class="card reveal">
+      <img src="../assets/analysis-maps.jpg" alt="Deux cartes de la même pile : largeur des étoiles et excentricité, avec isolignes" loading="lazy" width="1090" height="760">
+      <figcaption>
+        <h3><a href="tools/analysis.html">Outil Analysis</a></h3>
+        <p>Largeur à mi-hauteur (FWHM) et excentricité des étoiles, en isolignes sur tout le champ. Diagnostic affiché quand l'écart dépasse 10 % : inclinaison du capteur, courbure de champ, suivi. Avec Gaia : magnitude limite à 5 σ et limite de brillance de surface à 3 σ sur 10″ × 10″.</p>
+        <p class="proof">Exemple : magnitude limite <strong>G 18,2</strong>, brillance de surface limite <strong>24,1 mag/arcsec²</strong>.</p>
+      </figcaption>
+    </figure>
+    <figure class="card reveal">
+      <img src="../assets/snr-map.jpg" alt="Carte du rapport signal sur bruit de M 31 en fausses couleurs, avec la fiche de la région pointée" loading="lazy" width="780" height="734">
+      <figcaption>
+        <h3><a href="tools/sn-map.html">Outil S/N map</a></h3>
+        <p>Rapport signal/bruit de la pile en fausses couleurs. Pour la région pointée : le rapport mesuré et le temps de pose supplémentaire pour atteindre 3, 5 et 10.</p>
+        <p class="proof">Exemple : M 31, bras extérieur à <strong>S/N 2</strong>.</p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ───────────────────────── Galerie ───────────────────────── -->
+<section id="galerie" class="section gallery-section">
+  <div class="heading reveal">
+    <p class="eyebrow">Galerie</p>
+    <h2>Images traitées dans Darkroom.</h2>
+    <p class="lead">Toutes prises au Seestar S50 Pro. La légende de chaque image indique les outils utilisés, moteurs externes compris.</p>
+  </div>
+  <div class="gallery">
+    <button class="shot tall reveal" data-full="../assets/m42.jpg"
+            data-caption="M 42. Seestar S50 Pro. Stack HDR automatique. Traitement Darkroom : Background (GraXpert), Sharpen, Denoise et Separate stars (moteurs RC-Astro), Stretch arcsinh, Faint nebulosity, Remove halo, Local contrast, Dark structures, Saturation.">
+      <img src="../assets/m42-700.jpg" alt="M 42, la grande nébuleuse d'Orion" loading="lazy" width="700" height="1161">
+      <span><small>Orion · stack HDR</small><strong>M 42</strong></span>
+    </button>
+    <button class="shot wide reveal" data-full="../assets/veil.jpg"
+            data-caption="NGC 6960, Dentelles du Cygne. Seestar S50 Pro. Traitement Darkroom.">
+      <img src="../assets/veil-1200.jpg" alt="NGC 6960, les Dentelles du Cygne" loading="lazy" width="1200" height="675">
+      <span><small>Cygne · Dentelles</small><strong>NGC 6960</strong></span>
+    </button>
+    <button class="shot wide reveal" data-full="../assets/m27.jpg"
+            data-caption="M 27. Seestar S50 Pro. Stack standard. Traitement Darkroom : Background (GraXpert), Sharpen, Denoise et Separate stars (moteurs RC-Astro), Colour calibration sur Gaia, Stretch arcsinh, Faint nebulosity, Local contrast, Curves, Remove green.">
+      <img src="../assets/m27.jpg" alt="M 27, la nébuleuse de l'Haltère" loading="lazy" width="1500" height="1000">
+      <span><small>Petit Renard · nébuleuse de l'Haltère</small><strong>M 27</strong></span>
+    </button>
+  </div>
+</section>
+
+<!-- ───────────────────────── Conception ───────────────────────── -->
+<section class="section principles-section">
+  <div class="heading reveal">
+    <p class="eyebrow">Conception</p>
+    <h2>Ce que le logiciel garantit.</h2>
+  </div>
+  <div class="principles">
+    <article class="reveal">
+      <h3>Traçabilité</h3>
+      <p>Chaque traitement rapporte ce qu'il a mesuré : nombre d'étoiles utilisées, poses écartées et motif, gains appliqués, déplacement de la comète. Un réglage sans effet indique pourquoi.</p>
+    </article>
+    <article class="reveal">
+      <h3>Méthodes publiées</h3>
+      <p>Étirement hyperbolique généralisé, transformée en ondelettes à trous, calibration photométrique sur catalogue, assemblage HDR en lumière linéaire. Implémentations écrites à partir des équations publiées.</p>
+    </article>
+    <article class="reveal">
+      <h3>Moteurs externes facultatifs</h3>
+      <p>GraXpert (fond de ciel) et les moteurs RC-Astro (netteté, bruit, étoiles) sont utilisés depuis l'installation de l'utilisateur, s'ils sont présents et sous licence. Les autres outils n'en dépendent pas.</p>
+    </article>
+    <article class="reveal">
+      <h3>Aucun traitement automatique</h3>
+      <p>Chaque étape est réglée, prévisualisée puis appliquée par l'utilisateur. Une étape appliquée peut être reprise.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ───────────────────────── Télécharger ───────────────────────── -->
+<section id="telecharger" class="section download">
+  <div class="download-card reveal">
+    <img src="../assets/logo-256.png" alt="Logo COSMO" width="112" height="112" loading="lazy">
+    <p class="eyebrow">Téléchargement</p>
+    <!-- downloads:start -->
+    <h2>Télécharger COSMO Darkroom 0.1.0.</h2>
+    <p class="lead">Gratuit. Deux installateurs ; chacun contient l'application et les trois réseaux de COSMO.</p>
+    <div class="installers">
+      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.1.0/COSMO-Darkroom-0.1.0-macos-arm64.dmg" download>
+        <strong>macOS</strong><span>Apple Silicon (M1 et suivants)</span>
+        <em>Télécharger · .dmg · 822 Mo</em>
+      </a>
+      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.1.0/COSMO-Darkroom-0.1.0-windows-setup.exe" download>
+        <strong>Windows</strong><span>Windows 10 ou 11, 64 bits · calcule sur le processeur</span>
+        <em>Télécharger · .exe · 723 Mo</em>
+      </a>
+    </div>
+    <div class="actions"><a class="button ghost" href="guide.html">Guide de démarrage</a></div>
+    <dl class="first-launch">
+      <div><dt>Premier lancement · macOS</dt><dd>L'application n'est pas signée par un compte Apple Developer. La première fois, clic droit sur elle dans <em>Applications</em>, <em>Ouvrir</em>, puis encore <em>Ouvrir</em>. Sur les macOS récents : <em>Réglages Système › Confidentialité et sécurité › Ouvrir quand même</em>.</dd></div>
+      <div><dt>Premier lancement · Windows</dt><dd>L'installateur n'est pas signé. Si SmartScreen affiche « Windows a protégé votre ordinateur », cliquer <em>Informations complémentaires</em>, puis <em>Exécuter quand même</em>.</dd></div>
+    </dl>
+    <details class="checksums"><summary>Empreintes SHA-256</summary>
+      <p><code>9cd5716951c1688fe02eaf86d6c8f427107cfa0daa6135850f7ee45b4a09a8ea</code> COSMO-Darkroom-0.1.0-macos-arm64.dmg</p>
+      <p><code>b77e8889825ffb251ffd2eb30946265a9901f8e0327f3c8fb9d2b19bee16a84a</code> COSMO-Darkroom-0.1.0-windows-setup.exe</p>
+    </details>
+    <p class="fine">En téléchargeant, vous acceptez la <a href="licence.html">licence</a> : usage gratuit ; pas de redistribution, pas d'utilisation des réseaux hors de l'application.</p>
+    <p class="fine">Les moteurs facultatifs GraXpert et RC-Astro ne sont pas inclus : Darkroom les utilise depuis votre installation. RC-Astro reste soumis à la licence de son éditeur.</p>
+    <!-- downloads:end -->
+  </div>
+</section>
+
+<!-- ───────────────────────── Questions ───────────────────────── -->
+<section class="section faq">
+  <div class="heading reveal"><p class="eyebrow">Questions fréquentes</p><h2>Questions fréquentes.</h2></div>
+  <div class="faq-list">
+    <details class="reveal"><summary>Le logiciel est-il gratuit ?</summary><p>Oui : Darkroom, son empileur et ses outils, sans compte ni abonnement. Les moteurs RC-Astro sont un complément facultatif, soumis à la licence de leur éditeur.</p></details>
+    <details class="reveal"><summary>Avec quel matériel fonctionne-t-il ?</summary><p>Darkroom traite toute image FITS ou TIFF du ciel profond. L'outil Stack lit les poses brutes d'un capteur couleur ; il a été mis au point sur les poses d'un Seestar S50 Pro, avec lequel toutes les images de cette page ont été prises.</p></details>
+        <details class="reveal"><summary>Quels formats sont lus et exportés ?</summary><p>Lecture : FITS, TIFF, PNG, JPEG. Export : FITS 32 bits, TIFF 16 bits, PNG, JPEG ; les trois derniers portent le profil sRGB.</p></details>
+    <details class="reveal"><summary>Les mesures ont-elles une valeur scientifique ?</summary><p>FWHM, magnitude limite et rapport signal/bruit servent à évaluer une pile. Les magnitudes sont rapportées à la bande G de Gaia à partir d'un capteur couleur : ce sont des estimations, pas une photométrie étalonnée.</p></details>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <a class="brand" href="#top"><img src="../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO <em>Darkroom</em></span></a>
+  <p>Empilement et traitement des images du ciel profond.<br>Gratuit.</p>
+  <nav aria-label="Pied de page">
+    <a href="guide.html">Guide de démarrage</a>
+    <a href="#telecharger">Téléchargement</a>
+    <a href="confidentialite.html">Confidentialité</a>
+    <a href="licence.html">Licence</a>
+    <a href="../index.html" hreflang="en" lang="en">English</a>
+  </nav>
+  <small>© 2026 COSMO Darkroom</small>
+</footer>
+
+<dialog id="lightbox" aria-label="Image agrandie">
+  <button class="close" aria-label="Fermer">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img src="" alt="">
+  <p></p>
+</dialog>
+
+<script src="../app.js?v=20261013"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Outil Separate stars — COSMO Darkroom. Sépare l'image en deux couches : la nébuleuse sans ses étoiles, et les étoiles seules.">
+  <meta property="og:title" content="Outil Separate stars — COSMO Darkroom">
+  <meta property="og:description" content="Sépare l'image en deux couches : la nébuleuse sans ses étoiles, et les étoiles seules.">
+  <meta property="og:image" content="https://yonafunu.github.io/cosmo-darkroom/assets/share.jpg">
+  <title>Outil Separate stars — COSMO Darkroom</title>
+  <link rel="icon" href="../../assets/logo-64.png">
+  <link rel="alternate" hreflang="en" href="../../tools/separate-stars.html">
+  <link rel="stylesheet" href="../../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="site-header scrolled">
+  <a class="brand" href="../index.html" aria-label="COSMO Darkroom, accueil">
+    <img src="../../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO <em>Darkroom</em></span>
+  </a>
+  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Navigation principale">
+    <a href="../index.html#logiciel">Le logiciel</a>
+    <a href="../index.html#galerie">Galerie</a>
+    <a href="../guide.html">Guide</a>
+    <a class="nav-cta" href="../index.html#telecharger">Télécharger</a>
+    <a class="lang" href="../../tools/separate-stars.html" hreflang="en" lang="en">English</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow ">Étoiles</p>
+  <h1>Outil Separate stars</h1>
+  <p class="lead">Sépare l'image en deux couches : la nébuleuse sans ses étoiles, et les étoiles seules.</p>
+  <h2>Comment s'en servir</h2>
+  <figure class="film use"><video src="../../assets/use-separate.mp4" poster="../../assets/use-separate.jpg" controls loop muted playsinline preload="none" aria-label="La fenêtre de Darkroom pendant le réglage de Separate stars"></video><figcaption>La fenêtre de Darkroom, filmée pendant que les réglages bougent.</figcaption></figure>
+  <ol class="steps">
+    <li>Choisir l'étape dans la séquence, ou ajouter l'outil depuis <em>Tools</em>.</li>
+    <li>Le régler, puis <em>Preview</em> : l'étape est calculée sans être appliquée.</li>
+    <li><em>Apply</em> garde le résultat ; sinon changer les réglages et relancer <em>Preview</em>.</li>
+  </ol>
+  <h2>Réglages</h2>
+  <dl class="settings">
+    <div><dt>Nebula / Stars</dt><dd>La couche montrée : la nébuleuse sans ses étoiles, ou les étoiles seules.</dd></div>
+  </dl>
+  <h2>Quand s'en servir</h2>
+  <p>Pour traiter la nébuleuse et les étoiles séparément. Les étoiles deviennent une couche à part, que les autres outils atteignent.</p>
+  <h2>Image</h2>
+  <p>Travaille sur une image linéaire ou étirée.</p>
+  <h2>Exemple</h2>
+  <figure class="compare tall" style="--ratio: 620 / 1193">
+    <img src="../../assets/ex-separate-after.jpg" alt="couche nébuleuse" loading="lazy">
+    <img class="compare-top" src="../../assets/ex-separate-before.jpg" alt="image" loading="lazy">
+    <span class="tag left">image</span><span class="tag right">couche nébuleuse</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Comparer : image / couche nébuleuse">
+    <figcaption>M 42, moteur COSMO : la couche nébuleuse. Image prise au Seestar S50 Pro.</figcaption>
+  </figure>
+  <div class="actions tool-links"><a class="button ghost" href="remove-halo.html">← Remove halo</a><a class="button ghost" href="../index.html#traitement">Tous les outils</a><a class="button ghost" href="recombine.html">Recombine →</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="../index.html"><img src="../../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO <em>Darkroom</em></span></a>
+  <p>Empilement et traitement des images du ciel profond.<br>Gratuit.</p>
+  <nav aria-label="Pied de page">
+    <a href="../guide.html">Guide de démarrage</a>
+    <a href="../confidentialite.html">Confidentialité</a>
+    <a href="../licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO Darkroom</small>
+</footer>
+<script src="../../app.js?v=20261013"></script>
+</body>
+</html>

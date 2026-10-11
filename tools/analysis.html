@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Analysis tool — COSMO Darkroom. Maps the width (FWHM) and the eccentricity of the stars over the whole field; with Gaia, gives the limiting magnitude and the surface-brightness limit.">
+  <meta property="og:title" content="Analysis tool — COSMO Darkroom">
+  <meta property="og:description" content="Maps the width (FWHM) and the eccentricity of the stars over the whole field; with Gaia, gives the limiting magnitude and the surface-brightness limit.">
+  <meta property="og:image" content="https://yonafunu.github.io/cosmo-darkroom/assets/share.jpg">
+  <title>Analysis tool — COSMO Darkroom</title>
+  <link rel="icon" href="../assets/logo-64.png">
+  <link rel="alternate" hreflang="fr" href="../fr/tools/analysis.html">
+  <link rel="stylesheet" href="../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header scrolled">
+  <a class="brand" href="../index.html" aria-label="COSMO Darkroom, home">
+    <img src="../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO <em>Darkroom</em></span>
+  </a>
+  <button class="menu-toggle" aria-label="Open the menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Main navigation">
+    <a href="../index.html#software">Software</a>
+    <a href="../index.html#gallery">Gallery</a>
+    <a href="../guide.html">Guide</a>
+    <a class="nav-cta" href="../index.html#download">Download</a>
+    <a class="lang" href="../fr/tools/analysis.html" hreflang="fr" lang="fr">Français</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow ">Measurement</p>
+  <h1>Analysis tool</h1>
+  <p class="lead">Maps the width (FWHM) and the eccentricity of the stars over the whole field; with Gaia, gives the limiting magnitude and the surface-brightness limit.</p>
+  <h2>How to use it</h2>
+  <figure><img src="../assets/use-analysis.jpg" alt="The window of the tool Analysis" loading="lazy"><figcaption>The window of the tool Analysis.</figcaption></figure>
+  <ol class="steps">
+    <li>Open a linear stack, before any stretch, and click <em>Analysis</em>.</li>
+    <li>Choose the map: <em>Width (FWHM)</em> or <em>Eccentricity</em>. The diagnosis is written beside it.</li>
+    <li><em>Measure how faint it goes (Gaia)</em> adds the limiting magnitude and the surface-brightness limit.</li>
+  </ol>
+  <h2>Settings</h2>
+  <dl class="settings">
+    <div><dt>Width (FWHM)</dt><dd>Map of the star width, in pixels and arcseconds, with contour lines.</dd></div>
+    <div><dt>Eccentricity</dt><dd>Map of the elongation of the stars: 0 is round, 0.42 the limit of what looks round.</dd></div>
+    <div><dt>Measure how faint it goes (Gaia)</dt><dd>Limiting magnitude at 5 σ and surface-brightness limit at 3 σ over 10″ × 10″.</dd></div>
+  </dl>
+  <h2>When to use it</h2>
+  <p>On a linear stack, to assess it before processing: sensor tilt, field curvature, tracking, depth reached.</p>
+  <h2>Image</h2>
+  <p>Measures the linear stack; nothing is changed.</p>
+  <h2>Example</h2>
+  <figure><img src="../assets/analysis-maps.jpg" alt="Maps of star width and eccentricity, with contour lines" width="1090" height="760" loading="lazy"><figcaption>Image taken with a Seestar S50 Pro.</figcaption></figure>
+  <div class="actions tool-links"><a class="button ghost" href="recombine.html">← Recombine</a><a class="button ghost" href="../index.html#processing">All tools</a><a class="button ghost" href="sn-map.html">S/N map →</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="../index.html"><img src="../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO <em>Darkroom</em></span></a>
+  <p>Stacking and processing of deep-sky images.<br>Free.</p>
+  <nav aria-label="Footer">
+    <a href="../guide.html">Getting started</a>
+    <a href="../privacy.html">Privacy</a>
+    <a href="../licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO Darkroom</small>
+</footer>
+<script src="../app.js?v=20261013"></script>
+</body>
+</html>

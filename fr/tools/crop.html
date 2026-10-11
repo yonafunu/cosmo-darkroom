@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Outil Crop — COSMO Darkroom. Retire les bords irréguliers de la pile ; permet aussi de tourner ou de retourner l'image.">
+  <meta property="og:title" content="Outil Crop — COSMO Darkroom">
+  <meta property="og:description" content="Retire les bords irréguliers de la pile ; permet aussi de tourner ou de retourner l'image.">
+  <meta property="og:image" content="https://yonafunu.github.io/cosmo-darkroom/assets/share.jpg">
+  <title>Outil Crop — COSMO Darkroom</title>
+  <link rel="icon" href="../../assets/logo-64.png">
+  <link rel="alternate" hreflang="en" href="../../tools/crop.html">
+  <link rel="stylesheet" href="../../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="site-header scrolled">
+  <a class="brand" href="../index.html" aria-label="COSMO Darkroom, accueil">
+    <img src="../../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO <em>Darkroom</em></span>
+  </a>
+  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Navigation principale">
+    <a href="../index.html#logiciel">Le logiciel</a>
+    <a href="../index.html#galerie">Galerie</a>
+    <a href="../guide.html">Guide</a>
+    <a class="nav-cta" href="../index.html#telecharger">Télécharger</a>
+    <a class="lang" href="../../tools/crop.html" hreflang="en" lang="en">English</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow blue">Image linéaire</p>
+  <h1>Outil Crop</h1>
+  <p class="lead">Retire les bords irréguliers de la pile ; permet aussi de tourner ou de retourner l'image.</p>
+  <h2>Comment s'en servir</h2>
+  <figure class="film use"><video src="../../assets/use-crop.mp4" poster="../../assets/use-crop.jpg" controls loop muted playsinline preload="none" aria-label="La fenêtre de Darkroom pendant le réglage de Crop"></video><figcaption>La fenêtre de Darkroom, filmée pendant que les réglages bougent.</figcaption></figure>
+  <ol class="steps">
+    <li>Ouvrir <em>Tools</em> et cliquer l'outil : il s'ajoute après l'étape choisie.</li>
+    <li>Bouger ses réglages : l'image suit pendant le geste (<em>Live preview</em>).</li>
+    <li><em>Apply</em> garde le résultat. <em>Before / after</em> compare à tout moment.</li>
+  </ol>
+  <p class="proof">Faire glisser le cadre ou ses coins sur l'image.</p>
+  <h2>Réglages</h2>
+  <dl class="settings">
+    <div><dt>Aspect ratio</dt><dd>Free, Original, 1:1, 4:3, 3:2, 16:9 et leurs formes en portrait.</dd></div>
+    <div><dt>Trim edges</dt><dd>2, 5, 10 ou 15 % : retire cette part de chaque côté.</dd></div>
+    <div><dt>Orientation</dt><dd>Quarts de tour, demi-tour, retournement horizontal et vertical.</dd></div>
+    <div><dt>Whole frame</dt><dd>Remet le cadre sur toute l'image.</dd></div>
+  </dl>
+  <h2>Quand s'en servir</h2>
+  <p>En premier : les bords irréguliers laissés par l'empilement faussent tous les outils qui suivent.</p>
+  <h2>Image</h2>
+  <p>Travaille sur une image linéaire ou étirée.</p>
+  <h2>Exemple</h2>
+  <figure class="compare tall" style="--ratio: 620 / 1193">
+    <img src="../../assets/ex-crop-after.jpg" alt="recadrée" loading="lazy">
+    <img class="compare-top" src="../../assets/ex-crop-before.jpg" alt="pile entière" loading="lazy">
+    <span class="tag left">pile entière</span><span class="tag right">recadrée</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Comparer : pile entière / recadrée">
+    <figcaption>Pile de M 42 : les bords irréguliers laissés par l'empilement sont retirés. Image prise au Seestar S50 Pro.</figcaption>
+  </figure>
+  <div class="actions tool-links"><a class="button ghost" href="stack.html">← Stack</a><a class="button ghost" href="../index.html#traitement">Tous les outils</a><a class="button ghost" href="background.html">Background →</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="../index.html"><img src="../../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO <em>Darkroom</em></span></a>
+  <p>Empilement et traitement des images du ciel profond.<br>Gratuit.</p>
+  <nav aria-label="Pied de page">
+    <a href="../guide.html">Guide de démarrage</a>
+    <a href="../confidentialite.html">Confidentialité</a>
+    <a href="../licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO Darkroom</small>
+</footer>
+<script src="../../app.js?v=20261013"></script>
+</body>
+</html>

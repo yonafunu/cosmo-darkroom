@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Outil Faint nebulosity — COSMO Darkroom. Fait ressortir les nébulosités faibles autour d'un objet brillant, en un clic, zone par zone.">
+  <meta property="og:title" content="Outil Faint nebulosity — COSMO Darkroom">
+  <meta property="og:description" content="Fait ressortir les nébulosités faibles autour d'un objet brillant, en un clic, zone par zone.">
+  <meta property="og:image" content="https://yonafunu.github.io/cosmo-darkroom/assets/share.jpg">
+  <title>Outil Faint nebulosity — COSMO Darkroom</title>
+  <link rel="icon" href="../../assets/logo-64.png">
+  <link rel="alternate" hreflang="en" href="../../tools/faint-nebulosity.html">
+  <link rel="stylesheet" href="../../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="site-header scrolled">
+  <a class="brand" href="../index.html" aria-label="COSMO Darkroom, accueil">
+    <img src="../../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO <em>Darkroom</em></span>
+  </a>
+  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Navigation principale">
+    <a href="../index.html#logiciel">Le logiciel</a>
+    <a href="../index.html#galerie">Galerie</a>
+    <a href="../guide.html">Guide</a>
+    <a class="nav-cta" href="../index.html#telecharger">Télécharger</a>
+    <a class="lang" href="../../tools/faint-nebulosity.html" hreflang="en" lang="en">English</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow pink">Image étirée</p>
+  <h1>Outil Faint nebulosity</h1>
+  <p class="lead">Fait ressortir les nébulosités faibles autour d'un objet brillant, en un clic, zone par zone.</p>
+  <h2>Comment s'en servir</h2>
+  <figure class="film use"><video src="../../assets/use-faint.mp4" poster="../../assets/use-faint.jpg" controls loop muted playsinline preload="none" aria-label="La fenêtre de Darkroom pendant le réglage de Faint nebulosity"></video><figcaption>La fenêtre de Darkroom, filmée pendant que les réglages bougent.</figcaption></figure>
+  <ol class="steps">
+    <li>Ouvrir <em>Tools</em> et cliquer l'outil : il s'ajoute après l'étape choisie.</li>
+    <li>Bouger ses réglages : l'image suit pendant le geste (<em>Live preview</em>).</li>
+    <li><em>Apply</em> garde le résultat. <em>Before / after</em> compare à tout moment.</li>
+  </ol>
+  <p class="proof">Sur l'image : clic droit sur une partie faible à faire ressortir, garder le bouton enfoncé et tirer vers le haut. Elle monte, et Range se règle sur elle.</p>
+  <h2>Réglages</h2>
+  <dl class="settings">
+    <div><dt>Lift</dt><dd>De combien les régions faibles montent.</dd></div>
+    <div><dt>Range</dt><dd>Ce qui compte comme faible. Plus bas : des régions plus faibles montent aussi, avec leur grain. Plus haut : seulement ce qui est plus brillant.</dd></div>
+    <div><dt>Black level</dt><dd>Où finit la partie la plus sombre de l'image : 100 % la laisse, 0 % la rend noire.</dd></div>
+    <div><dt>Neutral black</dt><dd>Compte le rehaussement depuis un gris neutre quand la partie la plus sombre de l'image a sa propre couleur (poussière brune) : retire le voile violet.</dd></div>
+    <div><dt>Mask</dt><dd>Everywhere, Bright parts (l'objet, pas le fond de ciel) ou Dark parts. Les étoiles n'en font pas partie.</dd></div>
+    <div><dt>Threshold</dt><dd>Où commence le masque, du fond de ciel (0 %) à la partie la plus brillante de l'objet (100 %).</dd></div>
+  </dl>
+  <h2>Quand s'en servir</h2>
+  <p>Quand les parties faibles d'un objet restent enfouies après l'étirement. Le réglage Neutral black maintient un fond neutre dans les nébuleuses sombres.</p>
+  <h2>Image</h2>
+  <p>Travaille uniquement sur une image étirée.</p>
+  <h2>Exemple</h2>
+  <figure class="compare tall" style="--ratio: 476 / 884">
+    <img src="../../assets/faint-after.jpg" alt="avec Faint nebulosity" loading="lazy">
+    <img class="compare-top" src="../../assets/faint-before.jpg" alt="sans" loading="lazy">
+    <span class="tag left">sans</span><span class="tag right">avec Faint nebulosity</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Comparer : sans / avec Faint nebulosity">
+    <figcaption>M 42, mêmes poses. Image prise au Seestar S50 Pro.</figcaption>
+  </figure>
+  <div class="actions tool-links"><a class="button ghost" href="dark-structures.html">← Dark structures</a><a class="button ghost" href="../index.html#traitement">Tous les outils</a><a class="button ghost" href="local-contrast.html">Local contrast →</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="../index.html"><img src="../../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO <em>Darkroom</em></span></a>
+  <p>Empilement et traitement des images du ciel profond.<br>Gratuit.</p>
+  <nav aria-label="Pied de page">
+    <a href="../guide.html">Guide de démarrage</a>
+    <a href="../confidentialite.html">Confidentialité</a>
+    <a href="../licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO Darkroom</small>
+</footer>
+<script src="../../app.js?v=20261013"></script>
+</body>
+</html>

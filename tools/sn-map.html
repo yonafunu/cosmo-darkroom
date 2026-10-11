@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="S/N map tool — COSMO Darkroom. Shows the signal-to-noise ratio of the stack in false colours and, for the region under the pointer, the extra exposure time needed to reach 3, 5 and 10.">
+  <meta property="og:title" content="S/N map tool — COSMO Darkroom">
+  <meta property="og:description" content="Shows the signal-to-noise ratio of the stack in false colours and, for the region under the pointer, the extra exposure time needed to reach 3, 5 and 10.">
+  <meta property="og:image" content="https://yonafunu.github.io/cosmo-darkroom/assets/share.jpg">
+  <title>S/N map tool — COSMO Darkroom</title>
+  <link rel="icon" href="../assets/logo-64.png">
+  <link rel="alternate" hreflang="fr" href="../fr/tools/sn-map.html">
+  <link rel="stylesheet" href="../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header scrolled">
+  <a class="brand" href="../index.html" aria-label="COSMO Darkroom, home">
+    <img src="../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO <em>Darkroom</em></span>
+  </a>
+  <button class="menu-toggle" aria-label="Open the menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Main navigation">
+    <a href="../index.html#software">Software</a>
+    <a href="../index.html#gallery">Gallery</a>
+    <a href="../guide.html">Guide</a>
+    <a class="nav-cta" href="../index.html#download">Download</a>
+    <a class="lang" href="../fr/tools/sn-map.html" hreflang="fr" lang="fr">Français</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow ">Measurement</p>
+  <h1>S/N map tool</h1>
+  <p class="lead">Shows the signal-to-noise ratio of the stack in false colours and, for the region under the pointer, the extra exposure time needed to reach 3, 5 and 10.</p>
+  <h2>How to use it</h2>
+  <ol class="steps">
+    <li>Open the linear stack and click <em>S/N map</em>.</li>
+    <li>Point at a faint part of the object: the readout gives its signal-to-noise ratio and the extra exposure needed to reach 3, 5 and 10.</li>
+    <li>Right-click keeps the place, marked with a circle; right-click again releases it.</li>
+  </ol>
+  <h2>Settings</h2>
+  <dl class="settings">
+    <div><dt>Colours</dt><dd>Grey: below 1. Red: 1. Orange: 3. Yellow: 5. Green: 10. Blue: 30 and more.</dd></div>
+  </dl>
+  <h2>When to use it</h2>
+  <p>On a linear stack, to decide whether a faint region needs more exposure.</p>
+  <h2>Image</h2>
+  <p>Measures the linear stack; nothing is changed.</p>
+  <h2>Example</h2>
+  <figure><img src="../assets/snr-map.jpg" alt="False-colour signal-to-noise map of M 31" width="780" height="734" loading="lazy"><figcaption>Image taken with a Seestar S50 Pro.</figcaption></figure>
+  <div class="actions tool-links"><a class="button ghost" href="analysis.html">← Analysis</a><a class="button ghost" href="../index.html#processing">All tools</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="../index.html"><img src="../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO <em>Darkroom</em></span></a>
+  <p>Stacking and processing of deep-sky images.<br>Free.</p>
+  <nav aria-label="Footer">
+    <a href="../guide.html">Getting started</a>
+    <a href="../privacy.html">Privacy</a>
+    <a href="../licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO Darkroom</small>
+</footer>
+<script src="../app.js?v=20261013"></script>
+</body>
+</html>

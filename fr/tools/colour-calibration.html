@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Outil Colour calibration — COSMO Darkroom. Règle les gains des trois canaux de couleur : d'après le profil de l'équipement, les étoiles de l'image, ou le catalogue Gaia DR3.">
+  <meta property="og:title" content="Outil Colour calibration — COSMO Darkroom">
+  <meta property="og:description" content="Règle les gains des trois canaux de couleur : d'après le profil de l'équipement, les étoiles de l'image, ou le catalogue Gaia DR3.">
+  <meta property="og:image" content="https://yonafunu.github.io/cosmo-darkroom/assets/share.jpg">
+  <title>Outil Colour calibration — COSMO Darkroom</title>
+  <link rel="icon" href="../../assets/logo-64.png">
+  <link rel="alternate" hreflang="en" href="../../tools/colour-calibration.html">
+  <link rel="stylesheet" href="../../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="site-header scrolled">
+  <a class="brand" href="../index.html" aria-label="COSMO Darkroom, accueil">
+    <img src="../../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO <em>Darkroom</em></span>
+  </a>
+  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Navigation principale">
+    <a href="../index.html#logiciel">Le logiciel</a>
+    <a href="../index.html#galerie">Galerie</a>
+    <a href="../guide.html">Guide</a>
+    <a class="nav-cta" href="../index.html#telecharger">Télécharger</a>
+    <a class="lang" href="../../tools/colour-calibration.html" hreflang="en" lang="en">English</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow blue">Image linéaire</p>
+  <h1>Outil Colour calibration</h1>
+  <p class="lead">Règle les gains des trois canaux de couleur : d'après le profil de l'équipement, les étoiles de l'image, ou le catalogue Gaia DR3.</p>
+  <h2>Comment s'en servir</h2>
+  <figure class="film use"><video src="../../assets/use-colourcal.mp4" poster="../../assets/use-colourcal.jpg" controls loop muted playsinline preload="none" aria-label="La fenêtre de Darkroom pendant le réglage de Colour calibration"></video><figcaption>La fenêtre de Darkroom, filmée pendant que les réglages bougent.</figcaption></figure>
+  <ol class="steps">
+    <li>Choisir l'étape dans la séquence, ou ajouter l'outil depuis <em>Tools</em>.</li>
+    <li>Le régler, puis <em>Preview</em> : l'étape est calculée sans être appliquée.</li>
+    <li><em>Apply</em> garde le résultat ; sinon changer les réglages et relancer <em>Preview</em>.</li>
+  </ol>
+  <h2>Réglages</h2>
+  <dl class="settings">
+    <div><dt>Equipment</dt><dd>Applique les gains déjà mesurés pour ce capteur et ce filtre.</dd></div>
+    <div><dt>Image stars</dt><dd>Rend blanche l'étoile médiane de l'image. N'a besoin de rien d'autre.</dd></div>
+    <div><dt>Gaia</dt><dd>Donne à chaque étoile la couleur que le catalogue Gaia DR3 lui connaît ; les gains sont ensuite enregistrés comme profil de l'équipement.</dd></div>
+  </dl>
+  <h2>Quand s'en servir</h2>
+  <p>Après Background, avant de séparer les étoiles. Une fois le capteur et le filtre mesurés, il prend une fraction de seconde.</p>
+  <h2>Image</h2>
+  <p>Travaille uniquement sur une image linéaire.</p>
+  <h2>Exemple</h2>
+  <figure class="compare tall" style="--ratio: 620 / 1193">
+    <img src="../../assets/ex-colourcal-after.jpg" alt="avec Colour calibration" loading="lazy">
+    <img class="compare-top" src="../../assets/ex-colourcal-before.jpg" alt="sans" loading="lazy">
+    <span class="tag left">sans</span><span class="tag right">avec Colour calibration</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Comparer : sans / avec Colour calibration">
+    <figcaption>M 42, image linéaire. Méthode : étoiles de l'image. Image prise au Seestar S50 Pro.</figcaption>
+  </figure>
+  <div class="actions tool-links"><a class="button ghost" href="background.html">← Background</a><a class="button ghost" href="../index.html#traitement">Tous les outils</a><a class="button ghost" href="sharpen.html">Sharpen →</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="../index.html"><img src="../../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO <em>Darkroom</em></span></a>
+  <p>Empilement et traitement des images du ciel profond.<br>Gratuit.</p>
+  <nav aria-label="Pied de page">
+    <a href="../guide.html">Guide de démarrage</a>
+    <a href="../confidentialite.html">Confidentialité</a>
+    <a href="../licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO Darkroom</small>
+</footer>
+<script src="../../app.js?v=20261013"></script>
+</body>
+</html>

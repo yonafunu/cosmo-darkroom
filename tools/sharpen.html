@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Sharpen tool — COSMO Darkroom. Tighter, rounder stars and sharper detail (deconvolution).">
+  <meta property="og:title" content="Sharpen tool — COSMO Darkroom">
+  <meta property="og:description" content="Tighter, rounder stars and sharper detail (deconvolution).">
+  <meta property="og:image" content="https://yonafunu.github.io/cosmo-darkroom/assets/share.jpg">
+  <title>Sharpen tool — COSMO Darkroom</title>
+  <link rel="icon" href="../assets/logo-64.png">
+  <link rel="alternate" hreflang="fr" href="../fr/tools/sharpen.html">
+  <link rel="stylesheet" href="../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header scrolled">
+  <a class="brand" href="../index.html" aria-label="COSMO Darkroom, home">
+    <img src="../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO <em>Darkroom</em></span>
+  </a>
+  <button class="menu-toggle" aria-label="Open the menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Main navigation">
+    <a href="../index.html#software">Software</a>
+    <a href="../index.html#gallery">Gallery</a>
+    <a href="../guide.html">Guide</a>
+    <a class="nav-cta" href="../index.html#download">Download</a>
+    <a class="lang" href="../fr/tools/sharpen.html" hreflang="fr" lang="fr">Français</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow blue">Linear image</p>
+  <h1>Sharpen tool</h1>
+  <p class="lead">Tighter, rounder stars and sharper detail (deconvolution).</p>
+  <h2>How to use it</h2>
+  <figure class="film use"><video src="../assets/use-sharpen.mp4" poster="../assets/use-sharpen.jpg" controls loop muted playsinline preload="none" aria-label="The Darkroom window while setting Sharpen"></video><figcaption>The Darkroom window, recorded while the settings are moved.</figcaption></figure>
+  <ol class="steps">
+    <li>Select the step in the sequence, or add the tool from <em>Tools</em>.</li>
+    <li>Set it, then press <em>Preview</em>: the step is computed without being applied.</li>
+    <li>Press <em>Apply</em> to keep the result, or change the settings and preview again.</li>
+  </ol>
+  <h2>Settings</h2>
+  <dl class="settings">
+    <div><dt>AI / Classic</dt><dd>The trained model, or a classic deconvolution.</dd></div>
+    <div><dt>Star tightening</dt><dd>How much the stars are tightened.</dd></div>
+    <div><dt>Nebula sharpening</dt><dd>How much the detail of the nebula is sharpened.</dd></div>
+    <div><dt>Iterations</dt><dd>Classic method: the number of deconvolution passes.</dd></div>
+    <div><dt>Noise protection</dt><dd>Classic method: keeps the noise from being sharpened.</dd></div>
+  </dl>
+  <h2>When to use it</h2>
+  <p>On the linear image, before Denoise: sharpening needs the real shape of the stars, noise included.</p>
+  <h2>Image</h2>
+  <p>Works only on a linear image.</p>
+  <h2>Example</h2>
+  <figure class="compare" style="--ratio: 420 / 420">
+    <img src="../assets/ex-sharpen-after.jpg" alt="with Sharpen" loading="lazy">
+    <img class="compare-top" src="../assets/ex-sharpen-before.jpg" alt="without" loading="lazy">
+    <span class="tag left">without</span><span class="tag right">with Sharpen</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Compare : without / with Sharpen">
+    <figcaption>Running Man region at 100 %, COSMO engine. Image taken with a Seestar S50 Pro.</figcaption>
+  </figure>
+  <div class="actions tool-links"><a class="button ghost" href="colour-calibration.html">← Colour calibration</a><a class="button ghost" href="../index.html#processing">All tools</a><a class="button ghost" href="denoise.html">Denoise →</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="../index.html"><img src="../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO <em>Darkroom</em></span></a>
+  <p>Stacking and processing of deep-sky images.<br>Free.</p>
+  <nav aria-label="Footer">
+    <a href="../guide.html">Getting started</a>
+    <a href="../privacy.html">Privacy</a>
+    <a href="../licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO Darkroom</small>
+</footer>
+<script src="../app.js?v=20261013"></script>
+</body>
+</html>
