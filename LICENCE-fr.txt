@@ -3,7 +3,8 @@ Version 1.0 — 13 octobre 2026
 
 Traduction de courtoisie. En cas de divergence, le texte anglais (LICENSE.txt) fait foi.
 
-Ce contrat vous lie à l'auteur de COSMO Darkroom (« l'Auteur »). En installant ou en utilisant COSMO Darkroom
+Ce contrat vous lie à Jonathan Durand, l'auteur de COSMO Darkroom (« l'Auteur »). En installant ou en
+utilisant COSMO Darkroom
 (« le Logiciel »), vous l'acceptez. Si vous ne l'acceptez pas, n'installez pas et n'utilisez pas le Logiciel.
 
 1. LE LOGICIEL
@@ -63,4 +64,4 @@ Une version ultérieure du Logiciel peut être accompagnée d'un autre contrat. 
 Ce contrat est régi par le droit français. Si une de ses clauses est jugée inapplicable, les autres restent
 en vigueur.
 
-© 2026 COSMO Darkroom. Tous droits réservés.
+© 2026 Jonathan Durand. Tous droits réservés.

@@ -1,7 +1,8 @@
 COSMO DARKROOM — END-USER LICENCE AGREEMENT
 Version 1.0 — 13 October 2026
 
-This agreement is between you and the author of COSMO Darkroom ("the Author"). By installing or using
+This agreement is between you and Jonathan Durand, the author of COSMO Darkroom ("the Author"). By installing
+or using
 COSMO Darkroom ("the Software") you accept it. If you do not accept it, do not install or use the Software.
 
 1. WHAT THE SOFTWARE IS
@@ -57,4 +58,4 @@ version it was delivered with.
 10. GOVERNING LAW
 This agreement is governed by French law. If part of it is held unenforceable, the rest remains in force.
 
-© 2026 COSMO Darkroom. All rights reserved.
+© 2026 Jonathan Durand. All rights reserved.
