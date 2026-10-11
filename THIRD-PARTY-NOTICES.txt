@@ -1,0 +1,27 @@
+COSMO DARKROOM — THIRD-PARTY SOFTWARE
+
+COSMO Darkroom is delivered with the following open-source components. Each remains under its own licence,
+whose full text is available from the project's website. The licence of COSMO Darkroom does not limit the
+rights these licences give you over these components.
+
+  Python              Python Software Foundation License      https://www.python.org
+  PyTorch             BSD 3-Clause                            https://pytorch.org
+  NumPy               BSD 3-Clause                            https://numpy.org
+  SciPy               BSD 3-Clause                            https://scipy.org
+  Astropy             BSD 3-Clause                            https://www.astropy.org
+  Pillow              MIT-CMU (HPND)                          https://python-pillow.org
+  tifffile            BSD 3-Clause                            https://github.com/cgohlke/tifffile
+  tqdm                MIT / MPL 2.0                           https://github.com/tqdm/tqdm
+  Qt 6, PySide6       GNU LGPL version 3                      https://www.qt.io  https://doc.qt.io/qtforpython-6
+  PyInstaller         GPL 2 with a bootloader exception       https://pyinstaller.org
+                      (the exception allows distributing applications built with it under any licence)
+
+Qt and PySide6 (LGPL version 3). COSMO Darkroom uses these libraries as separate shared libraries, unmodified.
+They are in the application's folder (macOS: COSMO Darkroom.app/Contents/Frameworks; Windows: the "_internal"
+folder of the installation). You may replace them with your own compatible build of the same libraries. Their
+source code is available from https://download.qt.io and https://pypi.org/project/PySide6/. The text of the
+GNU LGPL version 3 is at https://www.gnu.org/licenses/lgpl-3.0.html.
+
+Catalogue data. The Gaia DR3 catalogue queried by the Colour calibration and Analysis tools is provided by the
+European Space Agency (ESA) mission Gaia (https://www.cosmos.esa.int/gaia), processed by the Gaia Data
+Processing and Analysis Consortium (DPAC).

@@ -1,0 +1,66 @@
+COSMO DARKROOM — CONTRAT DE LICENCE D'UTILISATEUR FINAL
+Version 1.0 — 13 octobre 2026
+
+Traduction de courtoisie. En cas de divergence, le texte anglais (LICENSE.txt) fait foi.
+
+Ce contrat vous lie à l'auteur de COSMO Darkroom (« l'Auteur »). En installant ou en utilisant COSMO Darkroom
+(« le Logiciel »), vous l'acceptez. Si vous ne l'acceptez pas, n'installez pas et n'utilisez pas le Logiciel.
+
+1. LE LOGICIEL
+Le Logiciel comprend l'application COSMO Darkroom, son empileur, sa documentation et les réseaux de neurones
+entraînés livrés avec elle pour la séparation des étoiles, la réduction du bruit et la netteté (« les
+Réseaux »).
+
+2. CE QUE VOUS POUVEZ FAIRE
+L'Auteur vous accorde une licence personnelle, non exclusive, non cessible et gratuite, pour installer le
+Logiciel sur des ordinateurs qui vous appartiennent ou que vous contrôlez et pour l'utiliser afin de traiter
+vos propres images, à titre privé ou professionnel. Les images que vous produisez avec le Logiciel sont à
+vous.
+
+3. CE QUE VOUS NE POUVEZ PAS FAIRE
+Sauf droit que la loi qui vous est applicable ne permet pas d'écarter, vous ne pouvez pas :
+  a) redistribuer, vendre, louer, prêter, concéder en sous-licence ou héberger le Logiciel ou une de ses
+     parties pour que d'autres le téléchargent — partagez plutôt le lien de la page de téléchargement
+     officielle ;
+  b) extraire, copier, convertir ou utiliser les Réseaux hors du Logiciel, ni les utiliser, eux ou leurs
+     sorties, pour entraîner, distiller ou évaluer un autre modèle destiné à reproduire leur fonction ;
+  c) décompiler, désassembler le Logiciel ou en faire l'ingénierie inverse, ni retirer la protection
+     appliquée aux Réseaux ;
+  d) modifier le Logiciel ou en créer des œuvres dérivées ;
+  e) retirer ou altérer une mention de droit d'auteur, de marque ou de licence.
+
+4. PROPRIÉTÉ
+Le Logiciel est concédé sous licence, non vendu. L'Auteur conserve tous les droits sur le Logiciel, sur les
+Réseaux et sur le nom et le logo « COSMO ». Ce contrat ne vous donne aucun droit sur ce nom ou ce logo,
+sinon celui de dire, quand c'est vrai, qu'une image a été traitée avec COSMO Darkroom.
+
+5. LOGICIELS TIERS
+Le Logiciel contient des composants open source, chacun sous sa propre licence ; ils sont listés dans
+THIRD-PARTY-NOTICES.txt, livré avec le Logiciel. Ce contrat ne limite en rien les droits que ces licences
+vous donnent sur ces composants. Le Logiciel peut utiliser GraXpert et les produits RC-Astro installés sur
+votre ordinateur ; ils ne font pas partie du Logiciel et restent soumis aux conditions de leurs éditeurs.
+
+6. ABSENCE DE GARANTIE
+Le Logiciel est fourni « en l'état », gratuitement, sans garantie d'aucune sorte, expresse ou implicite,
+notamment d'adéquation à un usage particulier ou d'absence d'erreurs. C'est un outil de traitement d'image :
+ses mesures sont des estimations et ses résultats ne doivent pas servir à des fins scientifiques, de
+navigation, médicales ou de sécurité.
+
+7. LIMITATION DE RESPONSABILITÉ
+Dans la mesure permise par la loi, l'Auteur n'est responsable d'aucun dommage né de l'utilisation du
+Logiciel ou de l'impossibilité de l'utiliser, y compris la perte de données ou d'images. Gardez des copies
+de vos fichiers d'origine. Rien ici n'écarte une responsabilité que la loi ne permet pas d'écarter.
+
+8. FIN DE LA LICENCE
+Cette licence prend fin automatiquement si vous y manquez. Vous devez alors cesser d'utiliser le Logiciel et
+en supprimer toutes les copies. Les articles 3 à 7 restent applicables.
+
+9. ÉVOLUTIONS
+Une version ultérieure du Logiciel peut être accompagnée d'un autre contrat. Celui-ci continue de s'appliquer
+à la version avec laquelle il a été livré.
+
+10. DROIT APPLICABLE
+Ce contrat est régi par le droit français. Si une de ses clauses est jugée inapplicable, les autres restent
+en vigueur.
+
+© 2026 COSMO Darkroom. Tous droits réservés.

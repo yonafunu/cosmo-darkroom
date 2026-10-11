@@ -1,0 +1,60 @@
+COSMO DARKROOM — END-USER LICENCE AGREEMENT
+Version 1.0 — 13 October 2026
+
+This agreement is between you and the author of COSMO Darkroom ("the Author"). By installing or using
+COSMO Darkroom ("the Software") you accept it. If you do not accept it, do not install or use the Software.
+
+1. WHAT THE SOFTWARE IS
+The Software comprises the COSMO Darkroom application, its stacker, its documentation and the trained neural
+networks delivered with it for star separation, noise reduction and sharpening ("the Networks").
+
+2. WHAT YOU MAY DO
+The Author grants you a personal, non-exclusive, non-transferable licence, free of charge, to install the
+Software on computers you own or control and to use it to process your own images, for private or
+professional purposes. The images you produce with the Software are yours.
+
+3. WHAT YOU MAY NOT DO
+Unless the law that applies to you gives you a right that cannot be excluded, you may not:
+  a) redistribute, sell, rent, lend, sublicense or host the Software or any part of it for others to
+     download — share the link to the official download page instead;
+  b) extract, copy, convert or use the Networks outside the Software, or use them or their outputs to train,
+     distil or evaluate another model intended to reproduce their function;
+  c) decompile, disassemble or reverse engineer the Software, or remove the protection applied to the
+     Networks;
+  d) modify the Software, or create works derived from it;
+  e) remove or alter any copyright, trademark or licence notice.
+
+4. OWNERSHIP
+The Software is licensed, not sold. The Author keeps all rights in the Software, in the Networks and in the
+name and logo "COSMO". Nothing in this agreement gives you a right to use that name or logo other than to
+say truthfully that an image was processed with COSMO Darkroom.
+
+5. THIRD-PARTY SOFTWARE
+The Software includes open-source components, each under its own licence; they are listed in
+THIRD-PARTY-NOTICES.txt, delivered with the Software. Nothing in this agreement limits the rights those
+licences give you over those components. The Software can use GraXpert and RC-Astro products installed on
+your computer; they are not part of the Software and remain subject to their publishers' terms.
+
+6. NO WARRANTY
+The Software is provided "as is", free of charge, without warranty of any kind, express or implied,
+including fitness for a particular purpose and absence of errors. It is an image-processing tool: its
+measurements are estimates and its results must not be relied on for scientific, navigational, medical or
+safety purposes.
+
+7. LIMITATION OF LIABILITY
+To the extent permitted by law, the Author is not liable for any damage arising from the use of the
+Software or the impossibility of using it, including loss of data or of images. Keep copies of your original
+files. Nothing here excludes liability that cannot be excluded by law.
+
+8. TERMINATION
+This licence ends automatically if you breach it. You must then stop using the Software and delete every
+copy. Sections 3 to 7 survive.
+
+9. CHANGES
+A later version of the Software may come with a different agreement. This one continues to apply to the
+version it was delivered with.
+
+10. GOVERNING LAW
+This agreement is governed by French law. If part of it is held unenforceable, the rest remains in force.
+
+© 2026 COSMO Darkroom. All rights reserved.
