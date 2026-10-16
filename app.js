@@ -1,4 +1,4 @@
-// COSMO Darkroom — vitrine. Rien d'indispensable ici : sans script, tout le contenu reste lisible.
+// COSMO — vitrine. Rien d'indispensable ici : sans script, tout le contenu reste lisible.
 (() => {
   "use strict";
 

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Narrowband palette tool — COSMO. False colours for a dual-band stack (Hα and OIII): eight palettes, among them SHO, HOO and Foraxx, chosen on a contact sheet.">
+  <meta property="og:title" content="Narrowband palette tool — COSMO">
+  <meta property="og:description" content="False colours for a dual-band stack (Hα and OIII): eight palettes, among them SHO, HOO and Foraxx, chosen on a contact sheet.">
+  <meta property="og:image" content="https://yonafunu.github.io/cosmo-darkroom/assets/share.jpg">
+  <title>Narrowband palette tool — COSMO</title>
+  <link rel="icon" href="../assets/logo-64.png">
+  <link rel="alternate" hreflang="fr" href="../fr/tools/narrowband-palette.html">
+  <link rel="stylesheet" href="../style.css?v=20261013">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header scrolled">
+  <a class="brand" href="../index.html" aria-label="COSMO, home">
+    <img src="../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO</span>
+  </a>
+  <button class="menu-toggle" aria-label="Open the menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Main navigation">
+    <a href="../index.html#software">Software</a>
+    <a href="../index.html#gallery">Gallery</a>
+    <a href="../guide.html">Guide</a>
+    <a class="nav-support" href="https://ko-fi.com/cosmoastro" rel="noopener" data-donate><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4h2c.7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg>Support</a>
+    <a class="nav-cta" href="../index.html#download">Download</a>
+    <a class="lang" href="../fr/tools/narrowband-palette.html" hreflang="fr" lang="fr">Français</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow pink">Stretched image</p>
+  <h1>Narrowband palette tool</h1>
+  <p class="lead">False colours for a dual-band stack (Hα and OIII): eight palettes, among them SHO, HOO and Foraxx, chosen on a contact sheet.</p>
+  <h2>How to use it</h2>
+  <figure class="film use"><video src="../assets/use-palette.mp4" poster="../assets/use-palette.jpg" controls loop muted playsinline preload="none" aria-label="The COSMO window while setting Narrowband palette"></video><figcaption>The COSMO window, recorded while the settings are moved.</figcaption></figure>
+  <ol class="steps">
+    <li>Add the tool from <em>Tools</em>, on a stretched image. Its place is on the nebula layer, after <em>Separate stars</em>: the stars then keep their own colours.</li>
+    <li>Press <em>Contact sheet</em>: the eight palettes are shown on the image, side by side. Click one: nine variations follow, with less or more OIII and redder or yellower warm tones, in finer steps at each click.</li>
+    <li>Click the middle one to keep it and close the sheet, then press <em>Apply</em>.</li>
+  </ol>
+  <p class="proof"><em>Whole image / Detail</em>: the thumbnails show the whole frame, or the part of the image where Hα and OIII are both strong, where the palettes differ the most.</p>
+  <h2>Settings</h2>
+  <dl class="settings">
+    <div><dt>Contact sheet</dt><dd>All the palettes on the image, side by side; then variations around the one chosen.</dd></div>
+    <div><dt>Palette</dt><dd>Gold and blue (default), SHO, Foraxx, Copper and teal, HOO, Natural, Foraxx HOO, HOS (CFHT). The two Foraxx palettes are dynamic: their blends follow the lines themselves.</dd></div>
+    <div><dt>OIII</dt><dd>How bright OIII is next to Hα. In the middle, both are at the same level; to the right OIII is up to four times brighter, to the left up to four times fainter.</dd></div>
+    <div><dt>Warm tones</dt><dd>Turns the warm colours (gold, orange, red) by up to 40°: to the right towards yellow, to the left towards red. Blues and teals do not move.</dd></div>
+    <div><dt>Sulfur</dt><dd>Palettes with sulfur only: how much sulfur is made, as a share of Hα.</dd></div>
+    <div><dt>Sulfur away from OIII</dt><dd>How much less sulfur there is where OIII dominates. At 0, the sulfur follows Hα everywhere.</dd></div>
+    <div><dt>Amount</dt><dd>The palette blended with the image as it was: 100 % is the palette alone.</dd></div>
+  </dl>
+  <h2>When to use it</h2>
+  <p>On a stack taken through a dual-band filter, such as the LP filter of a Seestar. Such a filter records no SII: the palettes that use sulfur make one from Hα, stronger where there is less OIII. It is a rendering, not a measurement.</p>
+  <h2>Image</h2>
+  <p>Works only on a stretched image.</p>
+  <h2>Examples</h2>
+  <figure class="compare" style="--ratio: 620 / 349">
+    <img src="../assets/ex-palette-after.jpg" alt="SHO palette" loading="lazy">
+    <img class="compare-top" src="../assets/ex-palette-before.jpg" alt="without" loading="lazy">
+    <span class="tag left">without</span><span class="tag right">SHO palette</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Compare : without / SHO palette">
+    <figcaption>NGC 6888, stack taken with the LP filter. The palette is applied to the nebula layer; the stars are put back with their own colours. Image taken with a Seestar S50 Pro.</figcaption>
+  </figure>
+  <figure class="compare" style="--ratio: 620 / 349">
+    <img src="../assets/ex-palette-gold.jpg" alt="Gold and blue palette" loading="lazy">
+    <img class="compare-top" src="../assets/ex-palette-before.jpg" alt="without" loading="lazy">
+    <span class="tag left">without</span><span class="tag right">Gold and blue palette</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Compare : without / Gold and blue palette">
+    <figcaption>Same image, default palette. On this stack the tool reads OIII 4.3 times fainter than Hα, and brings it to the same level. Image taken with a Seestar S50 Pro.</figcaption>
+  </figure>
+  <div class="actions tool-links"><a class="button ghost" href="h-alpha-boost.html">← Hα boost</a><a class="button ghost" href="../index.html#processing">All tools</a><a class="button ghost" href="hdr-multiscale.html">HDR multiscale →</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="../index.html"><img src="../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO</span></a>
+  <p>Stacking and processing of deep-sky images.<br>Free.</p>
+  <nav aria-label="Footer">
+    <a href="../guide.html">Getting started</a>
+    <a href="../privacy.html">Privacy</a>
+    <a href="../licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO</small>
+</footer>
+<script src="../app.js?v=20261013"></script>
+</body>
+</html>
