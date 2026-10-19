@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="What changes from one version of COSMO to the next.">
+  <title>Changelog — COSMO</title>
+  <link rel="icon" href="assets/logo-64.png">
+  <link rel="alternate" hreflang="fr" href="fr/changelog.html">
+  <link rel="stylesheet" href="style.css?v=20261019">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header scrolled">
+  <a class="brand" href="index.html" aria-label="COSMO, home">
+    <img src="assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO</span>
+  </a>
+  <button class="menu-toggle" aria-label="Open the menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Main navigation">
+    <a href="index.html#software">Software</a>
+    <a href="index.html#gallery">Gallery</a>
+    <a href="guide.html">Guide</a>
+    <a class="nav-support" href="https://ko-fi.com/cosmoastro" rel="noopener" data-donate><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4h2c.7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg>Support</a>
+    <a class="nav-cta" href="index.html#download">Download</a>
+    <a class="lang" href="fr/changelog.html" hreflang="fr" lang="fr">Français</a>
+  </nav>
+</header>
+<main class="doc changelog" id="content">
+  <p class="eyebrow">Changelog</p>
+  <h1>Changelog</h1>
+  <p class="lead">What changes from one version of COSMO to the next.</p>
+  <section class="release">
+    <h2><span class="release-version">0.3.3</span> <time datetime="2026-10-19">19 October 2026</time></h2>
+    <ul>
+      <li><strong>COSMOStars v44</strong> replaces v36: on an NGC 6960 test stack sharpened and denoised before the separation, 418 star remnants per megapixel instead of 2100. The colour under bright stars is matched, so no grey patch shows after a palette.</li>
+      <li><strong>Run up to &lt;step&gt;</strong>, at the bottom of the steps panel: applies, in order, the steps still to do before the selected one.</li>
+      <li><strong>Update check</strong>: COSMO says when a newer version is published (at most once a day, can be turned off in <em>Help</em>).</li>
+      <li><strong>Windows</strong>: install per user without administrator rights, a <strong>portable .zip</strong>, and a new version installs over the previous one.</li>
+      <li>Fixed: a Nebula or Stars step added after Recombine did not reach the final image; tooltips showed as empty white rectangles.</li>
+    </ul>
+  </section>
+  <section class="release">
+    <h2><span class="release-version">0.3.0</span> <time datetime="2026-10-16">16 October 2026</time></h2>
+    <ul>
+      <li><strong>COSMO</strong>: the application no longer carries the name “Darkroom”.</li>
+      <li><strong>COSMOSharp, COSMODenoise, COSMOStars</strong>: the three in-house networks have a name and are marked <em>Experimental</em>, not recommended for finished images yet. The RC-Astro engines remain available from your own installation.</li>
+      <li><strong>Narrowband palette</strong>: two gradient palettes, <em>Red, yellow and blue</em> (the new default) and <em>Red, gold and blue</em>.</li>
+    </ul>
+  </section>
+  <details class="release">
+    <summary><h2><span class="release-version">0.2.0</span> <time datetime="2026-10-12">12 October 2026</time></h2></summary>
+    <ul>
+      <li><strong>Narrowband palette</strong>: false colours for dual-band stacks (SHO, HOO, Foraxx…), chosen on a contact sheet of the image.</li>
+      <li><strong>Soft star cores</strong>: the hard edge of a bright star melts into its halo.</li>
+    </ul>
+  </details>
+  <details class="release">
+    <summary><h2><span class="release-version">0.1.0</span> <time datetime="2026-10-11">11 October 2026</time></h2></summary>
+    <ul>
+      <li>First version with installers for macOS and Windows: <strong>Stack</strong> (standard, automatic HDR, comet) and the processing tools of the linear and stretched image.</li>
+    </ul>
+  </details>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="index.html"><img src="assets/logo-128.png" alt="" width="40" height="40"><span>COSMO</span></a>
+  <p>Stacking and processing of deep-sky images.<br>Free.</p>
+  <nav aria-label="Footer">
+    <a href="guide.html">Getting started</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="licence.html">Licence</a>
+  </nav>
+  <small>© 2026 COSMO</small>
+</footer>
+<script src="app.js?v=20261019"></script>
+</body>
+</html>

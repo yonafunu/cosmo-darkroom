@@ -16,7 +16,7 @@
   <link rel="icon" href="../assets/logo-64.png">
   <link rel="preload" as="image" href="../assets/veil.jpg" imagesrcset="../assets/veil-1200.jpg 1200w, ../assets/veil.jpg 2400w" imagesizes="100vw">
   <link rel="alternate" hreflang="en" href="../index.html">
-  <link rel="stylesheet" href="../style.css?v=20261013">
+  <link rel="stylesheet" href="../style.css?v=20261019">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -394,26 +394,28 @@
     <img src="../assets/logo-256.png" alt="Logo COSMO" width="112" height="112" loading="lazy">
     <p class="eyebrow">Téléchargement</p>
     <!-- downloads:start -->
-    <h2>Télécharger COSMO 0.3.0.</h2>
-    <p class="lead">Gratuit. Deux installateurs ; chacun contient l'application et les trois réseaux de COSMO (COSMOSharp, COSMODenoise, COSMOStars), expérimentaux.</p>
+    <h2>Télécharger COSMO 0.3.3.</h2>
+    <p class="lead">Gratuit. Deux installateurs et une version portable pour Windows ; chacun contient l'application et les trois réseaux de COSMO (COSMOSharp, COSMODenoise, COSMOStars), expérimentaux.</p>
     <div class="installers">
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.3.0/COSMO-0.3.0-macos-arm64.dmg" download>
+      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.3.3/COSMO-0.3.3-macos-arm64.dmg" download>
         <strong>macOS</strong><span>Apple Silicon (M1 et suivants)</span>
-        <em>Télécharger · .dmg · 823 Mo</em>
+        <em>Télécharger · .dmg · 819 Mo</em>
       </a>
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.3.0/COSMO-0.3.0-windows-setup.exe" download>
+      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.3.3/COSMO-0.3.3-windows-setup.exe" download>
         <strong>Windows</strong><span>Windows 10 ou 11, 64 bits · calcule sur le processeur</span>
         <em>Télécharger · .exe · 723 Mo</em>
       </a>
     </div>
-    <div class="actions"><a class="button ghost" href="guide.html">Guide de démarrage</a></div>
+    <p class="portable"><a href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.3.3/COSMO-0.3.3-windows-portable.zip" download>Version portable (.zip, sans installation)</a> · 793 Mo</p>
+    <div class="actions"><a class="button ghost" href="guide.html">Guide de démarrage</a><a class="button ghost" href="changelog.html">Nouveautés</a></div>
     <dl class="first-launch">
       <div><dt>Premier lancement · macOS</dt><dd>L'application n'est pas signée par un compte Apple Developer. La première fois, clic droit sur elle dans <em>Applications</em>, <em>Ouvrir</em>, puis encore <em>Ouvrir</em>. Sur les macOS récents : <em>Réglages Système › Confidentialité et sécurité › Ouvrir quand même</em>.</dd></div>
-      <div><dt>Premier lancement · Windows</dt><dd>L'installateur n'est pas signé. Si SmartScreen affiche « Windows a protégé votre ordinateur », cliquer <em>Informations complémentaires</em>, puis <em>Exécuter quand même</em>.</dd></div>
+      <div><dt>Premier lancement · Windows</dt><dd>L'installateur n'est pas signé. Si SmartScreen affiche « Windows a protégé votre ordinateur », cliquer <em>Informations complémentaires</em>, puis <em>Exécuter quand même</em>. Si l'installateur s'arrête sur « erreur 5 » ou demande les droits d'administrateur, prendre la version portable : la dézipper dans un dossier au choix et lancer <em>COSMO.exe</em>.</dd></div>
     </dl>
     <details class="checksums"><summary>Empreintes SHA-256</summary>
-      <p><code>7172756cbcc9b3ac7eb4283ea347e84d843b3aaff31d26d75b7663aa59844466</code> COSMO-0.3.0-macos-arm64.dmg</p>
-      <p><code>0bec2f4c387a49a9dd208d15dc5d87be84c5c7446ed5e7cc9a633522e4a8679a</code> COSMO-0.3.0-windows-setup.exe</p>
+      <p><code>87133e25a608348a25c01e0caf9c08e1deebfb9d60b8d800b87316aa691651b4</code> COSMO-0.3.3-macos-arm64.dmg</p>
+      <p><code>f214d2cea98b905f42265771649befb7f49eea631633815f3a221e31b6b54904</code> COSMO-0.3.3-windows-setup.exe</p>
+      <p><code>be9c77022a3dc3cf5abea6b66744d3f455a6de0843f1343f773787dcfe95b279</code> COSMO-0.3.3-windows-portable.zip</p>
     </details>
     <p class="fine">En téléchargeant, vous acceptez la <a href="licence.html">licence</a> : usage gratuit ; pas de redistribution, pas d'utilisation des réseaux hors de l'application.</p>
     <p class="fine">Les moteurs facultatifs GraXpert et RC-Astro ne sont pas inclus : COSMO les utilise depuis votre installation. RC-Astro reste soumis à la licence de son éditeur.</p>
@@ -454,6 +456,7 @@
     <a href="#telecharger">Téléchargement</a>
     <a href="confidentialite.html">Confidentialité</a>
     <a href="licence.html">Licence</a>
+    <a href="changelog.html">Nouveautés</a>
     <a href="../index.html" hreflang="en" lang="en">English</a>
   </nav>
   <small>© 2026 COSMO</small>
@@ -467,6 +470,6 @@
   <p></p>
 </dialog>
 
-<script src="../app.js?v=20261013"></script>
+<script src="../app.js?v=20261019"></script>
 </body>
 </html>

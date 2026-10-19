@@ -16,7 +16,7 @@
   <link rel="icon" href="assets/logo-64.png">
   <link rel="alternate" hreflang="fr" href="fr/index.html">
   <link rel="preload" as="image" href="assets/veil.jpg" imagesrcset="assets/veil-1200.jpg 1200w, assets/veil.jpg 2400w" imagesizes="100vw">
-  <link rel="stylesheet" href="style.css?v=20261013">
+  <link rel="stylesheet" href="style.css?v=20261019">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -394,26 +394,28 @@
     <img src="assets/logo-256.png" alt="COSMO logo" width="112" height="112" loading="lazy">
     <p class="eyebrow">Download</p>
     <!-- downloads:start -->
-    <h2>Download COSMO 0.3.0.</h2>
-    <p class="lead">Free. Two installers; each one carries the application and the three COSMO networks (COSMOSharp, COSMODenoise, COSMOStars), which are experimental.</p>
+    <h2>Download COSMO 0.3.3.</h2>
+    <p class="lead">Free. Two installers and a portable Windows version; each one carries the application and the three COSMO networks (COSMOSharp, COSMODenoise, COSMOStars), which are experimental.</p>
     <div class="installers">
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.3.0/COSMO-0.3.0-macos-arm64.dmg" download>
+      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.3.3/COSMO-0.3.3-macos-arm64.dmg" download>
         <strong>macOS</strong><span>Apple Silicon (M1 or later)</span>
-        <em>Download · .dmg · 823 MB</em>
+        <em>Download · .dmg · 819 MB</em>
       </a>
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.3.0/COSMO-0.3.0-windows-setup.exe" download>
+      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.3.3/COSMO-0.3.3-windows-setup.exe" download>
         <strong>Windows</strong><span>Windows 10 or 11, 64-bit · runs on the processor</span>
         <em>Download · .exe · 723 MB</em>
       </a>
     </div>
-    <div class="actions"><a class="button ghost" href="guide.html">Getting started</a></div>
+    <p class="portable"><a href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.3.3/COSMO-0.3.3-windows-portable.zip" download>Portable version (.zip, no installation)</a> · 793 MB</p>
+    <div class="actions"><a class="button ghost" href="guide.html">Getting started</a><a class="button ghost" href="changelog.html">What's new</a></div>
     <dl class="first-launch">
       <div><dt>First launch · macOS</dt><dd>The application is not signed with an Apple Developer account. The first time, right-click it in <em>Applications</em>, choose <em>Open</em>, then <em>Open</em> again. On recent macOS: <em>System Settings › Privacy &amp; Security › Open Anyway</em>.</dd></div>
-      <div><dt>First launch · Windows</dt><dd>The installer is not signed. If SmartScreen shows “Windows protected your PC”, click <em>More info</em>, then <em>Run anyway</em>.</dd></div>
+      <div><dt>First launch · Windows</dt><dd>The installer is not signed. If SmartScreen shows “Windows protected your PC”, click <em>More info</em>, then <em>Run anyway</em>. If the installer stops with “error 5” or asks for administrator rights, use the portable version: unzip it into a folder of your choice and run <em>COSMO.exe</em>.</dd></div>
     </dl>
     <details class="checksums"><summary>SHA-256 checksums</summary>
-      <p><code>7172756cbcc9b3ac7eb4283ea347e84d843b3aaff31d26d75b7663aa59844466</code> COSMO-0.3.0-macos-arm64.dmg</p>
-      <p><code>0bec2f4c387a49a9dd208d15dc5d87be84c5c7446ed5e7cc9a633522e4a8679a</code> COSMO-0.3.0-windows-setup.exe</p>
+      <p><code>87133e25a608348a25c01e0caf9c08e1deebfb9d60b8d800b87316aa691651b4</code> COSMO-0.3.3-macos-arm64.dmg</p>
+      <p><code>f214d2cea98b905f42265771649befb7f49eea631633815f3a221e31b6b54904</code> COSMO-0.3.3-windows-setup.exe</p>
+      <p><code>be9c77022a3dc3cf5abea6b66744d3f455a6de0843f1343f773787dcfe95b279</code> COSMO-0.3.3-windows-portable.zip</p>
     </details>
     <p class="fine">By downloading, you accept the <a href="licence.html">licence</a>: free to use; no redistribution, no use of the networks outside the application.</p>
     <p class="fine">The optional GraXpert and RC-Astro engines are not included: COSMO uses them from your own installation. RC-Astro remains subject to its publisher's licence.</p>
@@ -454,6 +456,7 @@
     <a href="#download">Download</a>
     <a href="privacy.html">Privacy</a>
     <a href="licence.html">Licence</a>
+    <a href="changelog.html">Changelog</a>
     <a href="fr/index.html" hreflang="fr" lang="fr">Français</a>
   </nav>
   <small>© 2026 COSMO</small>
@@ -467,6 +470,6 @@
   <p></p>
 </dialog>
 
-<script src="app.js?v=20261013"></script>
+<script src="app.js?v=20261019"></script>
 </body>
 </html>
