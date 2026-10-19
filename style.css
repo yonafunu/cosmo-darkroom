@@ -1,4 +1,4 @@
-/* COSMO — vitrine. Aucune requête externe : polices du système, images locales. */
+/* COSMO — vitrine. Polices du système, images locales ; seule requête externe : le comptage des visites (GoatCounter). */
 
 :root {
   --night: #07080c;
