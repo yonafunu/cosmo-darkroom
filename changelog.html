@@ -8,7 +8,7 @@
   <title>Changelog — COSMO</title>
   <link rel="icon" href="assets/logo-64.png">
   <link rel="alternate" hreflang="fr" href="fr/changelog.html">
-  <link rel="stylesheet" href="style.css?v=20261019c">
+  <link rel="stylesheet" href="style.css?v=20261021a">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -36,6 +36,20 @@
   <h1>Changelog</h1>
   <p class="lead">What changes from one version of COSMO to the next.</p>
   <section class="release">
+    <h2><span class="release-version">0.4.0</span> <time datetime="2026-10-21">21 October 2026</time></h2>
+    <ul>
+      <li><strong>COSMO Fire &amp; Ice</strong>, the new default of <em>Narrowband palette</em>: OIII blue, Hα red, then orange and yellow as it brightens. Fitted on a hand-processed Draco stack (colour gap 0.029 over the whole image); where both lines are bright, OIII counts less, so no flat white (NGC 6888: 2.1 % of the crescent near white before, under 0.1 % now). Only three palettes remain: COSMO Fire &amp; Ice, HOO, SHO, on bigger thumbnails.</li>
+      <li><strong>Protect the sky</strong> (<em>Narrowband palette</em>): takes the faint OIII out of the background, so raising OIII no longer turns the sky into blue patches.</li>
+      <li><strong>Star colours</strong>, first step of <em>Stars</em> after a separation: gives the stars of a dual-band stack their natural colours back, from the Gaia catalogue when the file says where the telescope pointed (651 stars matched on NGC 7000), with a <em>Saturation</em> slider.</li>
+      <li><strong>COSMOStars v47</strong> replaces v44: on the same NGC 6960 test stack, 129 star remnants per megapixel instead of 418, and fewer stars left on bright nebula; the small spike left at the centre of a removed star is cleaned.</li>
+      <li><strong>Calibration</strong> in the <em>Stack</em> window: bias, darks, flats and dark flats, found in the folder or chosen by hand; a single file is used as a ready master. Subs calibrated in the camera (Seestar) need none.</li>
+      <li><strong>Full screen</strong> (<em>F</em>, <em>Esc</em> to leave) at any step; a slow preview now shows its progress.</li>
+      <li>Fixed: a star core sharpened by COSMOSharp above 1 made NoiseXTerminator divide the whole image, and the sky went black at the stretch.</li>
+    </ul>
+    <figure class="release-figure"><img src="assets/fire-ice-en.jpg" alt="How COSMO Fire & Ice colours a dual-band stack (NGC 6888): Hα and OIII as the filter records them, then the palette. Below, its colours from OIII alone to faint Hα." loading="lazy"><figcaption>How COSMO Fire & Ice colours a dual-band stack (NGC 6888): Hα and OIII as the filter records them, then the palette. Below, its colours from OIII alone to faint Hα.</figcaption></figure>
+    <figure class="release-figure"><img src="assets/ngc6888-fire-ice.jpg" alt="NGC 6888 processed in COSMO 0.4.0: COSMO Fire & Ice on the nebula, Star colours from Gaia on the stars. Seestar S50 Pro, LP filter." loading="lazy"><figcaption>NGC 6888 processed in COSMO 0.4.0: COSMO Fire & Ice on the nebula, Star colours from Gaia on the stars. Seestar S50 Pro, LP filter.</figcaption></figure>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.3.3</span> <time datetime="2026-10-19">19 October 2026</time></h2>
     <ul>
       <li><strong>COSMOStars v44</strong> replaces v36: on an NGC 6960 test stack sharpened and denoised before the separation, 418 star remnants per megapixel instead of 2100. The colour under bright stars is matched, so no grey patch shows after a palette.</li>
@@ -45,14 +59,14 @@
       <li>Fixed: a Nebula or Stars step added after Recombine did not reach the final image; tooltips showed as empty white rectangles.</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.3.0</span> <time datetime="2026-10-16">16 October 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.3.0</span> <time datetime="2026-10-16">16 October 2026</time></h2></summary>
     <ul>
       <li><strong>COSMO</strong>: the application no longer carries the name “Darkroom”.</li>
       <li><strong>COSMOSharp, COSMODenoise, COSMOStars</strong>: the three in-house networks have a name and are marked <em>Experimental</em>, not recommended for finished images yet. The RC-Astro engines remain available from your own installation.</li>
       <li><strong>Narrowband palette</strong>: two gradient palettes, <em>Red, yellow and blue</em> (the new default) and <em>Red, gold and blue</em>.</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.2.0</span> <time datetime="2026-10-12">12 October 2026</time></h2></summary>
     <ul>
@@ -77,7 +91,7 @@
   </nav>
   <small>© 2026 COSMO</small>
 </footer>
-<script src="app.js?v=20261019c"></script>
+<script src="app.js?v=20261021a"></script>
 <!-- mesure d'audience : GoatCounter, sans cookie ; les statistiques ne sont visibles que du proprietaire -->
 <script data-goatcounter="https://cosmo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

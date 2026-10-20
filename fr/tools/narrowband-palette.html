@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#07080c">
-  <meta name="description" content="Outil Narrowband palette — COSMO. Fausses couleurs pour une pile bi-bande (Hα et OIII) : huit palettes, dont SHO, HOO et Foraxx, choisies sur une planche contact.">
+  <meta name="description" content="Outil Narrowband palette — COSMO. Fausses couleurs pour une pile bi-bande (Hα et OIII) : COSMO Fire & Ice, HOO et SHO, choisies sur une planche contact.">
   <meta property="og:title" content="Outil Narrowband palette — COSMO">
-  <meta property="og:description" content="Fausses couleurs pour une pile bi-bande (Hα et OIII) : huit palettes, dont SHO, HOO et Foraxx, choisies sur une planche contact.">
+  <meta property="og:description" content="Fausses couleurs pour une pile bi-bande (Hα et OIII) : COSMO Fire & Ice, HOO et SHO, choisies sur une planche contact.">
   <meta property="og:image" content="https://www.cosmo-astro.com/assets/share.jpg">
   <title>Outil Narrowband palette — COSMO</title>
   <link rel="icon" href="../../assets/logo-64.png">
   <link rel="alternate" hreflang="en" href="../../tools/narrowband-palette.html">
-  <link rel="stylesheet" href="../../style.css?v=20261019c">
+  <link rel="stylesheet" href="../../style.css?v=20261021a">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -37,21 +37,23 @@
 <main class="doc" id="content">
   <p class="eyebrow pink">Image étirée</p>
   <h1>Outil Narrowband palette</h1>
-  <p class="lead">Fausses couleurs pour une pile bi-bande (Hα et OIII) : huit palettes, dont SHO, HOO et Foraxx, choisies sur une planche contact.</p>
+  <p class="lead">Fausses couleurs pour une pile bi-bande (Hα et OIII) : COSMO Fire & Ice, HOO et SHO, choisies sur une planche contact.</p>
   <h2>Comment s'en servir</h2>
-  <figure class="film use"><video src="../../assets/use-palette.mp4" poster="../../assets/use-palette.jpg" controls loop muted playsinline preload="none" aria-label="La fenêtre de COSMO pendant le réglage de Narrowband palette"></video><figcaption>La fenêtre de COSMO, filmée pendant que les réglages bougent.</figcaption></figure>
   <ol class="steps">
     <li>Ajouter l'outil depuis <em>Tools</em>, sur une image étirée. Sa place est sur la couche nébuleuse, après <em>Separate stars</em> : les étoiles gardent alors leurs propres couleurs.</li>
-    <li><em>Contact sheet</em> : les huit palettes sont montrées sur l'image, côte à côte. Cliquer l'une d'elles : neuf variations suivent, avec moins ou plus d'OIII et des tons chauds plus rouges ou plus jaunes, par pas plus fins à chaque clic.</li>
+    <li><em>Contact sheet</em> : les trois palettes sont montrées sur l'image, côte à côte. Cliquer l'une d'elles : neuf variations suivent, avec moins ou plus d'OIII et des tons chauds plus rouges ou plus jaunes, par pas plus fins à chaque clic.</li>
     <li>Cliquer celle du milieu pour la garder et refermer la planche, puis <em>Apply</em>.</li>
   </ol>
   <p class="proof"><em>Whole image / Detail</em> : les vignettes montrent l'image entière, ou la partie de l'image où Hα et OIII sont forts tous les deux, là où les palettes diffèrent le plus.</p>
   <h2>Réglages</h2>
   <dl class="settings">
     <div><dt>Contact sheet</dt><dd>Toutes les palettes sur l'image, côte à côte ; puis des variations autour de celle choisie.</dd></div>
-    <div><dt>Palette</dt><dd>Gold and blue (par défaut), SHO, Foraxx, Copper and teal, HOO, Natural, Foraxx HOO, HOS (CFHT). Les deux palettes Foraxx sont dynamiques : leurs mélanges suivent les raies elles-mêmes.</dd></div>
+    <div><dt>Palette</dt><dd>COSMO Fire & Ice (par défaut) : OIII en bleu, Hα en rouge, puis orange et jaune quand il s'éclaire, pâle là où les deux raies se rencontrent ; là où les deux sont fortes l'OIII compte moins, donc pas de blanc uni. HOO : Hα en rouge, OIII en cyan. SHO : la palette Hubble, son soufre fabriqué à partir du Hα.</dd></div>
+    <div><dt>Protect the sky</dt><dd>Retire l'OIII faible du fond : pousser l'OIII colore alors la nébuleuse sans faire de taches bleues dans le ciel. Trop loin, les bords faibles de la nébuleuse perdent aussi leur bleu.</dd></div>
     <div><dt>OIII</dt><dd>La clarté de l'OIII à côté du Hα. Au milieu, les deux sont au même niveau ; à droite l'OIII est jusqu'à quatre fois plus clair, à gauche jusqu'à quatre fois plus faible.</dd></div>
-    <div><dt>Warm tones</dt><dd>Tourne les couleurs chaudes (or, orange, rouge) jusqu'à 40° : à droite vers le jaune, à gauche vers le rouge. Les bleus et les turquoises ne bougent pas.</dd></div>
+    <div><dt>Warm tones</dt><dd>Tourne les couleurs chaudes (or, orange, rouge) jusqu'à 40° : à droite vers le jaune, à gauche vers le rouge. Les bleus et les turquoises ne bougent pas. Dans COSMO Fire & Ice : plus ou moins du jaune que le Hα fort apporte.</dd></div>
+    <div><dt>White where they meet</dt><dd>COSMO Fire & Ice seulement : à quel point Hα et OIII blanchissent là où ils se rencontrent. À 0, les deux couleurs s'additionnent seulement.</dd></div>
+    <div><dt>Pale blue</dt><dd>COSMO Fire & Ice seulement : à droite un bleu plus pâle et plus cyan pour l'OIII ; à gauche un bleu plus profond.</dd></div>
     <div><dt>Sulfur</dt><dd>Palettes à soufre seulement : la quantité de soufre fabriquée, en part du Hα.</dd></div>
     <div><dt>Sulfur away from OIII</dt><dd>De combien le soufre baisse là où l'OIII domine. À 0, il suit le Hα partout.</dd></div>
     <div><dt>Amount</dt><dd>Le mélange de la palette avec l'image telle qu'elle était : 100 % est la palette seule.</dd></div>
@@ -60,22 +62,14 @@
   <p>Sur une pile prise avec un filtre bi-bande, comme le filtre LP d'un Seestar. Un tel filtre n'enregistre pas de SII : les palettes à soufre en fabriquent un à partir du Hα, plus fort là où il y a moins d'OIII. C'est un rendu, pas une mesure.</p>
   <h2>Image</h2>
   <p>Travaille uniquement sur une image étirée.</p>
-  <h2>Exemples</h2>
+  <h2>Exemple</h2>
   <figure class="compare" style="--ratio: 620 / 349">
-    <img src="../../assets/ex-palette-after.jpg" alt="palette SHO" loading="lazy">
+    <img src="../../assets/ex-palette-fireice.jpg" alt="COSMO Fire & Ice" loading="lazy">
     <img class="compare-top" src="../../assets/ex-palette-before.jpg" alt="sans" loading="lazy">
-    <span class="tag left">sans</span><span class="tag right">palette SHO</span>
+    <span class="tag left">sans</span><span class="tag right">COSMO Fire & Ice</span>
     <span class="handle" aria-hidden="true"></span>
-    <input type="range" min="0" max="100" value="50" aria-label="Comparer : sans / palette SHO">
-    <figcaption>NGC 6888, pile prise avec le filtre LP. La palette est appliquée à la couche nébuleuse ; les étoiles sont remises avec leurs propres couleurs. Image prise au Seestar S50 Pro.</figcaption>
-  </figure>
-  <figure class="compare" style="--ratio: 620 / 349">
-    <img src="../../assets/ex-palette-gold.jpg" alt="palette Gold and blue" loading="lazy">
-    <img class="compare-top" src="../../assets/ex-palette-before.jpg" alt="sans" loading="lazy">
-    <span class="tag left">sans</span><span class="tag right">palette Gold and blue</span>
-    <span class="handle" aria-hidden="true"></span>
-    <input type="range" min="0" max="100" value="50" aria-label="Comparer : sans / palette Gold and blue">
-    <figcaption>Même image, palette par défaut. Sur cette pile, l'outil lit un OIII 4,3 fois plus faible que le Hα, et le ramène au même niveau. Image prise au Seestar S50 Pro.</figcaption>
+    <input type="range" min="0" max="100" value="50" aria-label="Comparer : sans / COSMO Fire & Ice">
+    <figcaption>NGC 6888, pile prise avec le filtre LP. COSMO Fire & Ice, la palette par défaut, sur la couche nébuleuse ; les étoiles sont remises avec leurs propres couleurs (Star colours, d'après Gaia). Image prise au Seestar S50 Pro.</figcaption>
   </figure>
   <div class="actions tool-links"><a class="button ghost" href="h-alpha-boost.html">← Hα boost</a><a class="button ghost" href="../index.html#traitement">Tous les outils</a><a class="button ghost" href="hdr-multiscale.html">HDR multiscale →</a></div>
 </main>
@@ -90,7 +84,7 @@
   </nav>
   <small>© 2026 COSMO</small>
 </footer>
-<script src="../../app.js?v=20261019c"></script>
+<script src="../../app.js?v=20261021a"></script>
 <!-- mesure d'audience : GoatCounter, sans cookie ; les statistiques ne sont visibles que du proprietaire -->
 <script data-goatcounter="https://cosmo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

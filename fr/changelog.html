@@ -8,7 +8,7 @@
   <title>Nouveautés — COSMO</title>
   <link rel="icon" href="../assets/logo-64.png">
   <link rel="alternate" hreflang="en" href="../changelog.html">
-  <link rel="stylesheet" href="../style.css?v=20261019c">
+  <link rel="stylesheet" href="../style.css?v=20261021a">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -36,6 +36,20 @@
   <h1>Nouveautés</h1>
   <p class="lead">Ce qui change d'une version de COSMO à la suivante.</p>
   <section class="release">
+    <h2><span class="release-version">0.4.0</span> <time datetime="2026-10-21">21 octobre 2026</time></h2>
+    <ul>
+      <li><strong>COSMO Fire &amp; Ice</strong>, la nouvelle palette par défaut de <em>Narrowband palette</em> : OIII en bleu, Hα en rouge, puis orange et jaune quand il s'éclaire. Ajustée sur une pile de la Draco traitée à la main (écart de couleur 0,029 sur toute l'image) ; là où les deux raies sont fortes, l'OIII compte moins, donc plus de blanc uni (NGC 6888 : 2,1 % du croissant presque blanc avant, moins de 0,1 % maintenant). Il ne reste que trois palettes : COSMO Fire &amp; Ice, HOO, SHO, sur des vignettes plus grandes.</li>
+      <li><strong>Protect the sky</strong> (<em>Narrowband palette</em>) : retire l'OIII faible du fond ; pousser l'OIII ne fait plus de taches bleues dans le ciel.</li>
+      <li><strong>Star colours</strong>, première étape de <em>Stars</em> après une séparation : rend aux étoiles d'une pile bi-bande leurs couleurs naturelles, d'après le catalogue Gaia quand le fichier dit où pointait le télescope (651 étoiles reconnues sur NGC 7000), avec un curseur <em>Saturation</em>.</li>
+      <li><strong>COSMOStars v47</strong> remplace v44 : sur la même pile de test de NGC 6960, 129 restes d'étoiles par mégapixel au lieu de 418, et moins d'étoiles laissées sur la nébuleuse brillante ; la petite pointe laissée au centre d'une étoile retirée est effacée.</li>
+      <li><strong>Calibration</strong> dans la fenêtre <em>Stack</em> : bias, darks, flats et dark flats, trouvés dans le dossier ou choisis à la main ; un fichier seul est pris comme maître tout fait. Les poses calibrées dans l'appareil (Seestar) n'en ont pas besoin.</li>
+      <li><strong>Plein écran</strong> (<em>F</em>, <em>Échap</em> pour sortir) à n'importe quelle étape ; un aperçu lent affiche maintenant sa progression.</li>
+      <li>Corrigé : un cœur d'étoile poussé au-dessus de 1 par COSMOSharp faisait diviser toute l'image par NoiseXTerminator, et le ciel devenait noir à l'étirement.</li>
+    </ul>
+    <figure class="release-figure"><img src="../assets/fire-ice-fr.jpg" alt="Comment COSMO Fire & Ice colore une pile bi-bande (NGC 6888) : Hα et OIII tels que le filtre les enregistre, puis la palette. En dessous, ses couleurs, de l'OIII seul au Hα faible." loading="lazy"><figcaption>Comment COSMO Fire & Ice colore une pile bi-bande (NGC 6888) : Hα et OIII tels que le filtre les enregistre, puis la palette. En dessous, ses couleurs, de l'OIII seul au Hα faible.</figcaption></figure>
+    <figure class="release-figure"><img src="../assets/ngc6888-fire-ice.jpg" alt="NGC 6888 traitée dans COSMO 0.4.0 : COSMO Fire & Ice sur la nébuleuse, Star colours d'après Gaia sur les étoiles. Seestar S50 Pro, filtre LP." loading="lazy"><figcaption>NGC 6888 traitée dans COSMO 0.4.0 : COSMO Fire & Ice sur la nébuleuse, Star colours d'après Gaia sur les étoiles. Seestar S50 Pro, filtre LP.</figcaption></figure>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.3.3</span> <time datetime="2026-10-19">19 octobre 2026</time></h2>
     <ul>
       <li><strong>COSMOStars v44</strong> remplace v36 : sur une pile de test de NGC 6960 accentuée et débruitée avant la séparation, 418 restes d'étoiles par mégapixel au lieu de 2100. La couleur sous les étoiles brillantes est raccordée : plus de tache grise après une palette.</li>
@@ -45,14 +59,14 @@
       <li>Corrigé : une étape de Nebula ou Stars ajoutée après Recombine n'arrivait pas dans l'image finale ; les bulles d'aide apparaissaient comme des rectangles blancs vides.</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.3.0</span> <time datetime="2026-10-16">16 octobre 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.3.0</span> <time datetime="2026-10-16">16 octobre 2026</time></h2></summary>
     <ul>
       <li><strong>COSMO</strong> : l'application ne porte plus le nom « Darkroom ».</li>
       <li><strong>COSMOSharp, COSMODenoise, COSMOStars</strong> : les trois réseaux maison ont un nom et sont marqués <em>Experimental</em>, déconseillés pour une image finale. Les moteurs RC-Astro restent utilisables depuis votre installation.</li>
       <li><strong>Narrowband palette</strong> : deux palettes en dégradé, <em>Red, yellow and blue</em> (la nouvelle palette par défaut) et <em>Red, gold and blue</em>.</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.2.0</span> <time datetime="2026-10-12">12 octobre 2026</time></h2></summary>
     <ul>
@@ -77,7 +91,7 @@
   </nav>
   <small>© 2026 COSMO</small>
 </footer>
-<script src="../app.js?v=20261019c"></script>
+<script src="../app.js?v=20261021a"></script>
 <!-- mesure d'audience : GoatCounter, sans cookie ; les statistiques ne sont visibles que du proprietaire -->
 <script data-goatcounter="https://cosmo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

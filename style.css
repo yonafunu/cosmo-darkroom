@@ -378,6 +378,9 @@ code { padding: 2px 6px; border-radius: 6px; background: rgba(255, 255, 255, 0.0
 .changelog .release ul { margin: 14px 0 0; padding-left: 20px; }
 .changelog .release li { margin-top: 8px; color: var(--soft); line-height: 1.55; }
 .changelog .release li strong { color: var(--text); }
+.changelog .release-figure { margin: 22px 0 0; }
+.changelog .release-figure img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
+.changelog .release-figure figcaption { margin-top: 8px; font-size: 14px; color: var(--muted); line-height: 1.5; }
 .changelog details.release summary { list-style: none; cursor: pointer; }
 .changelog details.release summary::-webkit-details-marker { display: none; }
 .changelog details.release summary h2::after { content: "+"; margin-left: auto; color: var(--muted); font-weight: 400; }

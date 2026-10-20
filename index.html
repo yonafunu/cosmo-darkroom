@@ -16,7 +16,7 @@
   <link rel="icon" href="assets/logo-64.png">
   <link rel="alternate" hreflang="fr" href="fr/index.html">
   <link rel="preload" as="image" href="assets/veil.jpg" imagesrcset="assets/veil-1200.jpg 1200w, assets/veil.jpg 2400w" imagesizes="100vw">
-  <link rel="stylesheet" href="style.css?v=20261019c">
+  <link rel="stylesheet" href="style.css?v=20261021a">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -119,6 +119,7 @@
       <span class="pill blue">Stack tool</span>
       <h3>Standard stack</h3>
       <ul class="ticks">
+        <li>calibration with bias, darks, flats and dark flats, found in the folder or chosen by hand;</li>
         <li>analysis of every sub and quality table;</li>
         <li>choice of the reference sub and of the subs kept, to the percent;</li>
         <li>alignment on the stars and outlier rejection;</li>
@@ -216,7 +217,7 @@
         <li><strong><a href="tools/temperature.html">Temperature</a></strong> warm / cool balance, sky background kept neutral</li>
         <li><strong><a href="tools/remove-green.html">Remove green</a></strong> removal of residual green (SCNR)</li>
         <li><strong><a href="tools/h-alpha-boost.html">Hα boost</a></strong> enhancement of Hα regions: red minus its continuum</li>
-        <li><strong><a href="tools/narrowband-palette.html">Narrowband palette</a></strong> false colours for dual-band stacks: SHO, HOO, Foraxx</li>
+        <li><strong><a href="tools/narrowband-palette.html">Narrowband palette</a></strong> false colours for dual-band stacks: COSMO Fire &amp; Ice, HOO, SHO</li>
         <li><strong><a href="tools/hdr-multiscale.html">HDR multiscale</a></strong> compression of large bright regions with wavelets</li>
         <li><strong><a href="tools/dark-structures.html">Dark structures</a></strong> enhancement of dark nebulae and dust lanes</li>
         <li><strong><a href="tools/faint-nebulosity.html">Faint nebulosity</a></strong> brings out faint nebulosity, in one click</li>
@@ -229,6 +230,7 @@
         <li><strong><a href="tools/reduce-stars.html">Reduce stars</a><span class="exp">Experimental</span></strong> reduction of star diameter, halos included</li>
         <li><strong><a href="tools/remove-halo.html">Remove halo</a></strong> removal of the halo of a bright star picked on the image</li>
         <li><strong><a href="tools/separate-stars.html">Separate stars</a><span class="exp">Experimental</span></strong> separation into two layers: nebula and stars</li>
+        <li><strong>Star colours</strong> natural colours for the stars of a dual-band stack, from the Gaia catalogue or from the Hα / OIII ratio, with a saturation slider</li>
         <li><strong><a href="tools/recombine.html">Recombine</a></strong> recombination of the layers, with adjustable star contribution</li>
       </ul>
       <h4>Adjusting on the image</h4>
@@ -395,28 +397,28 @@
     <img src="assets/logo-256.png" alt="COSMO logo" width="112" height="112" loading="lazy">
     <p class="eyebrow">Download</p>
     <!-- downloads:start -->
-    <h2>Download COSMO 0.3.3.</h2>
+    <h2>Download COSMO 0.4.0.</h2>
     <p class="lead">Free. Two installers and a portable Windows version; each one carries the application and the three COSMO networks (COSMOSharp, COSMODenoise, COSMOStars), which are experimental.</p>
     <div class="installers">
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.3.3/COSMO-0.3.3-macos-arm64.dmg" download data-goatcounter-click="download-macos" data-goatcounter-title="0.3.3">
+      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.4.0/COSMO-0.4.0-macos-arm64.dmg" download data-goatcounter-click="download-macos" data-goatcounter-title="0.4.0">
         <strong>macOS</strong><span>Apple Silicon (M1 or later)</span>
-        <em>Download · .dmg · 819 MB</em>
+        <em>Download · .dmg · 821 MB</em>
       </a>
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.3.3/COSMO-0.3.3-windows-setup.exe" download data-goatcounter-click="download-windows-setup" data-goatcounter-title="0.3.3">
+      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.4.0/COSMO-0.4.0-windows-setup.exe" download data-goatcounter-click="download-windows-setup" data-goatcounter-title="0.4.0">
         <strong>Windows</strong><span>Windows 10 or 11, 64-bit · runs on the processor</span>
         <em>Download · .exe · 723 MB</em>
       </a>
     </div>
-    <p class="portable"><a href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.3.3/COSMO-0.3.3-windows-portable.zip" download data-goatcounter-click="download-windows-portable" data-goatcounter-title="0.3.3">Portable version (.zip, no installation)</a> · 793 MB</p>
+    <p class="portable"><a href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.4.0/COSMO-0.4.0-windows-portable.zip" download data-goatcounter-click="download-windows-portable" data-goatcounter-title="0.4.0">Portable version (.zip, no installation)</a> · 793 MB</p>
     <div class="actions"><a class="button ghost" href="guide.html">Getting started</a><a class="button ghost" href="changelog.html">What's new</a></div>
     <dl class="first-launch">
       <div><dt>First launch · macOS</dt><dd>The application is not signed with an Apple Developer account. The first time, right-click it in <em>Applications</em>, choose <em>Open</em>, then <em>Open</em> again. On recent macOS: <em>System Settings › Privacy &amp; Security › Open Anyway</em>.</dd></div>
       <div><dt>First launch · Windows</dt><dd>The installer is not signed. If SmartScreen shows “Windows protected your PC”, click <em>More info</em>, then <em>Run anyway</em>. If the installer stops with “error 5” or asks for administrator rights, use the portable version: unzip it into a folder of your choice and run <em>COSMO.exe</em>.</dd></div>
     </dl>
     <details class="checksums"><summary>SHA-256 checksums</summary>
-      <p><code>87133e25a608348a25c01e0caf9c08e1deebfb9d60b8d800b87316aa691651b4</code> COSMO-0.3.3-macos-arm64.dmg</p>
-      <p><code>f214d2cea98b905f42265771649befb7f49eea631633815f3a221e31b6b54904</code> COSMO-0.3.3-windows-setup.exe</p>
-      <p><code>be9c77022a3dc3cf5abea6b66744d3f455a6de0843f1343f773787dcfe95b279</code> COSMO-0.3.3-windows-portable.zip</p>
+      <p><code>780f70ee2817e2e5b37ff36eca402f7f8a20411bc18a6f0afd41ec94de6cecf2</code> COSMO-0.4.0-macos-arm64.dmg</p>
+      <p><code>4279096508aee7706e6f5d7fecc0b979744489ff99e0209a4045d0181a5c9db9</code> COSMO-0.4.0-windows-setup.exe</p>
+      <p><code>fdf7bff7ad205d04c8733db8c3b7c9bdb0fe6bce117cf4bdb967206bd2118219</code> COSMO-0.4.0-windows-portable.zip</p>
     </details>
     <p class="fine">By downloading, you accept the <a href="licence.html">licence</a>: free to use; no redistribution, no use of the networks outside the application.</p>
     <p class="fine">The optional GraXpert and RC-Astro engines are not included: COSMO uses them from your own installation. RC-Astro remains subject to its publisher's licence.</p>
@@ -471,7 +473,7 @@
   <p></p>
 </dialog>
 
-<script src="app.js?v=20261019c"></script>
+<script src="app.js?v=20261021a"></script>
 <!-- mesure d'audience : GoatCounter, sans cookie ; les statistiques ne sont visibles que du proprietaire -->
 <script data-goatcounter="https://cosmo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
