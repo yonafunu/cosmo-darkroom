@@ -36,6 +36,14 @@
   <h1>Nouveautés</h1>
   <p class="lead">Ce qui change d'une version de COSMO à la suivante.</p>
   <section class="release">
+    <h2><span class="release-version">0.4.1</span> <time datetime="2026-10-22">22 octobre 2026</time></h2>
+    <ul>
+      <li>Corrigé : <strong>Stack</strong> échouait tout à la fin, à l'enregistrement, avec des poses qui ne nomment pas leur filtre (« FITS header values must contain standard printable ASCII characters »).</li>
+      <li><strong>Stretch</strong>, départ automatique : le point noir se place maintenant juste sous les zones les plus sombres de l'image. Une nébuleuse qui remplit le cadre (IC 1396) ne sort plus en voile laiteux uniforme ; sur un champ ordinaire, rien ne change.</li>
+      <li>L'avertissement sur un ciel de couleur non neutre propose maintenant Background avec <em>Remove gradients</em> décoché quand la nébuleuse remplit le cadre.</li>
+    </ul>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.4.0</span> <time datetime="2026-10-21">21 octobre 2026</time></h2>
     <ul>
       <li><strong>COSMO Fire &amp; Ice</strong>, la nouvelle palette par défaut de <em>Narrowband palette</em> : OIII en bleu, Hα en rouge, puis orange et jaune quand il s'éclaire. Ajustée sur une pile de la Draco traitée à la main (écart de couleur 0,029 sur toute l'image) ; là où les deux raies sont fortes, l'OIII compte moins, donc plus de blanc uni (NGC 6888 : 2,1 % du croissant presque blanc avant, moins de 0,1 % maintenant). Il ne reste que trois palettes : COSMO Fire &amp; Ice, HOO, SHO, sur des vignettes plus grandes.</li>
@@ -49,8 +57,8 @@
     <figure class="release-figure"><img src="../assets/fire-ice-fr.jpg" alt="Comment COSMO Fire & Ice colore une pile bi-bande (NGC 6888) : Hα et OIII tels que le filtre les enregistre, puis la palette. En dessous, ses couleurs, de l'OIII seul au Hα faible." loading="lazy"><figcaption>Comment COSMO Fire & Ice colore une pile bi-bande (NGC 6888) : Hα et OIII tels que le filtre les enregistre, puis la palette. En dessous, ses couleurs, de l'OIII seul au Hα faible.</figcaption></figure>
     <figure class="release-figure"><img src="../assets/ngc6888-fire-ice.jpg" alt="NGC 6888 traitée dans COSMO 0.4.0 : COSMO Fire & Ice sur la nébuleuse, Star colours d'après Gaia sur les étoiles. Seestar S50 Pro, filtre LP." loading="lazy"><figcaption>NGC 6888 traitée dans COSMO 0.4.0 : COSMO Fire & Ice sur la nébuleuse, Star colours d'après Gaia sur les étoiles. Seestar S50 Pro, filtre LP.</figcaption></figure>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.3.3</span> <time datetime="2026-10-19">19 octobre 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.3.3</span> <time datetime="2026-10-19">19 octobre 2026</time></h2></summary>
     <ul>
       <li><strong>COSMOStars v44</strong> remplace v36 : sur une pile de test de NGC 6960 accentuée et débruitée avant la séparation, 418 restes d'étoiles par mégapixel au lieu de 2100. La couleur sous les étoiles brillantes est raccordée : plus de tache grise après une palette.</li>
       <li><strong>Run up to &lt;étape&gt;</strong>, en bas du panneau des étapes : applique dans l'ordre les étapes qui restent avant l'étape choisie.</li>
@@ -58,7 +66,7 @@
       <li><strong>Windows</strong> : installation par utilisateur sans droits d'administrateur, une <strong>version portable .zip</strong>, et une nouvelle version s'installe par-dessus la précédente.</li>
       <li>Corrigé : une étape de Nebula ou Stars ajoutée après Recombine n'arrivait pas dans l'image finale ; les bulles d'aide apparaissaient comme des rectangles blancs vides.</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.3.0</span> <time datetime="2026-10-16">16 octobre 2026</time></h2></summary>
     <ul>

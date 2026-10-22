@@ -36,6 +36,14 @@
   <h1>Changelog</h1>
   <p class="lead">What changes from one version of COSMO to the next.</p>
   <section class="release">
+    <h2><span class="release-version">0.4.1</span> <time datetime="2026-10-22">22 October 2026</time></h2>
+    <ul>
+      <li>Fixed: <strong>Stack</strong> failed at the very end, when saving, with subs that do not name their filter (“FITS header values must contain standard printable ASCII characters”).</li>
+      <li><strong>Stretch</strong>, automatic start: the black point now sits just under the darkest parts of the image. A nebula filling the frame (IC 1396) no longer comes out as a flat, milky veil; on an ordinary field nothing changes.</li>
+      <li>The warning about a sky colour that is not neutral now suggests Background with <em>Remove gradients</em> off when the nebula fills the frame.</li>
+    </ul>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.4.0</span> <time datetime="2026-10-21">21 October 2026</time></h2>
     <ul>
       <li><strong>COSMO Fire &amp; Ice</strong>, the new default of <em>Narrowband palette</em>: OIII blue, Hα red, then orange and yellow as it brightens. Fitted on a hand-processed Draco stack (colour gap 0.029 over the whole image); where both lines are bright, OIII counts less, so no flat white (NGC 6888: 2.1 % of the crescent near white before, under 0.1 % now). Only three palettes remain: COSMO Fire &amp; Ice, HOO, SHO, on bigger thumbnails.</li>
@@ -49,8 +57,8 @@
     <figure class="release-figure"><img src="assets/fire-ice-en.jpg" alt="How COSMO Fire & Ice colours a dual-band stack (NGC 6888): Hα and OIII as the filter records them, then the palette. Below, its colours from OIII alone to faint Hα." loading="lazy"><figcaption>How COSMO Fire & Ice colours a dual-band stack (NGC 6888): Hα and OIII as the filter records them, then the palette. Below, its colours from OIII alone to faint Hα.</figcaption></figure>
     <figure class="release-figure"><img src="assets/ngc6888-fire-ice.jpg" alt="NGC 6888 processed in COSMO 0.4.0: COSMO Fire & Ice on the nebula, Star colours from Gaia on the stars. Seestar S50 Pro, LP filter." loading="lazy"><figcaption>NGC 6888 processed in COSMO 0.4.0: COSMO Fire & Ice on the nebula, Star colours from Gaia on the stars. Seestar S50 Pro, LP filter.</figcaption></figure>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.3.3</span> <time datetime="2026-10-19">19 October 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.3.3</span> <time datetime="2026-10-19">19 October 2026</time></h2></summary>
     <ul>
       <li><strong>COSMOStars v44</strong> replaces v36: on an NGC 6960 test stack sharpened and denoised before the separation, 418 star remnants per megapixel instead of 2100. The colour under bright stars is matched, so no grey patch shows after a palette.</li>
       <li><strong>Run up to &lt;step&gt;</strong>, at the bottom of the steps panel: applies, in order, the steps still to do before the selected one.</li>
@@ -58,7 +66,7 @@
       <li><strong>Windows</strong>: install per user without administrator rights, a <strong>portable .zip</strong>, and a new version installs over the previous one.</li>
       <li>Fixed: a Nebula or Stars step added after Recombine did not reach the final image; tooltips showed as empty white rectangles.</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.3.0</span> <time datetime="2026-10-16">16 October 2026</time></h2></summary>
     <ul>
