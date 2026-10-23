@@ -11,7 +11,7 @@
   <title>Outil Sharpen — COSMO</title>
   <link rel="icon" href="../../assets/logo-64.png">
   <link rel="alternate" hreflang="en" href="../../tools/sharpen.html">
-  <link rel="stylesheet" href="../../style.css?v=20261021a">
+  <link rel="stylesheet" href="../../style.css?v=20261023a">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -58,7 +58,7 @@
   <p>Sur l'image linéaire, avant Denoise : la netteté a besoin de la vraie forme des étoiles, bruit compris.</p>
   <h2>Image</h2>
   <p>Travaille uniquement sur une image linéaire.</p>
-  <h2>Exemple</h2>
+  <h2>Exemples</h2>
   <figure class="compare" style="--ratio: 420 / 420">
     <img src="../../assets/ex-sharpen-after.jpg" alt="avec Sharpen" loading="lazy">
     <img class="compare-top" src="../../assets/ex-sharpen-before.jpg" alt="sans" loading="lazy">
@@ -67,6 +67,28 @@
     <input type="range" min="0" max="100" value="50" aria-label="Comparer : sans / avec Sharpen">
     <figcaption>Région de l'Homme qui court à 100 %, moteur COSMOSharp (expérimental). Image prise au Seestar S50 Pro.</figcaption>
   </figure>
+  <div class="compare-set">
+    <div class="compare-modes" role="group" aria-label="Comparer"><button type="button" aria-pressed="true" data-before="../../assets/ex-sharpen-6888-ensemble-blurx.jpg" data-after="../../assets/ex-sharpen-6888-ensemble-cosmo.jpg" data-left="BlurXTerminator" data-right="COSMOSharp v12">BlurXTerminator / COSMOSharp</button><button type="button" aria-pressed="false" data-before="../../assets/ex-sharpen-6888-ensemble-sans.jpg" data-after="../../assets/ex-sharpen-6888-ensemble-blurx.jpg" data-left="sans affinage" data-right="BlurXTerminator">Avant / après BlurXTerminator</button><button type="button" aria-pressed="false" data-before="../../assets/ex-sharpen-6888-ensemble-sans.jpg" data-after="../../assets/ex-sharpen-6888-ensemble-cosmo.jpg" data-left="sans affinage" data-right="COSMOSharp v12">Avant / après COSMOSharp</button></div>
+  <figure class="compare" style="--ratio: 640 / 480">
+    <img src="../../assets/ex-sharpen-6888-ensemble-cosmo.jpg" alt="COSMOSharp v12" loading="lazy">
+    <img class="compare-top" src="../../assets/ex-sharpen-6888-ensemble-blurx.jpg" alt="BlurXTerminator" loading="lazy">
+    <span class="tag left">BlurXTerminator</span><span class="tag right">COSMOSharp v12</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Comparer : BlurXTerminator / COSMOSharp v12">
+    <figcaption>NGC 6888 à 50 %, même pile et mêmes étapes après l'affinage (NoiseXTerminator, étirement asinh automatique) : BlurXTerminator à gauche, COSMOSharp v12 à droite, étoiles à 50 % et détail de la nébuleuse ×2. Les boutons montrent l'image avant et après chacun. Image prise au Seestar S50 Pro.</figcaption>
+  </figure>
+  </div>
+  <div class="compare-set">
+    <div class="compare-modes" role="group" aria-label="Comparer"><button type="button" aria-pressed="true" data-before="../../assets/ex-sharpen-6888-detail-blurx.jpg" data-after="../../assets/ex-sharpen-6888-detail-cosmo.jpg" data-left="BlurXTerminator" data-right="COSMOSharp v12">BlurXTerminator / COSMOSharp</button><button type="button" aria-pressed="false" data-before="../../assets/ex-sharpen-6888-detail-sans.jpg" data-after="../../assets/ex-sharpen-6888-detail-blurx.jpg" data-left="sans affinage" data-right="BlurXTerminator">Avant / après BlurXTerminator</button><button type="button" aria-pressed="false" data-before="../../assets/ex-sharpen-6888-detail-sans.jpg" data-after="../../assets/ex-sharpen-6888-detail-cosmo.jpg" data-left="sans affinage" data-right="COSMOSharp v12">Avant / après COSMOSharp</button></div>
+  <figure class="compare" style="--ratio: 640 / 480">
+    <img src="../../assets/ex-sharpen-6888-detail-cosmo.jpg" alt="COSMOSharp v12" loading="lazy">
+    <img class="compare-top" src="../../assets/ex-sharpen-6888-detail-blurx.jpg" alt="BlurXTerminator" loading="lazy">
+    <span class="tag left">BlurXTerminator</span><span class="tag right">COSMOSharp v12</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Comparer : BlurXTerminator / COSMOSharp v12">
+    <figcaption>La même comparaison à 100 %. Image prise au Seestar S50 Pro.</figcaption>
+  </figure>
+  </div>
   <div class="actions tool-links"><a class="button ghost" href="colour-calibration.html">← Colour calibration</a><a class="button ghost" href="../index.html#traitement">Tous les outils</a><a class="button ghost" href="denoise.html">Denoise →</a></div>
 </main>
 <footer class="site-footer">
@@ -77,10 +99,11 @@
     <a href="../confidentialite.html">Confidentialité</a>
     <a href="../licence.html">Licence</a>
     <a href="../changelog.html">Nouveautés</a>
+    <a href="mailto:contact@cosmo-astro.com">Contact</a>
   </nav>
   <small>© 2026 COSMO</small>
 </footer>
-<script src="../../app.js?v=20261021a"></script>
+<script src="../../app.js?v=20261023a"></script>
 <!-- mesure d'audience : GoatCounter, sans cookie ; les statistiques ne sont visibles que du proprietaire -->
 <script data-goatcounter="https://cosmo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

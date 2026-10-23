@@ -8,7 +8,7 @@
   <title>Nouveautés — COSMO</title>
   <link rel="icon" href="../assets/logo-64.png">
   <link rel="alternate" hreflang="en" href="../changelog.html">
-  <link rel="stylesheet" href="../style.css?v=20261021a">
+  <link rel="stylesheet" href="../style.css?v=20261023a">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -36,6 +36,31 @@
   <h1>Nouveautés</h1>
   <p class="lead">Ce qui change d'une version de COSMO à la suivante.</p>
   <section class="release">
+    <h2><span class="release-version">0.5.0</span> <time datetime="2026-10-23">23 octobre 2026</time></h2>
+    <ul>
+      <li><strong>COSMOSharp v12</strong> : des étoiles plus fines, aussi fines qu'avec BlurXTerminator à son réglage par défaut, et un réglage à part pour le détail de la nébuleuse. Toujours expérimental : une petite flammèche peut rester d'un côté des étoiles brillantes. Comparaison sur NGC 6888 ci-dessous.</li>
+      <li><strong>COSMOStars v49</strong> : moins de restes d'étoiles après la séparation (sur NGC 6888, environ un tiers de petits points en moins).</li>
+      <li><strong>Separate stars</strong> ne laisse plus d'anneau à la place des grosses étoiles brillantes : le liseré que StarXTerminator et COSMOStars y laissent (plus net après Sharpen) est effacé, la lueur douce autour de l'étoile reste.</li>
+      <li><strong>HDR multiscale</strong> fait ressortir la structure d'un cœur brillant au lieu de seulement l'assombrir. Il marche maintenant au mieux sur l'image linéaire, juste avant Stretch (sur M 42 aux 50 % par défaut, environ 1,5 fois plus de détail dans le cœur, sa luminosité gardée) ; sur une image étirée, le détail suit la baisse du cœur. Force par défaut : 50 %. Un nouveau bouton <strong>Preview stretched</strong> montre l'image linéaire telle que ton Stretch la rendra : on voit ce qu'apporte HDR pendant qu'on bouge les curseurs.</li>
+      <li><strong>Un nouvel écran d'accueil</strong> : un ciel de nuit avec des filés d'étoiles qui tournent autour de l'étoile Polaire, un smart télescope et une lunette sur l'horizon ; vos images récentes s'affichent en vignettes. Les panneaux sont un peu transparents, sur l'accueil comme avec une image.</li>
+      <li><strong>Un écran de démarrage</strong> avec la version, un mot sur les réseaux expérimentaux (avec une licence RC-Astro, mieux vaut l'utiliser) et un merci aux soutiens, avec le lien Ko-fi. On peut le désactiver.</li>
+      <li><strong>Pipeline Classic</strong> : il sépare maintenant les étoiles après l'étirement, leur rend leurs couleurs naturelles et les remet ; la partie nébuleuse vous est laissée libre. <strong>Reset</strong>, dans le menu des pipelines, vide le pipeline pour construire le vôtre.</li>
+      <li>Bouton <strong>Contact</strong>, en haut : copie contact@cosmo-astro.com, pour signaler un problème ou écrire. Le nom de l'image affiche l'objet (IC 1396A) avec le fichier dessous, et COSMO s'ouvre sur tout l'écran.</li>
+    </ul>
+  <div class="compare-set">
+    <div class="compare-modes" role="group" aria-label="Comparer"><button type="button" aria-pressed="true" data-before="../assets/ex-sharpen-6888-ensemble-blurx.jpg" data-after="../assets/ex-sharpen-6888-ensemble-cosmo.jpg" data-left="BlurXTerminator" data-right="COSMOSharp v12">BlurXTerminator / COSMOSharp</button><button type="button" aria-pressed="false" data-before="../assets/ex-sharpen-6888-ensemble-sans.jpg" data-after="../assets/ex-sharpen-6888-ensemble-blurx.jpg" data-left="sans affinage" data-right="BlurXTerminator">Avant / après BlurXTerminator</button><button type="button" aria-pressed="false" data-before="../assets/ex-sharpen-6888-ensemble-sans.jpg" data-after="../assets/ex-sharpen-6888-ensemble-cosmo.jpg" data-left="sans affinage" data-right="COSMOSharp v12">Avant / après COSMOSharp</button></div>
+  <figure class="compare" style="--ratio: 640 / 480">
+    <img src="../assets/ex-sharpen-6888-ensemble-cosmo.jpg" alt="COSMOSharp v12" loading="lazy">
+    <img class="compare-top" src="../assets/ex-sharpen-6888-ensemble-blurx.jpg" alt="BlurXTerminator" loading="lazy">
+    <span class="tag left">BlurXTerminator</span><span class="tag right">COSMOSharp v12</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Comparer : BlurXTerminator / COSMOSharp v12">
+    <figcaption>NGC 6888 à 50 %, même pile et mêmes étapes après l'affinage (NoiseXTerminator, étirement asinh automatique) : BlurXTerminator à gauche, COSMOSharp v12 à droite, étoiles à 50 % et détail de la nébuleuse ×2. Les boutons montrent l'image avant et après chacun. Image prise au Seestar S50 Pro.</figcaption>
+  </figure>
+  </div>
+    <figure class="release-figure"><img src="../assets/welcome-0.5.jpg" alt="Le nouvel écran d'accueil de COSMO 0.5.0 : des filés d'étoiles autour de l'étoile Polaire, un smart télescope et une lunette sur l'horizon, les images récentes en vignettes." loading="lazy"><figcaption>Le nouvel écran d'accueil de COSMO 0.5.0 : des filés d'étoiles autour de l'étoile Polaire, un smart télescope et une lunette sur l'horizon, les images récentes en vignettes.</figcaption></figure>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.4.1</span> <time datetime="2026-10-22">22 octobre 2026</time></h2>
     <ul>
       <li>Corrigé : <strong>Stack</strong> échouait tout à la fin, à l'enregistrement, avec des poses qui ne nomment pas leur filtre (« FITS header values must contain standard printable ASCII characters »).</li>
@@ -43,8 +68,8 @@
       <li>L'avertissement sur un ciel de couleur non neutre propose maintenant Background avec <em>Remove gradients</em> décoché quand la nébuleuse remplit le cadre.</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.4.0</span> <time datetime="2026-10-21">21 octobre 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.4.0</span> <time datetime="2026-10-21">21 octobre 2026</time></h2></summary>
     <ul>
       <li><strong>COSMO Fire &amp; Ice</strong>, la nouvelle palette par défaut de <em>Narrowband palette</em> : OIII en bleu, Hα en rouge, puis orange et jaune quand il s'éclaire. Ajustée sur une pile de la Draco traitée à la main (écart de couleur 0,029 sur toute l'image) ; là où les deux raies sont fortes, l'OIII compte moins, donc plus de blanc uni (NGC 6888 : 2,1 % du croissant presque blanc avant, moins de 0,1 % maintenant). Il ne reste que trois palettes : COSMO Fire &amp; Ice, HOO, SHO, sur des vignettes plus grandes.</li>
       <li><strong>Protect the sky</strong> (<em>Narrowband palette</em>) : retire l'OIII faible du fond ; pousser l'OIII ne fait plus de taches bleues dans le ciel.</li>
@@ -56,7 +81,7 @@
     </ul>
     <figure class="release-figure"><img src="../assets/fire-ice-fr.jpg" alt="Comment COSMO Fire & Ice colore une pile bi-bande (NGC 6888) : Hα et OIII tels que le filtre les enregistre, puis la palette. En dessous, ses couleurs, de l'OIII seul au Hα faible." loading="lazy"><figcaption>Comment COSMO Fire & Ice colore une pile bi-bande (NGC 6888) : Hα et OIII tels que le filtre les enregistre, puis la palette. En dessous, ses couleurs, de l'OIII seul au Hα faible.</figcaption></figure>
     <figure class="release-figure"><img src="../assets/ngc6888-fire-ice.jpg" alt="NGC 6888 traitée dans COSMO 0.4.0 : COSMO Fire & Ice sur la nébuleuse, Star colours d'après Gaia sur les étoiles. Seestar S50 Pro, filtre LP." loading="lazy"><figcaption>NGC 6888 traitée dans COSMO 0.4.0 : COSMO Fire & Ice sur la nébuleuse, Star colours d'après Gaia sur les étoiles. Seestar S50 Pro, filtre LP.</figcaption></figure>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.3.3</span> <time datetime="2026-10-19">19 octobre 2026</time></h2></summary>
     <ul>
@@ -96,10 +121,11 @@
     <a href="guide.html">Guide de démarrage</a>
     <a href="confidentialite.html">Confidentialité</a>
     <a href="licence.html">Licence</a>
+    <a href="mailto:contact@cosmo-astro.com">Contact</a>
   </nav>
   <small>© 2026 COSMO</small>
 </footer>
-<script src="../app.js?v=20261021a"></script>
+<script src="../app.js?v=20261023a"></script>
 <!-- mesure d'audience : GoatCounter, sans cookie ; les statistiques ne sont visibles que du proprietaire -->
 <script data-goatcounter="https://cosmo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

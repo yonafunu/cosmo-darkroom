@@ -147,6 +147,11 @@ figcaption { margin-top: 14px; font-size: 14px; color: var(--muted); }
 .tag.left { left: 12px; }
 .tag.right { right: 12px; }
 .compare figcaption { text-align: center; }
+.compare-set { margin: 32px auto 0; }
+.compare-modes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0 auto 14px; }
+.compare-modes button { padding: 7px 14px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.22); background: rgba(10, 11, 16, 0.35); color: var(--soft); font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; transition: background 0.2s, color 0.2s, border-color 0.2s; }
+.compare-modes button:hover { color: var(--text); border-color: rgba(255, 255, 255, 0.4); }
+.compare-modes button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #06141c; }
 
 .comet { display: grid; gap: 18px; }
 .film video { width: 100%; max-width: 560px; aspect-ratio: 1; object-fit: cover; margin: 0 auto; border-radius: 14px; background: #000; }

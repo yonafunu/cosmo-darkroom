@@ -8,7 +8,7 @@
   <title>Changelog — COSMO</title>
   <link rel="icon" href="assets/logo-64.png">
   <link rel="alternate" hreflang="fr" href="fr/changelog.html">
-  <link rel="stylesheet" href="style.css?v=20261021a">
+  <link rel="stylesheet" href="style.css?v=20261023a">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -36,6 +36,31 @@
   <h1>Changelog</h1>
   <p class="lead">What changes from one version of COSMO to the next.</p>
   <section class="release">
+    <h2><span class="release-version">0.5.0</span> <time datetime="2026-10-23">23 October 2026</time></h2>
+    <ul>
+      <li><strong>COSMOSharp v12</strong>: sharper stars, as fine as BlurXTerminator at its default setting, with a separate setting for the nebula detail. Still experimental: a little flare can remain on one side of bright stars. Compare on NGC 6888 below.</li>
+      <li><strong>COSMOStars v49</strong>: fewer remains of stars after the separation (on NGC 6888, about a third fewer small dots).</li>
+      <li><strong>Separate stars</strong> no longer leaves a ring where the big bright stars were: the thin rim that StarXTerminator and COSMOStars leave on them (sharper after Sharpen) is taken out, the soft glow around the star stays.</li>
+      <li><strong>HDR multiscale</strong> reveals the structure of a bright core instead of just darkening it. It now works best on the linear image, just before Stretch (on M 42 at the default 50 %, about 1.5 times more detail in the core, its brightness kept); on a stretched image, the detail follows the core down. Default strength 50 %. A new <strong>Preview stretched</strong> button shows the linear image as your Stretch will make it, so you see what HDR brings out while you move the sliders.</li>
+      <li><strong>A new welcome screen</strong>: a night sky with star trails turning around the Pole Star, a smart telescope and a refractor on the horizon; your recent images now show as thumbnails. The side panels are a little transparent, on the welcome screen and with an image.</li>
+      <li><strong>A startup screen</strong> with the version, a word on the experimental networks (if you have an RC-Astro licence, prefer it) and a thank-you to the supporters, with the Ko-fi link. It can be turned off.</li>
+      <li><strong>Classic pipeline</strong>: it now separates the stars after the stretch, gives them their natural colours and puts them back; the nebula part is left free for you. <strong>Reset</strong>, in the pipeline menu, empties the pipeline to build your own.</li>
+      <li><strong>Contact</strong> button, at the top: copies contact@cosmo-astro.com, to report a problem or write. The image name shows the object (IC 1396A) with the file below, and COSMO opens on the whole screen.</li>
+    </ul>
+  <div class="compare-set">
+    <div class="compare-modes" role="group" aria-label="Compare"><button type="button" aria-pressed="true" data-before="assets/ex-sharpen-6888-ensemble-blurx.jpg" data-after="assets/ex-sharpen-6888-ensemble-cosmo.jpg" data-left="BlurXTerminator" data-right="COSMOSharp v12">BlurXTerminator / COSMOSharp</button><button type="button" aria-pressed="false" data-before="assets/ex-sharpen-6888-ensemble-sans.jpg" data-after="assets/ex-sharpen-6888-ensemble-blurx.jpg" data-left="without sharpening" data-right="BlurXTerminator">Before / after BlurXTerminator</button><button type="button" aria-pressed="false" data-before="assets/ex-sharpen-6888-ensemble-sans.jpg" data-after="assets/ex-sharpen-6888-ensemble-cosmo.jpg" data-left="without sharpening" data-right="COSMOSharp v12">Before / after COSMOSharp</button></div>
+  <figure class="compare" style="--ratio: 640 / 480">
+    <img src="assets/ex-sharpen-6888-ensemble-cosmo.jpg" alt="COSMOSharp v12" loading="lazy">
+    <img class="compare-top" src="assets/ex-sharpen-6888-ensemble-blurx.jpg" alt="BlurXTerminator" loading="lazy">
+    <span class="tag left">BlurXTerminator</span><span class="tag right">COSMOSharp v12</span>
+    <span class="handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="Compare : BlurXTerminator / COSMOSharp v12">
+    <figcaption>NGC 6888 at 50 %, same stack and the same steps after sharpening (NoiseXTerminator, automatic asinh stretch): BlurXTerminator on the left, COSMOSharp v12 on the right, stars to 50 % and nebula detail ×2. The buttons show the image before and after each one. Image taken with a Seestar S50 Pro.</figcaption>
+  </figure>
+  </div>
+    <figure class="release-figure"><img src="assets/welcome-0.5.jpg" alt="The new welcome screen of COSMO 0.5.0: star trails around the Pole Star, a smart telescope and a refractor on the horizon, the recent images as thumbnails." loading="lazy"><figcaption>The new welcome screen of COSMO 0.5.0: star trails around the Pole Star, a smart telescope and a refractor on the horizon, the recent images as thumbnails.</figcaption></figure>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.4.1</span> <time datetime="2026-10-22">22 October 2026</time></h2>
     <ul>
       <li>Fixed: <strong>Stack</strong> failed at the very end, when saving, with subs that do not name their filter (“FITS header values must contain standard printable ASCII characters”).</li>
@@ -43,8 +68,8 @@
       <li>The warning about a sky colour that is not neutral now suggests Background with <em>Remove gradients</em> off when the nebula fills the frame.</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.4.0</span> <time datetime="2026-10-21">21 October 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.4.0</span> <time datetime="2026-10-21">21 October 2026</time></h2></summary>
     <ul>
       <li><strong>COSMO Fire &amp; Ice</strong>, the new default of <em>Narrowband palette</em>: OIII blue, Hα red, then orange and yellow as it brightens. Fitted on a hand-processed Draco stack (colour gap 0.029 over the whole image); where both lines are bright, OIII counts less, so no flat white (NGC 6888: 2.1 % of the crescent near white before, under 0.1 % now). Only three palettes remain: COSMO Fire &amp; Ice, HOO, SHO, on bigger thumbnails.</li>
       <li><strong>Protect the sky</strong> (<em>Narrowband palette</em>): takes the faint OIII out of the background, so raising OIII no longer turns the sky into blue patches.</li>
@@ -56,7 +81,7 @@
     </ul>
     <figure class="release-figure"><img src="assets/fire-ice-en.jpg" alt="How COSMO Fire & Ice colours a dual-band stack (NGC 6888): Hα and OIII as the filter records them, then the palette. Below, its colours from OIII alone to faint Hα." loading="lazy"><figcaption>How COSMO Fire & Ice colours a dual-band stack (NGC 6888): Hα and OIII as the filter records them, then the palette. Below, its colours from OIII alone to faint Hα.</figcaption></figure>
     <figure class="release-figure"><img src="assets/ngc6888-fire-ice.jpg" alt="NGC 6888 processed in COSMO 0.4.0: COSMO Fire & Ice on the nebula, Star colours from Gaia on the stars. Seestar S50 Pro, LP filter." loading="lazy"><figcaption>NGC 6888 processed in COSMO 0.4.0: COSMO Fire & Ice on the nebula, Star colours from Gaia on the stars. Seestar S50 Pro, LP filter.</figcaption></figure>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.3.3</span> <time datetime="2026-10-19">19 October 2026</time></h2></summary>
     <ul>
@@ -96,10 +121,11 @@
     <a href="guide.html">Getting started</a>
     <a href="privacy.html">Privacy</a>
     <a href="licence.html">Licence</a>
+    <a href="mailto:contact@cosmo-astro.com">Contact</a>
   </nav>
   <small>© 2026 COSMO</small>
 </footer>
-<script src="app.js?v=20261021a"></script>
+<script src="app.js?v=20261023a"></script>
 <!-- mesure d'audience : GoatCounter, sans cookie ; les statistiques ne sont visibles que du proprietaire -->
 <script data-goatcounter="https://cosmo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

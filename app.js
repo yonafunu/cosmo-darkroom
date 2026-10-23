@@ -38,6 +38,26 @@
     measure();
   });
 
+  // Une comparaison a plusieurs paires : les boutons changent les deux images et leurs etiquettes.
+  document.querySelectorAll(".compare-set").forEach((set) => {
+    const figure = set.querySelector(".compare");
+    const [under, top] = figure.querySelectorAll("img");
+    const left = figure.querySelector(".tag.left");
+    const right = figure.querySelector(".tag.right");
+    const input = figure.querySelector("input[type=range]");
+    const label = input.getAttribute("aria-label").split(" : ")[0];
+    set.querySelectorAll(".compare-modes button").forEach((button) => {
+      button.addEventListener("click", () => {
+        set.querySelectorAll(".compare-modes button").forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+        top.src = button.dataset.before;
+        under.src = button.dataset.after;
+        top.alt = left.textContent = button.dataset.left;
+        under.alt = right.textContent = button.dataset.right;
+        input.setAttribute("aria-label", `${label} : ${button.dataset.left} / ${button.dataset.right}`);
+      });
+    });
+  });
+
   // La galerie : un clic agrandit l'image et donne sa recette.
   const lightbox = document.getElementById("lightbox");
   if (lightbox && typeof lightbox.showModal === "function") {
