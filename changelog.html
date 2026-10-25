@@ -36,6 +36,21 @@
   <h1>Changelog</h1>
   <p class="lead">What changes from one version of COSMO to the next.</p>
   <section class="release">
+    <h2><span class="release-version">0.6.0</span> <time datetime="2026-10-25">25 October 2026</time></h2>
+    <ul>
+      <li><strong>The Lab</strong> (button next to Analysis, or <em>Ctrl+L</em>) places your image in the universe. <strong>3D universe</strong>: the stars of your image at their Gaia distances, in deep space, with a short flight to start and a <em>Fly</em> button; the flight can be saved as a video or an animated image. <strong>Deep field</strong>: the galaxies and nebulae of the image at their measured distances (Markarian's Chain, about 60 million light years away, and the far sky behind it). <strong>Discoveries</strong>: what the image holds that you would not think of looking for (the nearest star, brown dwarfs, true double stars…), grouped by kind, with <em>Show all</em>. <strong>Milky Way</strong>: where your object sits in our galaxy. <strong>HR diagram</strong> and <strong>Light time</strong>: when the light of your image left, set against history. The Lab asks Gaia, SIMBAD and SkyBoT; only the coordinates of the image are sent.</li>
+      <li><strong>COSMO in French</strong>: the flag at the top switches the language (COSMO restarts). The tool names stay in English, as people know them; pipelines are the same files in both languages.</li>
+      <li><strong>One Stars tool</strong>: <em>Separate</em>, <em>Reduce</em> or <em>Remove</em>, chosen at the top of the tool, instead of separate tools that were easy to mix up.</li>
+      <li><strong>A compact top bar</strong> on narrow screens, and a cleaner welcome screen: the side panels show only once an image is open.</li>
+      <li><strong>Stack</strong>: darks and flats whose colour pattern is written differently (in small letters or with a trailing space, as some SharpCap files do) are accepted.</li>
+    </ul>
+    <figure class="release-figure"><img src="assets/lab-3d-en.jpg" alt="The Lab, 3D universe: the stars of HD 335129 at their Gaia distances, from the Earth to the farthest one (about 51,000 light years), the image hung behind them." loading="lazy"><figcaption>The Lab, 3D universe: the stars of HD 335129 at their Gaia distances, from the Earth to the farthest one (about 51,000 light years), the image hung behind them.</figcaption></figure>
+    <figure class="release-figure"><img src="assets/lab-deep-en.jpg" alt="Deep field: the galaxies of Markarian's Chain at their measured distances, the far sky behind them. Image made from Pan-STARRS survey data." loading="lazy"><figcaption>Deep field: the galaxies of Markarian's Chain at their measured distances, the far sky behind them. Image made from Pan-STARRS survey data.</figcaption></figure>
+    <figure class="release-figure"><img src="assets/lab-finds-en.jpg" alt="Discoveries on M 42: the nearest star of the image, brown dwarfs, the farthest star Gaia could measure, true double stars." loading="lazy"><figcaption>Discoveries on M 42: the nearest star of the image, brown dwarfs, the farthest star Gaia could measure, true double stars.</figcaption></figure>
+    <figure class="release-figure"><img src="assets/lab-milkyway-en.jpg" alt="Milky Way: where NGC 6888 sits in our galaxy. Illustration NASA/JPL-Caltech/ESO/R. Hurt." loading="lazy"><figcaption>Milky Way: where NGC 6888 sits in our galaxy. Illustration NASA/JPL-Caltech/ESO/R. Hurt.</figcaption></figure>
+    <figure class="release-figure"><img src="assets/lab-time-en.jpg" alt="Light time: when the light of the stars of NGC 6888 left, set against history." loading="lazy"><figcaption>Light time: when the light of the stars of NGC 6888 left, set against history.</figcaption></figure>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.5.0</span> <time datetime="2026-10-23">23 October 2026</time></h2>
     <ul>
       <li><strong>COSMOSharp v12</strong>: sharper stars, as fine as BlurXTerminator at its default setting, with a separate setting for the nebula detail. Still experimental: a little flare can remain on one side of bright stars. Compare on NGC 6888 below.</li>
@@ -60,14 +75,14 @@
   </div>
     <figure class="release-figure"><img src="assets/welcome-0.5.jpg" alt="The new welcome screen of COSMO 0.5.0: star trails around the Pole Star, a smart telescope and a refractor on the horizon, the recent images as thumbnails." loading="lazy"><figcaption>The new welcome screen of COSMO 0.5.0: star trails around the Pole Star, a smart telescope and a refractor on the horizon, the recent images as thumbnails.</figcaption></figure>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.4.1</span> <time datetime="2026-10-22">22 October 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.4.1</span> <time datetime="2026-10-22">22 October 2026</time></h2></summary>
     <ul>
       <li>Fixed: <strong>Stack</strong> failed at the very end, when saving, with subs that do not name their filter (“FITS header values must contain standard printable ASCII characters”).</li>
       <li><strong>Stretch</strong>, automatic start: the black point now sits just under the darkest parts of the image. A nebula filling the frame (IC 1396) no longer comes out as a flat, milky veil; on an ordinary field nothing changes.</li>
       <li>The warning about a sky colour that is not neutral now suggests Background with <em>Remove gradients</em> off when the nebula fills the frame.</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.4.0</span> <time datetime="2026-10-21">21 October 2026</time></h2></summary>
     <ul>
