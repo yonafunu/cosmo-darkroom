@@ -46,6 +46,16 @@
   <p><strong>Open</strong> ouvre un FITS, un TIFF, un PNG ou un JPEG. <strong>Stack</strong> part d'un dossier de poses : COSMO les analyse, vous choisissez celles à garder, puis il les empile.</p>
   <p>Une image linéaire paraît noire : COSMO l'éclaircit à l'écran pour que vous la voyiez, sans toucher à ses données.</p>
 
+  <h3>Calibration : offsets, darks, flats</h3>
+  <p>COSMO trouve lui-même les poses de calibration dans le dossier choisi et ses sous-dossiers, ou juste à côté (un dossier <em>DARK</em> ou <em>FLAT</em> à côté de <em>LIGHT</em>). Il reconnaît chaque sorte à l'en-tête FITS (<code>IMAGETYP</code>) ou au nom du fichier ou du dossier : <em>bias</em> ou <em>offset</em>, <em>dark</em>, <em>flat</em>, <em>darkflat</em>. Il garde les darks de la durée des poses et les flats de leur filtre. Les poses déjà calibrées dans l'appareil (Seestar) n'en ont pas besoin.</p>
+
+  <h3>Plusieurs nuits</h3>
+  <p>Choisissez le dossier qui contient toutes les nuits, ou ajoutez-les une par une avec <strong>Ajouter un dossier…</strong> si elles sont rangées à des endroits différents : COSMO les sépare tout seul (plus de 6 heures sans pose entre deux) et les empile ensemble. Chaque nuit est calibrée avec ses propres poses : celles de son dossier, sinon celles datées de la nuit (des flats faits le lendemain matin), sinon celles qui ne sont à aucune nuit (une bibliothèque de darks), sinon celles de la nuit la plus proche. La fenêtre <strong>Stack</strong> liste les nuits et dit d'où vient chaque calibration ; le bouton <strong>?</strong> le rappelle.</p>
+  <pre>M 27/
+  2026-09-05/   lights/  flats/
+  2026-09-13/   lights/  flats/
+  darks/        (une bibliothèque de darks, pour toutes les nuits)</pre>
+
   <h2><span>03</span> Suivre le fil</h2>
   <p>À gauche, les étapes du pipeline <strong>Classic</strong> sont déjà en place, reliées par un fil. En bleu, celles qui travaillent sur l'image linéaire ; en rose, celles qui viennent après l'étirement.</p>
   <ol>

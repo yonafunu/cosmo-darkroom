@@ -46,6 +46,16 @@
   <p><strong>Open</strong> opens a FITS, TIFF, PNG or JPEG file. <strong>Stack</strong> starts from a folder of sub-exposures: COSMO analyses them, you choose which to keep, then it stacks them.</p>
   <p>A linear image looks black: COSMO brightens it on screen so that you can see it, without touching its data.</p>
 
+  <h3>Calibration: bias, darks, flats</h3>
+  <p>COSMO finds the calibration frames itself, in the chosen folder and its subfolders, or next to it (a <em>DARK</em> or <em>FLAT</em> folder beside <em>LIGHT</em>). It knows each kind from the FITS header (<code>IMAGETYP</code>) or from the name of the file or folder: <em>bias</em> or <em>offset</em>, <em>dark</em>, <em>flat</em>, <em>darkflat</em>. It keeps the darks of the subs' length and the flats of their filter. Subs already calibrated in the camera (Seestar) need none.</p>
+
+  <h3>Several nights</h3>
+  <p>Choose the folder that holds all the nights, or add them one by one with <strong>Add folder…</strong> if they are kept in different places: COSMO splits them by itself (more than 6 hours without a sub between two) and stacks them together. Each night is calibrated with its own frames: those in its folder, else those dated from that night (flats taken the next morning), else those of no night (a library of darks), else those of the nearest night. The <strong>Stack</strong> window lists the nights and says where each calibration comes from; the <strong>?</strong> button recalls it.</p>
+  <pre>M 27/
+  2026-09-05/   lights/  flats/
+  2026-09-13/   lights/  flats/
+  darks/        (a library of darks, for every night)</pre>
+
   <h2><span>03</span> Follow the sequence</h2>
   <p>On the left, the steps of the <strong>Classic</strong> pipeline are already in place, linked by a thread. In blue, those that work on the linear image; in pink, those that come after the stretch.</p>
   <ol>

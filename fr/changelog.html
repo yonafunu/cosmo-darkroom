@@ -36,6 +36,21 @@
   <h1>Nouveautés</h1>
   <p class="lead">Ce qui change d'une version de COSMO à la suivante.</p>
   <section class="release">
+    <h2><span class="release-version">0.7.0</span> <time datetime="2026-10-31">31 octobre 2026</time></h2>
+    <ul>
+      <li><strong>Stack, plusieurs nuits</strong> : les poses de plusieurs nuits vont dans une même pile, chaque nuit calibrée avec ses propres darks et flats. <em>Ajouter un dossier</em> apporte une autre nuit, et chaque pose montre d'où elle vient.</li>
+      <li><strong>Fenêtre Stack redessinée</strong> dans le style de COSMO : des étapes, une carte par nuit, un bouton principal, une carte du ciel en fond pendant la préparation. Les dossiers incompatibles sont expliqués, les darks Seestar mieux pris en charge, et le choix du dossier s'ouvre à côté du dernier dossier de poses.</li>
+      <li><strong>Alignement sur les champs pauvres en étoiles</strong> (longue focale, nébuleuses planétaires) : une pose qui montre trop peu d'étoiles est relue à un seuil plus bas, et plus de poses sont gardées. Un nouveau volet <strong>Alignement avancé</strong>, replié par défaut, propose des curseurs pour le seuil de détection, les étoiles floues, la transparence, les étoiles appariées et le décalage maximal, avec <em>Réinitialiser</em>. Une pose prise à l'aube ou sous la Lune n'est plus choisie comme référence (sur une série Seestar de C 15, 75 poses sur 81 gardées au lieu d'aucune).</li>
+      <li><strong>COSMOSharp v15</strong> : environ deux fois moins de halo lointain et de lueur d'un seul côté des étoiles que v12. Toujours expérimental.</li>
+      <li><strong>Avant / après</strong> de l'étape choisie, avec une barre qu'on fait glisser sur l'image.</li>
+      <li><strong>Export en plusieurs formats d'un coup</strong> (FITS, TIFF, PNG, JPEG) sous le même nom ; les formats cochés sont retenus pour la fois suivante.</li>
+      <li><strong>Narrowband palette</strong> s'ouvre à 45 % de force, et les vignettes de la planche montrent cette force.</li>
+      <li><strong>Lab</strong> : de nouvelles pages pour la découverte de l'objet, sa vue dans <strong>d'autres lumières</strong> (rayons X, infrarouge…) avec un mode <em>Superposer</em>, une <strong>visite guidée</strong> de votre image en pleine résolution, une étoile racontée comme un personnage et ce que l'objet voit de nous. <strong>Temps de lumière</strong> redessiné : époques, repères historiques, une rivière de vos étoiles, objets épinglés et un photon à suivre.</li>
+      <li><strong>Linux</strong> : COSMO existe maintenant en AppImage et en .tar.gz (x86_64).</li>
+      <li>Résolution de bugs mineurs (nombres en français dans l'Analyse, bouton de profondeur Gaia, la vue qui reste sur la nébuleuse après <em>Separate</em>).</li>
+    </ul>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.6.2</span> <time datetime="2026-10-27">27 octobre 2026</time></h2>
     <ul>
       <li><strong>COSMOStars v54</strong> : la nébuleuse garde son relief après la séparation. Les versions précédentes l'avaient peu à peu lissé ; v54 garde environ 40 % de relief fin (3 à 8 pixels) en plus sur le Croissant, et les fins filaments des Dentelles ne sont plus retirés comme des étoiles.</li>
@@ -46,8 +61,8 @@
       <li>Résolution de bugs mineurs.</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.6.0</span> <time datetime="2026-10-25">25 octobre 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.6.0</span> <time datetime="2026-10-25">25 octobre 2026</time></h2></summary>
     <ul>
       <li><strong>Le Lab</strong> (bouton à côté d'Analysis, ou <em>Ctrl+L</em>) place votre image dans l'univers. <strong>Univers 3D</strong> : les étoiles de votre image à leurs distances Gaia, dans l'espace profond, avec un court vol d'ouverture et un bouton <em>Voler</em> ; le vol peut être enregistré en vidéo ou en image animée. <strong>Deep field</strong> : les galaxies et nébuleuses de l'image à leurs distances mesurées (la chaîne de Markarian, à environ 60 millions d'années-lumière, et le ciel lointain derrière). <strong>Découvertes</strong> : ce que l'image contient sans qu'on pense à le chercher (l'étoile la plus proche, des naines brunes, de vraies étoiles doubles…), regroupé par sorte, avec <em>Tout afficher</em>. <strong>Voie lactée</strong> : où se trouve votre objet dans notre galaxie. <strong>Diagramme HR</strong> et <strong>Temps de lumière</strong> : quand la lumière de votre image est partie, face à l'histoire. Le Lab interroge Gaia, SIMBAD et SkyBoT ; seules les coordonnées de l'image sont envoyées.</li>
       <li><strong>COSMO en français</strong> : le drapeau en haut change la langue (COSMO redémarre). Les noms des outils restent en anglais, tels qu'on les connaît ; les pipelines sont les mêmes fichiers dans les deux langues.</li>
@@ -60,7 +75,7 @@
     <figure class="release-figure"><img src="../assets/lab-finds-fr.jpg" alt="Découvertes sur M 42 : l'étoile la plus proche de l'image, des naines brunes, l'étoile la plus lointaine que Gaia a pu mesurer, de vraies étoiles doubles." loading="lazy"><figcaption>Découvertes sur M 42 : l'étoile la plus proche de l'image, des naines brunes, l'étoile la plus lointaine que Gaia a pu mesurer, de vraies étoiles doubles.</figcaption></figure>
     <figure class="release-figure"><img src="../assets/lab-milkyway-fr.jpg" alt="Voie lactée : où se trouve NGC 6888 dans notre galaxie. Illustration NASA/JPL-Caltech/ESO/R. Hurt." loading="lazy"><figcaption>Voie lactée : où se trouve NGC 6888 dans notre galaxie. Illustration NASA/JPL-Caltech/ESO/R. Hurt.</figcaption></figure>
     <figure class="release-figure"><img src="../assets/lab-time-fr.jpg" alt="Temps de lumière : quand la lumière des étoiles de NGC 6888 est partie, face à l'histoire." loading="lazy"><figcaption>Temps de lumière : quand la lumière des étoiles de NGC 6888 est partie, face à l'histoire.</figcaption></figure>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.5.0</span> <time datetime="2026-10-23">23 octobre 2026</time></h2></summary>
     <ul>

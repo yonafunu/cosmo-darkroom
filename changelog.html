@@ -36,6 +36,21 @@
   <h1>Changelog</h1>
   <p class="lead">What changes from one version of COSMO to the next.</p>
   <section class="release">
+    <h2><span class="release-version">0.7.0</span> <time datetime="2026-10-31">31 October 2026</time></h2>
+    <ul>
+      <li><strong>Stack, several nights</strong>: subs from several nights go into one stack, each night calibrated with its own darks and flats. <em>Add folder</em> brings another night, and each sub shows where it comes from.</li>
+      <li><strong>Stack window redrawn</strong> in COSMO's style: steps, a card per night, one main button, a sky map behind it while preparing. Incompatible folders are explained, Seestar darks are handled better, and the folder dialog opens next to the last subs folder.</li>
+      <li><strong>Alignment on star-poor fields</strong> (long focal length, planetary nebulae): a sub that shows too few stars is searched again at a lower threshold, and more subs are kept. A new <strong>Advanced alignment</strong> panel, folded by default, has sliders for the detection threshold, blurred stars, transparency, paired stars and largest shift, with <em>Reset</em>. A sub taken at dawn or under the Moon is no longer chosen as the reference (on a Seestar series of C 15, 75 of 81 subs kept instead of none).</li>
+      <li><strong>COSMOSharp v15</strong>: about half the far halo and half the one-sided glow of v12 around stars. Still experimental.</li>
+      <li><strong>Before / after</strong> of the selected step, with a bar dragged across the image.</li>
+      <li><strong>Export in several formats at once</strong> (FITS, TIFF, PNG, JPEG) under the same name; the formats ticked are kept for next time.</li>
+      <li><strong>Narrowband palette</strong> opens at 45 % amount, and the contact-sheet thumbnails show that amount.</li>
+      <li><strong>Lab</strong>: new pages for the object's discovery, its view in <strong>other lights</strong> (X-rays, infrared…) with an <em>Overlay</em> mode, a <strong>guided tour</strong> of your image at full resolution, a star told as a character and what the object sees of us. <strong>Light time</strong> redrawn: eras, history landmarks, a river of your stars, pinned objects and a photon to follow.</li>
+      <li><strong>Linux</strong>: COSMO is now available as an AppImage and a .tar.gz (x86_64).</li>
+      <li>Minor bug fixes (French numbers in the Analysis, the Gaia depth button, the view staying on the nebula after <em>Separate</em>).</li>
+    </ul>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.6.2</span> <time datetime="2026-10-27">27 October 2026</time></h2>
     <ul>
       <li><strong>COSMOStars v54</strong>: the nebula keeps its relief after the separation. The previous versions had slowly smoothed it away; v54 keeps about 40 % more fine relief (3 to 8 pixels) on the Crescent, and the thin filaments of the Veil are no longer removed as stars.</li>
@@ -46,8 +61,8 @@
       <li>Minor bug fixes.</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.6.0</span> <time datetime="2026-10-25">25 October 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.6.0</span> <time datetime="2026-10-25">25 October 2026</time></h2></summary>
     <ul>
       <li><strong>The Lab</strong> (button next to Analysis, or <em>Ctrl+L</em>) places your image in the universe. <strong>3D universe</strong>: the stars of your image at their Gaia distances, in deep space, with a short flight to start and a <em>Fly</em> button; the flight can be saved as a video or an animated image. <strong>Deep field</strong>: the galaxies and nebulae of the image at their measured distances (Markarian's Chain, about 60 million light years away, and the far sky behind it). <strong>Discoveries</strong>: what the image holds that you would not think of looking for (the nearest star, brown dwarfs, true double stars…), grouped by kind, with <em>Show all</em>. <strong>Milky Way</strong>: where your object sits in our galaxy. <strong>HR diagram</strong> and <strong>Light time</strong>: when the light of your image left, set against history. The Lab asks Gaia, SIMBAD and SkyBoT; only the coordinates of the image are sent.</li>
       <li><strong>COSMO in French</strong>: the flag at the top switches the language (COSMO restarts). The tool names stay in English, as people know them; pipelines are the same files in both languages.</li>
@@ -60,7 +75,7 @@
     <figure class="release-figure"><img src="assets/lab-finds-en.jpg" alt="Discoveries on M 42: the nearest star of the image, brown dwarfs, the farthest star Gaia could measure, true double stars." loading="lazy"><figcaption>Discoveries on M 42: the nearest star of the image, brown dwarfs, the farthest star Gaia could measure, true double stars.</figcaption></figure>
     <figure class="release-figure"><img src="assets/lab-milkyway-en.jpg" alt="Milky Way: where NGC 6888 sits in our galaxy. Illustration NASA/JPL-Caltech/ESO/R. Hurt." loading="lazy"><figcaption>Milky Way: where NGC 6888 sits in our galaxy. Illustration NASA/JPL-Caltech/ESO/R. Hurt.</figcaption></figure>
     <figure class="release-figure"><img src="assets/lab-time-en.jpg" alt="Light time: when the light of the stars of NGC 6888 left, set against history." loading="lazy"><figcaption>Light time: when the light of the stars of NGC 6888 left, set against history.</figcaption></figure>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.5.0</span> <time datetime="2026-10-23">23 October 2026</time></h2></summary>
     <ul>

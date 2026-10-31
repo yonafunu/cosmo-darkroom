@@ -242,6 +242,8 @@ dialog .close { position: sticky; float: right; top: 12px; margin: 12px 12px -52
 .doc ol { padding-left: 22px; display: grid; gap: 8px; }
 .doc strong { color: var(--text); }
 .doc code { padding: 2px 6px; border-radius: 6px; background: rgba(255, 255, 255, 0.08); font-size: 0.9em; }
+.doc h3 { margin-top: 30px; font-size: 19px; letter-spacing: -0.01em; }
+.doc pre { margin-top: 14px; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.04); color: var(--soft); font-size: 13.5px; line-height: 1.5; overflow-x: auto; }
 .doc a:not(.button) { color: var(--accent); }
 .doc .actions { margin-top: 48px; }
 .doc figure { margin-top: 28px; }
@@ -339,6 +341,7 @@ code { padding: 2px 6px; border-radius: 6px; background: rgba(255, 255, 255, 0.0
 
 /* ── Téléchargement ── */
 .installers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 720px; margin: 34px auto 0; }
+.installers.three { grid-template-columns: repeat(3, 1fr); max-width: 1020px; }
 .installer { display: grid; gap: 4px; padding: 24px; border-radius: var(--radius); border: 1px solid var(--line); background: rgba(255, 255, 255, 0.04); text-decoration: none; text-align: left; transition: border-color 0.2s, transform 0.2s, background 0.2s; }
 .installer:hover { border-color: var(--accent); background: rgba(90, 200, 250, 0.08); transform: translateY(-2px); }
 .installer strong { font-size: 22px; letter-spacing: -0.02em; }
@@ -351,7 +354,7 @@ code { padding: 2px 6px; border-radius: 6px; background: rgba(255, 255, 255, 0.0
 .checksums { max-width: 720px; margin: 18px auto 0; text-align: left; font-size: 13.5px; color: var(--muted); }
 .checksums summary { cursor: pointer; }
 .checksums p { margin-top: 8px; overflow-wrap: anywhere; }
-@media (max-width: 760px) { .installers { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .installers, .installers.three { grid-template-columns: 1fr; } }
 
 /* ── Licence ── */
 .doc.licence h2 { font-size: 19px; margin-top: 36px; }
