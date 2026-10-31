@@ -408,3 +408,12 @@ code { padding: 2px 6px; border-radius: 6px; background: rgba(255, 255, 255, 0.0
 .progress-bar i { position: absolute; inset: 0 auto 0 0; width: var(--done); border-radius: inherit; background: var(--thread); }
 .progress-list p { margin: 10px 0 0; color: var(--soft); font-size: 14.5px; line-height: 1.45; }
 @media (max-width: 760px) { .progress-list { grid-template-columns: 1fr; } }
+
+/* ── Lien vers la page Facebook (un simple lien : aucun script de Facebook n'est charge) ── */
+.button svg { margin-right: 9px; }
+.site-footer nav .follow-link { display: inline-flex; align-items: center; gap: 6px; }
+/* icone seule dans la barre du haut ; dans le menu replie, le mot s'affiche a cote */
+.site-header nav .nav-social { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 36px; min-height: 36px; padding: 0 9px; border: 1px solid rgba(120, 160, 255, 0.4); border-radius: 999px; color: #9db8ff; }
+.site-header nav .nav-social:hover { color: #fff; background: #1877f2; border-color: #1877f2; }
+.site-header nav .nav-social span { display: none; }
+@media (max-width: 960px) { .site-header nav .nav-social span { display: inline; } }
