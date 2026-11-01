@@ -37,6 +37,12 @@
   <h1>Changelog</h1>
   <p class="lead">What changes from one version of COSMO to the next.</p>
   <section class="release">
+    <h2><span class="release-version">0.8.1</span> <time datetime="2026-11-01">1 November 2026</time></h2>
+    <ul>
+      <li><strong>StarNet</strong>: in the installed versions of 0.8.0, the starless image StarNet returns could not be read ("lzw_decode" error), and neither could a compressed TIFF opened in COSMO. The missing decoder is now included, and Qt's TIFF reader takes over if it ever fails.</li>
+    </ul>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.8.0</span> <time datetime="2026-11-01">1 November 2026</time></h2>
     <ul>
       <li><strong>Stack, mosaic</strong>: a <em>Mosaic</em> switch in the Stack window. The panels are found from the pointing and confirmed by the stars, each panel is stacked on its own, then they are joined without visible seams (matched backgrounds, blended edges). A final <strong>Framing</strong> step shows where each panel sits.</li>
@@ -48,8 +54,8 @@
     </ul>
     <figure class="release-figure"><img src="assets/mosaic-m45.jpg" alt="Mosaic stack: M 45 from a Seestar mosaic, the outline of each panel drawn over it, as in the Framing step." loading="lazy"><figcaption>Mosaic stack: M 45 from a Seestar mosaic, the outline of each panel drawn over it, as in the Framing step.</figcaption></figure>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.7.0</span> <time datetime="2026-10-31">31 October 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.7.0</span> <time datetime="2026-10-31">31 October 2026</time></h2></summary>
     <ul>
       <li><strong>Stack, several nights</strong>: subs from several nights go into one stack, each night calibrated with its own darks and flats. <em>Add folder</em> brings another night, and each sub shows where it comes from.</li>
       <li><strong>Stack window redrawn</strong> in COSMO's style: steps, a card per night, one main button, a sky map behind it while preparing. Incompatible folders are explained, Seestar darks are handled better, and the folder dialog opens next to the last subs folder.</li>
@@ -62,7 +68,7 @@
       <li><strong>Linux</strong>: COSMO is now available as an AppImage and a .tar.gz (x86_64).</li>
       <li>Minor bug fixes (French numbers in the Analysis, the Gaia depth button, the view staying on the nebula after <em>Separate</em>).</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.6.2</span> <time datetime="2026-10-27">27 October 2026</time></h2></summary>
     <ul>
