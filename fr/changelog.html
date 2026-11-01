@@ -8,7 +8,7 @@
   <title>Nouveautés — COSMO</title>
   <link rel="icon" href="../assets/logo-64.png">
   <link rel="alternate" hreflang="en" href="../changelog.html">
-  <link rel="stylesheet" href="../style.css?v=20261031a">
+  <link rel="stylesheet" href="../style.css?v=20261101a">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -37,11 +37,23 @@
   <h1>Nouveautés</h1>
   <p class="lead">Ce qui change d'une version de COSMO à la suivante.</p>
   <section class="release">
+    <h2><span class="release-version">0.8.0</span> <time datetime="2026-11-01">1 novembre 2026</time></h2>
+    <ul>
+      <li><strong>Stack, mosaïque</strong> : un interrupteur <em>Mosaïque</em> dans la fenêtre Stack. Les panneaux sont trouvés d'après le pointage et confirmés par les étoiles, chaque panneau est empilé à part, puis ils sont raccordés sans couture visible (fonds accordés, bords fondus). Une dernière étape <strong>Cadrage</strong> montre où se trouve chaque panneau.</li>
+      <li><strong>Retournement au méridien</strong> : les poses tournées de 180° (ou 90°) après le retournement sont alignées avec les autres et empilées, sur un champ simple comme dans une mosaïque.</li>
+      <li><strong>StarNet</strong> comme moteur de <em>Séparer les étoiles</em> et <em>Réduire les étoiles</em>, avec votre propre StarNet 2.5 ou plus récent (gratuit, installé à part, indiqué dans <em>Outils › Installation de StarNet</em>). Avec GraXpert pour le fond et COSMOSharp pour la netteté, un traitement complet se fait sans outil payant.</li>
+      <li><strong>Original / final</strong> : votre fichier tel qu'il s'est ouvert à côté de l'image telle qu'elle est maintenant, avec la barre de l'avant / après.</li>
+      <li><strong>Arcsinh</strong> s'ouvre à 38 % de couleur, 28 % d'étoiles naturelles et 71 % de cœurs d'étoiles doux.</li>
+      <li>Résolution de bugs mineurs (une pile d'Astro Pixel Processor lue comme déjà étirée, les compteurs de la fenêtre Stack pendant une mosaïque, une étape longue qui semblait bloquée montre maintenant son temps écoulé).</li>
+    </ul>
+    <figure class="release-figure"><img src="../assets/mosaic-m45.jpg" alt="Empilement en mosaïque : M 45 à partir d'une mosaïque Seestar, le contour de chaque panneau tracé dessus, comme à l'étape Cadrage." loading="lazy"><figcaption>Empilement en mosaïque : M 45 à partir d'une mosaïque Seestar, le contour de chaque panneau tracé dessus, comme à l'étape Cadrage.</figcaption></figure>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.7.0</span> <time datetime="2026-10-31">31 octobre 2026</time></h2>
     <ul>
       <li><strong>Stack, plusieurs nuits</strong> : les poses de plusieurs nuits vont dans une même pile, chaque nuit calibrée avec ses propres darks et flats. <em>Ajouter un dossier</em> apporte une autre nuit, et chaque pose montre d'où elle vient.</li>
       <li><strong>Fenêtre Stack redessinée</strong> dans le style de COSMO : des étapes, une carte par nuit, un bouton principal, une carte du ciel en fond pendant la préparation. Les dossiers incompatibles sont expliqués, les darks Seestar mieux pris en charge, et le choix du dossier s'ouvre à côté du dernier dossier de poses.</li>
-      <li><strong>Alignement sur les champs pauvres en étoiles</strong> (longue focale, nébuleuses planétaires) : une pose qui montre trop peu d'étoiles est relue à un seuil plus bas, et plus de poses sont gardées. Un nouveau volet <strong>Alignement avancé</strong>, replié par défaut, propose des curseurs pour le seuil de détection, les étoiles floues, la transparence, les étoiles appariées et le décalage maximal, avec <em>Réinitialiser</em>. Une pose prise à l'aube ou sous la Lune n'est plus choisie comme référence (sur une série Seestar de C 15, 75 poses sur 81 gardées au lieu d'aucune).</li>
+      <li><strong>Alignement sur les champs pauvres en étoiles</strong> (longue focale, nébuleuses planétaires) : une pose qui montre trop peu d'étoiles est relue à un seuil plus bas, et plus de poses sont gardées. Un nouveau volet <strong>Alignement avancé</strong>, replié par défaut, propose des curseurs pour le seuil de détection, les étoiles floues, la transparence, les étoiles appariées et le décalage maximal, avec <em>Réinitialiser</em>. Une pose prise à l'aube ou sous la Lune n'est plus choisie comme référence.</li>
       <li><strong>COSMOSharp v15</strong> : environ deux fois moins de halo lointain et de lueur d'un seul côté des étoiles que v12. Toujours expérimental.</li>
       <li><strong>Avant / après</strong> de l'étape choisie, avec une barre qu'on fait glisser sur l'image.</li>
       <li><strong>Export en plusieurs formats d'un coup</strong> (FITS, TIFF, PNG, JPEG) sous le même nom ; les formats cochés sont retenus pour la fois suivante.</li>
@@ -51,8 +63,8 @@
       <li>Résolution de bugs mineurs (nombres en français dans l'Analyse, bouton de profondeur Gaia, la vue qui reste sur la nébuleuse après <em>Separate</em>).</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.6.2</span> <time datetime="2026-10-27">27 octobre 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.6.2</span> <time datetime="2026-10-27">27 octobre 2026</time></h2></summary>
     <ul>
       <li><strong>COSMOStars v54</strong> : la nébuleuse garde son relief après la séparation. Les versions précédentes l'avaient peu à peu lissé ; v54 garde environ 40 % de relief fin (3 à 8 pixels) en plus sur le Croissant, et les fins filaments des Dentelles ne sont plus retirés comme des étoiles.</li>
       <li><strong>COSMODenoise v2</strong> : entraîné sur des piles profondes face au même ciel avec beaucoup moins de pose. Moins de grain pour le même détail de nébuleuse que v1, et plus d'étoiles faibles gardées.</li>
@@ -61,7 +73,7 @@
       <li><strong>Lab, univers 3D</strong> : votre galaxie ou nébuleuse reste nette quand la vue ne bouge plus ; elle ne devient plus floue et trop lumineuse dès qu'on s'arrête.</li>
       <li>Résolution de bugs mineurs.</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.6.0</span> <time datetime="2026-10-25">25 octobre 2026</time></h2></summary>
     <ul>
@@ -81,9 +93,9 @@
     <summary><h2><span class="release-version">0.5.0</span> <time datetime="2026-10-23">23 octobre 2026</time></h2></summary>
     <ul>
       <li><strong>COSMOSharp v12</strong> : des étoiles plus fines, aussi fines qu'avec BlurXTerminator à son réglage par défaut, et un réglage à part pour le détail de la nébuleuse. Toujours expérimental : une petite flammèche peut rester d'un côté des étoiles brillantes. Comparaison sur NGC 6888 ci-dessous.</li>
-      <li><strong>COSMOStars v49</strong> : moins de restes d'étoiles après la séparation (sur NGC 6888, environ un tiers de petits points en moins).</li>
+      <li><strong>COSMOStars v49</strong> : moins de restes d'étoiles après la séparation.</li>
       <li><strong>Separate stars</strong> ne laisse plus d'anneau à la place des grosses étoiles brillantes : le liseré que StarXTerminator et COSMOStars y laissent (plus net après Sharpen) est effacé, la lueur douce autour de l'étoile reste.</li>
-      <li><strong>HDR multiscale</strong> fait ressortir la structure d'un cœur brillant au lieu de seulement l'assombrir. Il marche maintenant au mieux sur l'image linéaire, juste avant Stretch (sur M 42 aux 50 % par défaut, environ 1,5 fois plus de détail dans le cœur, sa luminosité gardée) ; sur une image étirée, le détail suit la baisse du cœur. Force par défaut : 50 %. Un nouveau bouton <strong>Preview stretched</strong> montre l'image linéaire telle que ton Stretch la rendra : on voit ce qu'apporte HDR pendant qu'on bouge les curseurs.</li>
+      <li><strong>HDR multiscale</strong> fait ressortir la structure d'un cœur brillant au lieu de seulement l'assombrir. Il marche maintenant au mieux sur l'image linéaire, juste avant Stretch, la luminosité du cœur gardée ; sur une image étirée, le détail suit la baisse du cœur. Force par défaut : 50 %. Un nouveau bouton <strong>Preview stretched</strong> montre l'image linéaire telle que ton Stretch la rendra : on voit ce qu'apporte HDR pendant qu'on bouge les curseurs.</li>
       <li><strong>Un nouvel écran d'accueil</strong> : un ciel de nuit avec des filés d'étoiles qui tournent autour de l'étoile Polaire, un smart télescope et une lunette sur l'horizon ; vos images récentes s'affichent en vignettes. Les panneaux sont un peu transparents, sur l'accueil comme avec une image.</li>
       <li><strong>Un écran de démarrage</strong> avec la version, un mot sur les réseaux expérimentaux (avec une licence RC-Astro, mieux vaut l'utiliser) et un merci aux soutiens, avec le lien Ko-fi. On peut le désactiver.</li>
       <li><strong>Pipeline Classic</strong> : il sépare maintenant les étoiles après l'étirement, leur rend leurs couleurs naturelles et les remet ; la partie nébuleuse vous est laissée libre. <strong>Reset</strong>, dans le menu des pipelines, vide le pipeline pour construire le vôtre.</li>
@@ -116,7 +128,7 @@
       <li><strong>COSMO Fire &amp; Ice</strong>, la nouvelle palette par défaut de <em>Narrowband palette</em> : OIII en bleu, Hα en rouge, puis orange et jaune quand il s'éclaire. Ajustée sur une pile de la Draco traitée à la main (écart de couleur 0,029 sur toute l'image) ; là où les deux raies sont fortes, l'OIII compte moins, donc plus de blanc uni (NGC 6888 : 2,1 % du croissant presque blanc avant, moins de 0,1 % maintenant). Il ne reste que trois palettes : COSMO Fire &amp; Ice, HOO, SHO, sur des vignettes plus grandes.</li>
       <li><strong>Protect the sky</strong> (<em>Narrowband palette</em>) : retire l'OIII faible du fond ; pousser l'OIII ne fait plus de taches bleues dans le ciel.</li>
       <li><strong>Star colours</strong>, première étape de <em>Stars</em> après une séparation : rend aux étoiles d'une pile bi-bande leurs couleurs naturelles, d'après le catalogue Gaia quand le fichier dit où pointait le télescope (651 étoiles reconnues sur NGC 7000), avec un curseur <em>Saturation</em>.</li>
-      <li><strong>COSMOStars v47</strong> remplace v44 : sur la même pile de test de NGC 6960, 129 restes d'étoiles par mégapixel au lieu de 418, et moins d'étoiles laissées sur la nébuleuse brillante ; la petite pointe laissée au centre d'une étoile retirée est effacée.</li>
+      <li><strong>COSMOStars v47</strong> remplace v44 : moins de restes d'étoiles, et moins d'étoiles laissées sur la nébuleuse brillante ; la petite pointe laissée au centre d'une étoile retirée est effacée.</li>
       <li><strong>Calibration</strong> dans la fenêtre <em>Stack</em> : bias, darks, flats et dark flats, trouvés dans le dossier ou choisis à la main ; un fichier seul est pris comme maître tout fait. Les poses calibrées dans l'appareil (Seestar) n'en ont pas besoin.</li>
       <li><strong>Plein écran</strong> (<em>F</em>, <em>Échap</em> pour sortir) à n'importe quelle étape ; un aperçu lent affiche maintenant sa progression.</li>
       <li>Corrigé : un cœur d'étoile poussé au-dessus de 1 par COSMOSharp faisait diviser toute l'image par NoiseXTerminator, et le ciel devenait noir à l'étirement.</li>
@@ -127,7 +139,7 @@
   <details class="release">
     <summary><h2><span class="release-version">0.3.3</span> <time datetime="2026-10-19">19 octobre 2026</time></h2></summary>
     <ul>
-      <li><strong>COSMOStars v44</strong> remplace v36 : sur une pile de test de NGC 6960 accentuée et débruitée avant la séparation, 418 restes d'étoiles par mégapixel au lieu de 2100. La couleur sous les étoiles brillantes est raccordée : plus de tache grise après une palette.</li>
+      <li><strong>COSMOStars v44</strong> remplace v36 : beaucoup moins de restes d'étoiles, y compris sur une image accentuée et débruitée avant la séparation. La couleur sous les étoiles brillantes est raccordée : plus de tache grise après une palette.</li>
       <li><strong>Run up to &lt;étape&gt;</strong>, en bas du panneau des étapes : applique dans l'ordre les étapes qui restent avant l'étape choisie.</li>
       <li><strong>Nouvelles versions</strong> : COSMO signale qu'une version plus récente est publiée (au plus une fois par jour, désactivable dans <em>Help</em>).</li>
       <li><strong>Windows</strong> : installation par utilisateur sans droits d'administrateur, une <strong>version portable .zip</strong>, et une nouvelle version s'installe par-dessus la précédente.</li>
@@ -168,7 +180,7 @@
   </nav>
   <small>© 2026 COSMO</small>
 </footer>
-<script src="../app.js?v=20261031a"></script>
+<script src="../app.js?v=20261101a"></script>
 <!-- mesure d'audience : GoatCounter, sans cookie ; les statistiques ne sont visibles que du proprietaire -->
 <script data-goatcounter="https://cosmo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

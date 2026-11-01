@@ -8,7 +8,7 @@
   <title>Changelog — COSMO</title>
   <link rel="icon" href="assets/logo-64.png">
   <link rel="alternate" hreflang="fr" href="fr/changelog.html">
-  <link rel="stylesheet" href="style.css?v=20261031a">
+  <link rel="stylesheet" href="style.css?v=20261101a">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -37,11 +37,23 @@
   <h1>Changelog</h1>
   <p class="lead">What changes from one version of COSMO to the next.</p>
   <section class="release">
+    <h2><span class="release-version">0.8.0</span> <time datetime="2026-11-01">1 November 2026</time></h2>
+    <ul>
+      <li><strong>Stack, mosaic</strong>: a <em>Mosaic</em> switch in the Stack window. The panels are found from the pointing and confirmed by the stars, each panel is stacked on its own, then they are joined without visible seams (matched backgrounds, blended edges). A final <strong>Framing</strong> step shows where each panel sits.</li>
+      <li><strong>Meridian flip</strong>: subs turned by 180° (or 90°) after the flip are aligned with the others and stacked, in a single field as in a mosaic.</li>
+      <li><strong>StarNet</strong> as an engine of <em>Separate stars</em> and <em>Reduce stars</em>, with your own copy of StarNet 2.5 or newer (free, installed separately, located in <em>Tools › StarNet installation</em>). With GraXpert for the background and COSMOSharp for sharpening, a full processing needs no paid tool.</li>
+      <li><strong>Original / final</strong>: your file as it opened beside the image as it is now, with the before / after bar.</li>
+      <li><strong>Arcsinh</strong> opens at 38 % colour, 28 % natural stars and 71 % soft star cores.</li>
+      <li>Minor bug fixes (a stack from Astro Pixel Processor read as already stretched, the Stack window counts during a mosaic, a long step that looked stuck now shows its elapsed time).</li>
+    </ul>
+    <figure class="release-figure"><img src="assets/mosaic-m45.jpg" alt="Mosaic stack: M 45 from a Seestar mosaic, the outline of each panel drawn over it, as in the Framing step." loading="lazy"><figcaption>Mosaic stack: M 45 from a Seestar mosaic, the outline of each panel drawn over it, as in the Framing step.</figcaption></figure>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.7.0</span> <time datetime="2026-10-31">31 October 2026</time></h2>
     <ul>
       <li><strong>Stack, several nights</strong>: subs from several nights go into one stack, each night calibrated with its own darks and flats. <em>Add folder</em> brings another night, and each sub shows where it comes from.</li>
       <li><strong>Stack window redrawn</strong> in COSMO's style: steps, a card per night, one main button, a sky map behind it while preparing. Incompatible folders are explained, Seestar darks are handled better, and the folder dialog opens next to the last subs folder.</li>
-      <li><strong>Alignment on star-poor fields</strong> (long focal length, planetary nebulae): a sub that shows too few stars is searched again at a lower threshold, and more subs are kept. A new <strong>Advanced alignment</strong> panel, folded by default, has sliders for the detection threshold, blurred stars, transparency, paired stars and largest shift, with <em>Reset</em>. A sub taken at dawn or under the Moon is no longer chosen as the reference (on a Seestar series of C 15, 75 of 81 subs kept instead of none).</li>
+      <li><strong>Alignment on star-poor fields</strong> (long focal length, planetary nebulae): a sub that shows too few stars is searched again at a lower threshold, and more subs are kept. A new <strong>Advanced alignment</strong> panel, folded by default, has sliders for the detection threshold, blurred stars, transparency, paired stars and largest shift, with <em>Reset</em>. A sub taken at dawn or under the Moon is no longer chosen as the reference.</li>
       <li><strong>COSMOSharp v15</strong>: about half the far halo and half the one-sided glow of v12 around stars. Still experimental.</li>
       <li><strong>Before / after</strong> of the selected step, with a bar dragged across the image.</li>
       <li><strong>Export in several formats at once</strong> (FITS, TIFF, PNG, JPEG) under the same name; the formats ticked are kept for next time.</li>
@@ -51,8 +63,8 @@
       <li>Minor bug fixes (French numbers in the Analysis, the Gaia depth button, the view staying on the nebula after <em>Separate</em>).</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.6.2</span> <time datetime="2026-10-27">27 October 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.6.2</span> <time datetime="2026-10-27">27 October 2026</time></h2></summary>
     <ul>
       <li><strong>COSMOStars v54</strong>: the nebula keeps its relief after the separation. The previous versions had slowly smoothed it away; v54 keeps about 40 % more fine relief (3 to 8 pixels) on the Crescent, and the thin filaments of the Veil are no longer removed as stars.</li>
       <li><strong>COSMODenoise v2</strong>: trained on deep stacks against the same sky with much less exposure. Less grain for the same nebula detail than v1, and more faint stars kept.</li>
@@ -61,7 +73,7 @@
       <li><strong>Lab, 3D universe</strong>: your galaxy or nebula stays sharp when the view is still; it no longer turns blurry and over-bright once you stop moving.</li>
       <li>Minor bug fixes.</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.6.0</span> <time datetime="2026-10-25">25 October 2026</time></h2></summary>
     <ul>
@@ -81,9 +93,9 @@
     <summary><h2><span class="release-version">0.5.0</span> <time datetime="2026-10-23">23 October 2026</time></h2></summary>
     <ul>
       <li><strong>COSMOSharp v12</strong>: sharper stars, as fine as BlurXTerminator at its default setting, with a separate setting for the nebula detail. Still experimental: a little flare can remain on one side of bright stars. Compare on NGC 6888 below.</li>
-      <li><strong>COSMOStars v49</strong>: fewer remains of stars after the separation (on NGC 6888, about a third fewer small dots).</li>
+      <li><strong>COSMOStars v49</strong>: fewer remains of stars after the separation.</li>
       <li><strong>Separate stars</strong> no longer leaves a ring where the big bright stars were: the thin rim that StarXTerminator and COSMOStars leave on them (sharper after Sharpen) is taken out, the soft glow around the star stays.</li>
-      <li><strong>HDR multiscale</strong> reveals the structure of a bright core instead of just darkening it. It now works best on the linear image, just before Stretch (on M 42 at the default 50 %, about 1.5 times more detail in the core, its brightness kept); on a stretched image, the detail follows the core down. Default strength 50 %. A new <strong>Preview stretched</strong> button shows the linear image as your Stretch will make it, so you see what HDR brings out while you move the sliders.</li>
+      <li><strong>HDR multiscale</strong> reveals the structure of a bright core instead of just darkening it. It now works best on the linear image, just before Stretch, the brightness of the core kept; on a stretched image, the detail follows the core down. Default strength 50 %. A new <strong>Preview stretched</strong> button shows the linear image as your Stretch will make it, so you see what HDR brings out while you move the sliders.</li>
       <li><strong>A new welcome screen</strong>: a night sky with star trails turning around the Pole Star, a smart telescope and a refractor on the horizon; your recent images now show as thumbnails. The side panels are a little transparent, on the welcome screen and with an image.</li>
       <li><strong>A startup screen</strong> with the version, a word on the experimental networks (if you have an RC-Astro licence, prefer it) and a thank-you to the supporters, with the Ko-fi link. It can be turned off.</li>
       <li><strong>Classic pipeline</strong>: it now separates the stars after the stretch, gives them their natural colours and puts them back; the nebula part is left free for you. <strong>Reset</strong>, in the pipeline menu, empties the pipeline to build your own.</li>
@@ -116,7 +128,7 @@
       <li><strong>COSMO Fire &amp; Ice</strong>, the new default of <em>Narrowband palette</em>: OIII blue, Hα red, then orange and yellow as it brightens. Fitted on a hand-processed Draco stack (colour gap 0.029 over the whole image); where both lines are bright, OIII counts less, so no flat white (NGC 6888: 2.1 % of the crescent near white before, under 0.1 % now). Only three palettes remain: COSMO Fire &amp; Ice, HOO, SHO, on bigger thumbnails.</li>
       <li><strong>Protect the sky</strong> (<em>Narrowband palette</em>): takes the faint OIII out of the background, so raising OIII no longer turns the sky into blue patches.</li>
       <li><strong>Star colours</strong>, first step of <em>Stars</em> after a separation: gives the stars of a dual-band stack their natural colours back, from the Gaia catalogue when the file says where the telescope pointed (651 stars matched on NGC 7000), with a <em>Saturation</em> slider.</li>
-      <li><strong>COSMOStars v47</strong> replaces v44: on the same NGC 6960 test stack, 129 star remnants per megapixel instead of 418, and fewer stars left on bright nebula; the small spike left at the centre of a removed star is cleaned.</li>
+      <li><strong>COSMOStars v47</strong> replaces v44: fewer star remnants, and fewer stars left on bright nebula; the small spike left at the centre of a removed star is cleaned.</li>
       <li><strong>Calibration</strong> in the <em>Stack</em> window: bias, darks, flats and dark flats, found in the folder or chosen by hand; a single file is used as a ready master. Subs calibrated in the camera (Seestar) need none.</li>
       <li><strong>Full screen</strong> (<em>F</em>, <em>Esc</em> to leave) at any step; a slow preview now shows its progress.</li>
       <li>Fixed: a star core sharpened by COSMOSharp above 1 made NoiseXTerminator divide the whole image, and the sky went black at the stretch.</li>
@@ -127,7 +139,7 @@
   <details class="release">
     <summary><h2><span class="release-version">0.3.3</span> <time datetime="2026-10-19">19 October 2026</time></h2></summary>
     <ul>
-      <li><strong>COSMOStars v44</strong> replaces v36: on an NGC 6960 test stack sharpened and denoised before the separation, 418 star remnants per megapixel instead of 2100. The colour under bright stars is matched, so no grey patch shows after a palette.</li>
+      <li><strong>COSMOStars v44</strong> replaces v36: far fewer star remnants, also on an image sharpened and denoised before the separation. The colour under bright stars is matched, so no grey patch shows after a palette.</li>
       <li><strong>Run up to &lt;step&gt;</strong>, at the bottom of the steps panel: applies, in order, the steps still to do before the selected one.</li>
       <li><strong>Update check</strong>: COSMO says when a newer version is published (at most once a day, can be turned off in <em>Help</em>).</li>
       <li><strong>Windows</strong>: install per user without administrator rights, a <strong>portable .zip</strong>, and a new version installs over the previous one.</li>
@@ -168,7 +180,7 @@
   </nav>
   <small>© 2026 COSMO</small>
 </footer>
-<script src="app.js?v=20261031a"></script>
+<script src="app.js?v=20261101a"></script>
 <!-- mesure d'audience : GoatCounter, sans cookie ; les statistiques ne sont visibles que du proprietaire -->
 <script data-goatcounter="https://cosmo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

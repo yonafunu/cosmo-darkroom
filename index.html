@@ -16,7 +16,7 @@
   <link rel="icon" href="assets/logo-64.png">
   <link rel="alternate" hreflang="fr" href="fr/index.html">
   <link rel="preload" as="image" href="assets/veil.jpg" imagesrcset="assets/veil-1200.jpg 1200w, assets/veil.jpg 2400w" imagesizes="100vw">
-  <link rel="stylesheet" href="style.css?v=20261031a">
+  <link rel="stylesheet" href="style.css?v=20261101a">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -57,6 +57,7 @@
     <p class="hero-copy">COSMO brings together, in one application, the stacking of sub-exposures, colour calibration on a star catalogue, the processing of the linear then stretched image, and the measurement of the stack.</p>
     <div class="actions">
       <a class="button primary" href="#software">Features</a>
+      <a class="button ghost" href="#new">What is new</a>
       <a class="button ghost" href="#gallery">Images</a>
     </div>
   </div>
@@ -69,6 +70,53 @@
   <li><strong>Step by step</strong><span>nothing is applied without your validation</span></li>
   <li><strong>FITS · TIFF · PNG · JPEG</strong><span>read and export</span></li>
 </ul>
+
+<!-- ───────────────────────── Recent additions ───────────────────────── -->
+<section id="new" class="section">
+  <div class="heading reveal">
+    <p class="eyebrow pink">Recent additions</p>
+    <h2>What is new in COSMO.</h2>
+    <p class="lead">Mosaics and several nights in the <em>Stack</em> tool, a complete set of free engines, and the <em>Lab</em>.</p>
+  </div>
+
+  <div class="duo news">
+    <figure class="card reveal">
+      <img src="assets/mosaic-m45-800.jpg" srcset="assets/mosaic-m45-800.jpg 800w, assets/mosaic-m45.jpg 1600w" sizes="(max-width: 980px) 100vw, 50vw"
+           alt="M 45 assembled from a Seestar mosaic, the outline of each panel drawn over the image" loading="lazy">
+      <figcaption>
+        <span class="pill pink">New in 0.8 · Stack tool</span>
+        <h3>Mosaic stack</h3>
+        <p>A <em>Mosaic</em> switch. The panels are found from the pointing and confirmed by the stars, each panel is stacked on its own, then they are joined with matched backgrounds and blended edges. A <em>Framing</em> step shows where each panel sits.</p>
+      </figcaption>
+    </figure>
+    <figure class="card reveal">
+      <img src="assets/lab-3d-en.jpg" alt="The Lab, 3D universe: the stars of HD 335129 at their Gaia distances, from the Earth to the farthest one, the image behind them" loading="lazy">
+      <figcaption>
+        <span class="pill">Lab</span>
+        <h3>Your image as a place in the universe</h3>
+        <p>The stars of the image in 3D at their Gaia distances, the field located in the Milky Way, and what it contains: variable and double stars, asteroids, quasars, from Gaia, SIMBAD and SkyBoT. Only the coordinates of the field are sent, never the image.</p>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="duo news">
+    <article class="news-text reveal">
+      <span class="pill blue">Stack tool</span>
+      <h3>Several nights, meridian flip</h3>
+      <p>Subs from several nights go into one stack, each night calibrated with its own darks and flats; <em>Add folder</em> brings another night. Subs turned by 180° after a meridian flip are aligned with the others, in a single field as in a mosaic.</p>
+    </article>
+    <article class="news-text reveal">
+      <span class="pill pink">New in 0.8 · Engines</span>
+      <h3>A complete set of free engines</h3>
+      <div class="engines" aria-label="Free engines">
+        <span><strong>GraXpert</strong> background gradient</span>
+        <span><strong>COSMOSharp</strong> deconvolution</span>
+        <span><strong>StarNet</strong> star removal</span>
+      </div>
+      <p>The three steps that usually call for the paid RC-Astro tools have a free engine. COSMOSharp is built in (experimental); GraXpert and StarNet are installed separately and found by COSMO. BlurXTerminator, NoiseXTerminator and StarXTerminator remain available as engines with a licence.</p>
+    </article>
+  </div>
+</section>
 
 <!-- ───────────────────────── Interface ───────────────────────── -->
 <section id="software" class="section">
@@ -289,7 +337,7 @@
     </div>
     <dl class="numbers">
       <div><dt>3 to 8 s</dt><dd>duration of a calibration on Gaia</dd></div>
-      <div><dt>262</dt><dd>stars identified on M 42</dd></div>
+      <div><dt>Gaia DR3</dt><dd>reference catalogue, no plate solving</dd></div>
       <div><dt>2 %</dt><dd>difference in gains between two fields, same sensor and same filter</dd></div>
       <div><dt>0.2 s</dt><dd>with the saved profile</dd></div>
     </dl>
@@ -421,24 +469,24 @@
     <img src="assets/logo-256.png" alt="COSMO logo" width="112" height="112" loading="lazy">
     <p class="eyebrow">Download</p>
     <!-- downloads:start -->
-    <h2>Download COSMO 0.7.0.</h2>
+    <h2>Download COSMO 0.8.0.</h2>
     <p class="lead">Free. For macOS, Windows (installer or portable) and Linux; each one carries the application and the three COSMO networks (COSMOSharp, COSMODenoise, COSMOStars), which are experimental.</p>
     <div class="installers three">
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.7.0/COSMO-0.7.0-macos-arm64.dmg" download data-goatcounter-click="download-macos" data-goatcounter-title="0.7.0">
+      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.8.0/COSMO-0.8.0-macos-arm64.dmg" download data-goatcounter-click="download-macos" data-goatcounter-title="0.8.0">
         <strong>macOS</strong><span>Apple Silicon (M1 or later)</span>
-        <em>Download · .dmg · 524 MB</em>
+        <em>Download · .dmg · 537 MB</em>
       </a>
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.7.0/COSMO-0.7.0-windows-setup.exe" download data-goatcounter-click="download-windows-setup" data-goatcounter-title="0.7.0">
+      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.8.0/COSMO-0.8.0-windows-setup.exe" download data-goatcounter-click="download-windows-setup" data-goatcounter-title="0.8.0">
         <strong>Windows</strong><span>Windows 10 or 11, 64-bit · runs on the processor</span>
         <em>Download · .exe · 414 MB</em>
       </a>
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.7.0/COSMO-0.7.0-linux-x86_64.AppImage" download data-goatcounter-click="download-linux" data-goatcounter-title="0.7.0">
+      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.8.0/COSMO-0.8.0-linux-x86_64.AppImage" download data-goatcounter-click="download-linux" data-goatcounter-title="0.8.0">
         <strong>Linux</strong><span>x86_64 · Ubuntu 22.04, Debian 12, Fedora 38 or later · runs on the processor</span>
-        <em>Download · AppImage · 583 MB</em>
+        <em>Download · AppImage · 584 MB</em>
       </a>
     </div>
-    <p class="portable"><a href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.7.0/COSMO-0.7.0-windows-portable.zip" download data-goatcounter-click="download-windows-portable" data-goatcounter-title="0.7.0">Portable version (.zip, no installation)</a> · 484 MB</p>
-    <p class="portable"><a href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.7.0/COSMO-0.7.0-linux-x86_64.tar.gz" download data-goatcounter-click="download-linux-archive" data-goatcounter-title="0.7.0">Archive (.tar.gz, if the AppImage does not start)</a> · 619 MB</p>
+    <p class="portable"><a href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.8.0/COSMO-0.8.0-windows-portable.zip" download data-goatcounter-click="download-windows-portable" data-goatcounter-title="0.8.0">Portable version (.zip, no installation)</a> · 485 MB</p>
+    <p class="portable"><a href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.8.0/COSMO-0.8.0-linux-x86_64.tar.gz" download data-goatcounter-click="download-linux-archive" data-goatcounter-title="0.8.0">Archive (.tar.gz, if the AppImage does not start)</a> · 620 MB</p>
     <div class="actions"><a class="button ghost" href="guide.html">Getting started</a><a class="button ghost" href="changelog.html">What's new</a><a class="button ghost" href="https://www.facebook.com/profile.php?id=61596157228182" rel="noopener" data-goatcounter-click="follow-facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4V14h2.8v8z"/></svg>Follow on Facebook</a></div>
     <dl class="first-launch">
       <div><dt>First launch · macOS</dt><dd>The application is not signed with an Apple Developer account. The first time, right-click it in <em>Applications</em>, choose <em>Open</em>, then <em>Open</em> again. On recent macOS: <em>System Settings › Privacy &amp; Security › Open Anyway</em>.</dd></div>
@@ -446,11 +494,11 @@
       <div><dt>First launch · Linux</dt><dd>Make the file executable (<code>chmod +x COSMO-*.AppImage</code>, or <em>Properties › Allow executing</em>), then open it. If nothing happens, install FUSE 2 (<code>sudo apt install libfuse2</code> on Ubuntu) or take the archive: unpack it and run <em>COSMO/COSMO</em>.</dd></div>
     </dl>
     <details class="checksums"><summary>SHA-256 checksums</summary>
-      <p><code>1a3df545806f8c06cf51016614a25879ab0b836543a0dceea0fd0bdffb3b12ee</code> COSMO-0.7.0-macos-arm64.dmg</p>
-      <p><code>d2827cf7a9a6ba03c397ffffea1e86bcb93bef5ac18e0b716bd184d7d5ddb1dc</code> COSMO-0.7.0-windows-setup.exe</p>
-      <p><code>c30bb16ff969d15445f40ec15ee26b28544435938366eae9a3d87fad83761344</code> COSMO-0.7.0-windows-portable.zip</p>
-      <p><code>4c78a1da77218e750ca5379b4bb82dc19ce52430e0e45ab6b1d84c85325b9692</code> COSMO-0.7.0-linux-x86_64.AppImage</p>
-      <p><code>12c104ecfcd0bf342d7fb06bd4bcd7027c51caf96e0e977125b0960da408e79c</code> COSMO-0.7.0-linux-x86_64.tar.gz</p>
+      <p><code>af2b9bf96b098a2a872785f8f84682f12d4920e22b749405e9ef6e0f1a30833d</code> COSMO-0.8.0-macos-arm64.dmg</p>
+      <p><code>fee49c0840d5197d1f65993ad242640b868af4676c62cfaddbfa9420d3c8a972</code> COSMO-0.8.0-windows-setup.exe</p>
+      <p><code>63be194b5cb34dae8f8c0f2954eb5f90363a549ce7841926c67d9c8089c3f51e</code> COSMO-0.8.0-windows-portable.zip</p>
+      <p><code>5e7b24777e2e4954f55319233ec9e840576c8a202c1542ee005118a7fc473526</code> COSMO-0.8.0-linux-x86_64.AppImage</p>
+      <p><code>08a160cfefd5da926dfc66b7a802eaeddf4f0fbe5ff46cdab769c9e5eeba7e39</code> COSMO-0.8.0-linux-x86_64.tar.gz</p>
     </details>
     <p class="fine">By downloading, you accept the <a href="licence.html">licence</a>: free to use; no redistribution, no use of the networks outside the application.</p>
     <p class="fine">The optional GraXpert and RC-Astro engines are not included: COSMO uses them from your own installation. RC-Astro remains subject to its publisher's licence.</p>
@@ -507,7 +555,7 @@
   <p></p>
 </dialog>
 
-<script src="app.js?v=20261031a"></script>
+<script src="app.js?v=20261101a"></script>
 <!-- mesure d'audience : GoatCounter, sans cookie ; les statistiques ne sont visibles que du proprietaire -->
 <script data-goatcounter="https://cosmo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
