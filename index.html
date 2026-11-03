@@ -140,12 +140,12 @@
     <article class="reveal">
       <span class="trio-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg></span>
       <h3>Preview, Apply, Go back</h3>
-      <p><em>Preview</em> computes the step without applying it. <em>Apply</em> applies it. <em>Go back to this step</em> returns the image to its state before a step already applied. No step is ever run automatically.</p>
+      <p><em>Preview</em> computes the step without applying it. <em>Apply</em> applies it. <em>Go back to this step</em> returns the image to its state before a step already applied. No step runs unless you ask: one at a time, or all those left at once with <em>One click</em> (beta).</p>
     </article>
     <article class="reveal">
       <span class="trio-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8Z"/></svg></span>
       <h3>Pipelines</h3>
-      <p>A sequence of steps and their settings is saved in a <code>.cosmopipe</code> file, reusable on another image. The <em>Classic</em> pipeline is loaded at startup.</p>
+      <p>A sequence of steps and their settings is saved in a <code>.cosmopipe</code> file, reusable on another image. Four are built in: <em>Classic</em> (loaded at startup), <em>Nebula and stars apart</em>, <em>Dual-band palette</em> and <em>Galaxy</em>.</p>
     </article>
   </div>
 
@@ -271,6 +271,7 @@
         <li><strong><a href="tools/dark-structures.html">Dark structures</a></strong> enhancement of dark nebulae and dust lanes</li>
         <li><strong><a href="tools/faint-nebulosity.html">Faint nebulosity</a></strong> brings out faint nebulosity, in one click</li>
         <li><strong><a href="tools/local-contrast.html">Local contrast</a></strong> local contrast per scale (à trous wavelets)</li>
+        <li><strong><a href="tools/details.html">Details</a></strong> sharpening of the fine structure of the stretched image, 2 to 16 pixels</li>
       </ul>
     </div>
     <div class="toolcol">
@@ -469,24 +470,24 @@
     <img src="assets/logo-256.png" alt="COSMO logo" width="112" height="112" loading="lazy">
     <p class="eyebrow">Download</p>
     <!-- downloads:start -->
-    <h2>Download COSMO 0.8.1.</h2>
+    <h2>Download COSMO 0.9.0.</h2>
     <p class="lead">Free. For macOS, Windows (installer or portable) and Linux; each one carries the application and the three COSMO networks (COSMOSharp, COSMODenoise, COSMOStars), which are experimental.</p>
     <div class="installers three">
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.8.1/COSMO-0.8.1-macos-arm64.dmg" download data-goatcounter-click="download-macos" data-goatcounter-title="0.8.1">
+      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.9.0/COSMO-0.9.0-macos-arm64.dmg" download data-goatcounter-click="download-macos" data-goatcounter-title="0.9.0">
         <strong>macOS</strong><span>Apple Silicon (M1 or later)</span>
-        <em>Download · .dmg · 527 MB</em>
+        <em>Download · .dmg · 535 MB</em>
       </a>
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.8.1/COSMO-0.8.1-windows-setup.exe" download data-goatcounter-click="download-windows-setup" data-goatcounter-title="0.8.1">
+      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.9.0/COSMO-0.9.0-windows-setup.exe" download data-goatcounter-click="download-windows-setup" data-goatcounter-title="0.9.0">
         <strong>Windows</strong><span>Windows 10 or 11, 64-bit · runs on the processor</span>
         <em>Download · .exe · 414 MB</em>
       </a>
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.8.1/COSMO-0.8.1-linux-x86_64.AppImage" download data-goatcounter-click="download-linux" data-goatcounter-title="0.8.1">
+      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.9.0/COSMO-0.9.0-linux-x86_64.AppImage" download data-goatcounter-click="download-linux" data-goatcounter-title="0.9.0">
         <strong>Linux</strong><span>x86_64 · Ubuntu 22.04, Debian 12, Fedora 38 or later · runs on the processor</span>
         <em>Download · AppImage · 584 MB</em>
       </a>
     </div>
-    <p class="portable"><a href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.8.1/COSMO-0.8.1-windows-portable.zip" download data-goatcounter-click="download-windows-portable" data-goatcounter-title="0.8.1">Portable version (.zip, no installation)</a> · 485 MB</p>
-    <p class="portable"><a href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.8.1/COSMO-0.8.1-linux-x86_64.tar.gz" download data-goatcounter-click="download-linux-archive" data-goatcounter-title="0.8.1">Archive (.tar.gz, if the AppImage does not start)</a> · 621 MB</p>
+    <p class="portable"><a href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.9.0/COSMO-0.9.0-windows-portable.zip" download data-goatcounter-click="download-windows-portable" data-goatcounter-title="0.9.0">Portable version (.zip, no installation)</a> · 485 MB</p>
+    <p class="portable"><a href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.9.0/COSMO-0.9.0-linux-x86_64.tar.gz" download data-goatcounter-click="download-linux-archive" data-goatcounter-title="0.9.0">Archive (.tar.gz, if the AppImage does not start)</a> · 621 MB</p>
     <div class="actions"><a class="button ghost" href="guide.html">Getting started</a><a class="button ghost" href="changelog.html">What's new</a><a class="button ghost" href="https://www.facebook.com/profile.php?id=61596157228182" rel="noopener" data-goatcounter-click="follow-facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4V14h2.8v8z"/></svg>Follow on Facebook</a></div>
     <dl class="first-launch">
       <div><dt>First launch · macOS</dt><dd>The application is not signed with an Apple Developer account. The first time, right-click it in <em>Applications</em>, choose <em>Open</em>, then <em>Open</em> again. On recent macOS: <em>System Settings › Privacy &amp; Security › Open Anyway</em>.</dd></div>
@@ -494,11 +495,11 @@
       <div><dt>First launch · Linux</dt><dd>Make the file executable (<code>chmod +x COSMO-*.AppImage</code>, or <em>Properties › Allow executing</em>), then open it. If nothing happens, install FUSE 2 (<code>sudo apt install libfuse2</code> on Ubuntu) or take the archive: unpack it and run <em>COSMO/COSMO</em>.</dd></div>
     </dl>
     <details class="checksums"><summary>SHA-256 checksums</summary>
-      <p><code>4229edbe94889c45309ed107c9d7b95b71bb403763ac8616356d72aabb16ee2b</code> COSMO-0.8.1-macos-arm64.dmg</p>
-      <p><code>f0ff3baf9634d8f6b3dfd5c01d90e8070f5160ff0f1233ef431d7e012360deed</code> COSMO-0.8.1-windows-setup.exe</p>
-      <p><code>33e9edba23eb20a8c2ccc6b76146ab7627746eff48550e3f733aee2d31eb5454</code> COSMO-0.8.1-windows-portable.zip</p>
-      <p><code>cfd4ab1d129a173b6a69e44fdda404c6a9f28d7e61cea370857cd831995effe0</code> COSMO-0.8.1-linux-x86_64.AppImage</p>
-      <p><code>ff597af9850ff1ab3ff3916c353278752010cc48a4eaefe05ecb7fa858d90053</code> COSMO-0.8.1-linux-x86_64.tar.gz</p>
+      <p><code>f7876c313fa1a28f42eb7e63dfdc59204b6bfe576dbc1925ad2bd0b1f6440e04</code> COSMO-0.9.0-macos-arm64.dmg</p>
+      <p><code>e856c1105f5157b8d79ffe6142a9c7cf3c3cf909428ee6961e1f139f747cac16</code> COSMO-0.9.0-windows-setup.exe</p>
+      <p><code>61623ff474291372e072425767584d8b01bc834835e4c484b592ce1d8b169d42</code> COSMO-0.9.0-windows-portable.zip</p>
+      <p><code>5210fbd590186fec44dce370fe89bc9da516aacff4d0b13701d285110bfa224e</code> COSMO-0.9.0-linux-x86_64.AppImage</p>
+      <p><code>f5ab3bd710516223f8fedb983fc1bad0f782d20e8cc86612d986028a2cdded3c</code> COSMO-0.9.0-linux-x86_64.tar.gz</p>
     </details>
     <p class="fine">By downloading, you accept the <a href="licence.html">licence</a>: free to use; no redistribution, no use of the networks outside the application.</p>
     <p class="fine">The optional GraXpert and RC-Astro engines are not included: COSMO uses them from your own installation. RC-Astro remains subject to its publisher's licence.</p>

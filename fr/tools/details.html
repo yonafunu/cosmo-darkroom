@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="Outil Details — COSMO. Renforce la structure fine de l'image étirée, de 2 à 16 pixels : les nœuds d'un bras de galaxie, les filaments, le bord d'une bande de poussière.">
+  <meta property="og:title" content="Outil Details — COSMO">
+  <meta property="og:description" content="Renforce la structure fine de l'image étirée, de 2 à 16 pixels : les nœuds d'un bras de galaxie, les filaments, le bord d'une bande de poussière.">
+  <meta property="og:image" content="https://www.cosmo-astro.com/assets/share.jpg">
+  <title>Outil Details — COSMO</title>
+  <link rel="icon" href="../../assets/logo-64.png">
+  <link rel="alternate" hreflang="en" href="../../tools/details.html">
+  <link rel="stylesheet" href="../../style.css?v=20261101a">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="site-header scrolled">
+  <a class="brand" href="../index.html" aria-label="COSMO, accueil">
+    <img src="../../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO</span>
+  </a>
+  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Navigation principale">
+    <a href="../index.html#logiciel">Le logiciel</a>
+    <a href="../index.html#galerie">Galerie</a>
+    <a href="../guide.html">Guide</a>
+    <a href="../changelog.html">Nouveautés</a>
+    <a class="nav-social" href="https://www.facebook.com/profile.php?id=61596157228182" rel="noopener" title="Facebook" aria-label="Facebook" data-goatcounter-click="follow-facebook-header"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4V14h2.8v8z"/></svg><span>Facebook</span></a>
+    <a class="nav-support" href="https://ko-fi.com/cosmoastro" rel="noopener" data-donate data-goatcounter-click="support-kofi"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4h2c.7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg>Soutenir</a>
+    <a class="nav-cta" href="../index.html#telecharger">Télécharger</a>
+    <a class="lang" href="../../tools/details.html" hreflang="en" lang="en">English</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow pink">Image étirée</p>
+  <h1>Outil Details</h1>
+  <p class="lead">Renforce la structure fine de l'image étirée, de 2 à 16 pixels : les nœuds d'un bras de galaxie, les filaments, le bord d'une bande de poussière.</p>
+  <h2>Comment s'en servir</h2>
+  <figure class="film use"><video src="../../assets/use-details.mp4" poster="../../assets/use-details.jpg" controls loop muted playsinline preload="none" aria-label="La fenêtre de COSMO pendant le réglage de Details"></video><figcaption>La fenêtre de COSMO, filmée pendant que les réglages bougent.</figcaption></figure>
+  <ol class="steps">
+    <li>Ouvrir <em>Tools</em> et cliquer l'outil : il s'ajoute après l'étape choisie.</li>
+    <li>Bouger ses réglages : l'image suit pendant le geste (<em>Live preview</em>).</li>
+    <li><em>Apply</em> garde le résultat. <em>Before / after</em> compare à tout moment.</li>
+  </ol>
+  <h2>Réglages</h2>
+  <dl class="settings">
+    <div><dt>Amount</dt><dd>De combien la structure fine se renforce ; une structure déjà marquée en reçoit beaucoup moins.</dd></div>
+    <div><dt>Scale</dt><dd>La taille du détail qui en reçoit le plus, de 2 pixels (le plus fin, le grain y est aussi) à 16 pixels (les bras et les bandes eux-mêmes).</dd></div>
+    <div><dt>Noise protection</dt><dd>Ce qui ne dépasse pas le grain est laissé tel quel. Baissez-la sur une image débruitée pour atteindre un détail plus fin.</dd></div>
+    <div><dt>Mask</dt><dd>Everywhere, Bright parts (l'objet, pas le fond de ciel) ou Dark parts. Les étoiles n'en font pas partie.</dd></div>
+    <div><dt>Threshold</dt><dd>Où commence le masque, du fond de ciel (0 %) à la partie la plus brillante de l'objet (100 %).</dd></div>
+  </dl>
+  <h2>Quand s'en servir</h2>
+  <p>Vers la fin, quand l'image reste molle une fois étirée. Sharpen travaille sur l'image linéaire ; Details sur l'image que l'on voit. Le grain, les étoiles brillantes et leurs abords sont laissés tels quels, et rien n'est coupé.</p>
+  <h2>Image</h2>
+  <p>Travaille uniquement sur une image étirée.</p>
+  <div class="actions tool-links"><a class="button ghost" href="local-contrast.html">← Local contrast</a><a class="button ghost" href="../index.html#traitement">Tous les outils</a><a class="button ghost" href="reduce-stars.html">Reduce stars →</a></div>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="../index.html"><img src="../../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO</span></a>
+  <p>Empilement et traitement des images du ciel profond.<br>Gratuit.</p>
+  <nav aria-label="Pied de page">
+    <a href="../guide.html">Guide de démarrage</a>
+    <a href="../confidentialite.html">Confidentialité</a>
+    <a href="../licence.html">Licence</a>
+    <a href="../changelog.html">Nouveautés</a>
+    <a href="mailto:contact@cosmo-astro.com">Contact</a>
+    <a class="follow-link" href="https://www.facebook.com/profile.php?id=61596157228182" rel="noopener" data-goatcounter-click="follow-facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4V14h2.8v8z"/></svg>Facebook</a>
+  </nav>
+  <small>© 2026 COSMO</small>
+</footer>
+<script src="../../app.js?v=20261101a"></script>
+<!-- mesure d'audience : GoatCounter, sans cookie ; les statistiques ne sont visibles que du proprietaire -->
+<script data-goatcounter="https://cosmo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

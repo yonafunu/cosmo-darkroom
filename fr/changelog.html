@@ -37,13 +37,23 @@
   <h1>Nouveautés</h1>
   <p class="lead">Ce qui change d'une version de COSMO à la suivante.</p>
   <section class="release">
+    <h2><span class="release-version">0.9.0</span> <time datetime="2026-11-03">3 novembre 2026</time></h2>
+    <ul>
+      <li><strong>One click</strong> (bêta) : un bouton sous le choix du pipeline. Réglez le recadrage, puis un clic applique toutes les étapes qui restent, dans l'ordre et avec leurs réglages, la dernière comprise. Il s'arrête à une étape qui a besoin de vous (une étoile à désigner) et reprend au clic suivant.</li>
+      <li><strong>Galaxie</strong>, un nouveau pipeline d'usine : étirement arcsinh, puis sur la galaxie sans ses étoiles une courbe douce, Hα boost, Détails et le bleu des bras ; les étoiles dans leurs couleurs naturelles ; une fois recombinées, les parties faibles extérieures remontées. Il utilise GraXpert et les outils RC-Astro quand ils sont installés, les moteurs de COSMO sinon.</li>
+      <li><strong>Détails</strong>, une nouvelle étape pour l'image étirée : elle renforce la structure fine (nœuds d'un bras de galaxie, filaments, bord d'une bande de poussière), de 2 à 16 pixels. Le grain, les étoiles brillantes et leurs abords sont laissés tels quels, et rien n'est coupé. Curseurs : Force, Échelle, Protection du bruit.</li>
+      <li><strong>Hα boost</strong> trouve les petites régions HII des bras de galaxie, qu'il manquait, et les filaments fins. Il travaille maintenant dans Nebula, sur l'image sans ses étoiles.</li>
+      <li><strong>Après Denoise</strong> (NoiseXTerminator ou COSMO), l'affichage et l'étirement automatique ne poussent plus trop fort une image débruitée. <strong>Faint nebulosity</strong> : l'<em>Étendue</em> monte jusqu'à 1000 %. Bugs corrigés : une mosaïque échouait sous Windows tout à la fin (« WinError 32 »), un export FITS échouait quand Hα boost faisait partie des étapes, et le panneau dit maintenant quand l'aperçu <em>En direct</em> est coupé.</li>
+    </ul>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.8.1</span> <time datetime="2026-11-01">1 novembre 2026</time></h2>
     <ul>
       <li><strong>StarNet</strong> : dans les versions installées de la 0.8.0, l'image sans étoiles rendue par StarNet ne pouvait pas être lue (erreur « lzw_decode »), pas plus qu'un TIFF compressé ouvert dans COSMO. Le décodeur manquant est maintenant inclus, et le lecteur TIFF de Qt prend le relais s'il venait à échouer.</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.8.0</span> <time datetime="2026-11-01">1 novembre 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.8.0</span> <time datetime="2026-11-01">1 novembre 2026</time></h2></summary>
     <ul>
       <li><strong>Stack, mosaïque</strong> : un interrupteur <em>Mosaïque</em> dans la fenêtre Stack. Les panneaux sont trouvés d'après le pointage et confirmés par les étoiles, chaque panneau est empilé à part, puis ils sont raccordés sans couture visible (fonds accordés, bords fondus). Une dernière étape <strong>Cadrage</strong> montre où se trouve chaque panneau.</li>
       <li><strong>Retournement au méridien</strong> : les poses tournées de 180° (ou 90°) après le retournement sont alignées avec les autres et empilées, sur un champ simple comme dans une mosaïque.</li>
@@ -53,7 +63,7 @@
       <li>Résolution de bugs mineurs (une pile d'Astro Pixel Processor lue comme déjà étirée, les compteurs de la fenêtre Stack pendant une mosaïque, une étape longue qui semblait bloquée montre maintenant son temps écoulé).</li>
     </ul>
     <figure class="release-figure"><img src="../assets/mosaic-m45.jpg" alt="Empilement en mosaïque : M 45 à partir d'une mosaïque Seestar, le contour de chaque panneau tracé dessus, comme à l'étape Cadrage." loading="lazy"><figcaption>Empilement en mosaïque : M 45 à partir d'une mosaïque Seestar, le contour de chaque panneau tracé dessus, comme à l'étape Cadrage.</figcaption></figure>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.7.0</span> <time datetime="2026-10-31">31 octobre 2026</time></h2></summary>
     <ul>

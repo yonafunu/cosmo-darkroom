@@ -37,13 +37,23 @@
   <h1>Changelog</h1>
   <p class="lead">What changes from one version of COSMO to the next.</p>
   <section class="release">
+    <h2><span class="release-version">0.9.0</span> <time datetime="2026-11-03">3 November 2026</time></h2>
+    <ul>
+      <li><strong>One click</strong> (beta): a button under the pipeline choice. Set the Crop, then one click applies every step left, in order and with its settings, the last one included. It stops at a step that needs you (a star to point at) and goes on at the next click.</li>
+      <li><strong>Galaxy</strong>, a new built-in pipeline: asinh stretch, then on the galaxy without its stars a gentle curve, Hα boost, Details and the blue of the arms; the stars in their natural colours; once recombined, the faint outer parts lifted. It uses GraXpert and the RC-Astro tools when they are installed, COSMO's own engines otherwise.</li>
+      <li><strong>Details</strong>, a new step for the stretched image: it sharpens the fine structure (knots of a galaxy arm, filaments, the edge of a dust lane), 2 to 16 pixels wide. Grain, bright stars and their surroundings are left alone, and nothing clips. Sliders: Amount, Scale, Noise protection.</li>
+      <li><strong>Hα boost</strong> finds the small HII regions of galaxy arms, which it used to miss, and thin filaments. It now works in Nebula, on the image without its stars.</li>
+      <li><strong>After Denoise</strong> (NoiseXTerminator or COSMO), the screen and the automatic stretch no longer push a denoised image too hard. <strong>Faint nebulosity</strong>: <em>Range</em> goes up to 1000 %. Bug fixes: a mosaic failed on Windows at the very end ("WinError 32"), a FITS export failed when Hα boost was among the steps, and the panel now says when <em>Live</em> preview is off.</li>
+    </ul>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.8.1</span> <time datetime="2026-11-01">1 November 2026</time></h2>
     <ul>
       <li><strong>StarNet</strong>: in the installed versions of 0.8.0, the starless image StarNet returns could not be read ("lzw_decode" error), and neither could a compressed TIFF opened in COSMO. The missing decoder is now included, and Qt's TIFF reader takes over if it ever fails.</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.8.0</span> <time datetime="2026-11-01">1 November 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.8.0</span> <time datetime="2026-11-01">1 November 2026</time></h2></summary>
     <ul>
       <li><strong>Stack, mosaic</strong>: a <em>Mosaic</em> switch in the Stack window. The panels are found from the pointing and confirmed by the stars, each panel is stacked on its own, then they are joined without visible seams (matched backgrounds, blended edges). A final <strong>Framing</strong> step shows where each panel sits.</li>
       <li><strong>Meridian flip</strong>: subs turned by 180° (or 90°) after the flip are aligned with the others and stacked, in a single field as in a mosaic.</li>
@@ -53,7 +63,7 @@
       <li>Minor bug fixes (a stack from Astro Pixel Processor read as already stretched, the Stack window counts during a mosaic, a long step that looked stuck now shows its elapsed time).</li>
     </ul>
     <figure class="release-figure"><img src="assets/mosaic-m45.jpg" alt="Mosaic stack: M 45 from a Seestar mosaic, the outline of each panel drawn over it, as in the Framing step." loading="lazy"><figcaption>Mosaic stack: M 45 from a Seestar mosaic, the outline of each panel drawn over it, as in the Framing step.</figcaption></figure>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.7.0</span> <time datetime="2026-10-31">31 October 2026</time></h2></summary>
     <ul>
