@@ -470,24 +470,36 @@
     <img src="assets/logo-256.png" alt="COSMO logo" width="112" height="112" loading="lazy">
     <p class="eyebrow">Download</p>
     <!-- downloads:start -->
-    <h2>Download COSMO 0.9.0.</h2>
+    <h2>Download COSMO 0.10.0.</h2>
     <p class="lead">Free. For macOS, Windows (installer or portable) and Linux; each one carries the application and the three COSMO networks (COSMOSharp, COSMODenoise, COSMOStars), which are experimental.</p>
     <div class="installers three">
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.9.0/COSMO-0.9.0-macos-arm64.dmg" download data-goatcounter-click="download-macos" data-goatcounter-title="0.9.0">
-        <strong>macOS</strong><span>Apple Silicon (M1 or later)</span>
-        <em>Download · .dmg · 535 MB</em>
-      </a>
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.9.0/COSMO-0.9.0-windows-setup.exe" download data-goatcounter-click="download-windows-setup" data-goatcounter-title="0.9.0">
-        <strong>Windows</strong><span>Windows 10 or 11, 64-bit · runs on the processor</span>
-        <em>Download · .exe · 414 MB</em>
-      </a>
-      <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.9.0/COSMO-0.9.0-linux-x86_64.AppImage" download data-goatcounter-click="download-linux" data-goatcounter-title="0.9.0">
-        <strong>Linux</strong><span>x86_64 · Ubuntu 22.04, Debian 12, Fedora 38 or later · runs on the processor</span>
-        <em>Download · AppImage · 584 MB</em>
-      </a>
+      <div class="system">
+        <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.10.0/COSMO-0.10.0-macos-arm64.dmg" download data-goatcounter-click="download-macos" data-goatcounter-title="0.10.0">
+          <strong>macOS</strong><span>Apple Silicon (M1 or later)</span>
+          <em>Download · .dmg · 534 MB</em>
+        </a>
+      </div>
+      <div class="system">
+        <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.10.0/COSMO-0.10.0-windows-setup.exe" download data-goatcounter-click="download-windows-setup" data-goatcounter-title="0.10.0">
+          <strong>Windows</strong><span>Installer · Windows 10 or 11, 64-bit · runs on the processor</span>
+          <em>Download · .exe · 415 MB</em>
+        </a>
+        <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.10.0/COSMO-0.10.0-windows-portable.zip" download data-goatcounter-click="download-windows-portable" data-goatcounter-title="0.10.0">
+          <strong>Windows portable</strong><span>No installation: unzip it into any folder and run COSMO.exe</span>
+          <em>Download · .zip · 486 MB</em>
+        </a>
+      </div>
+      <div class="system">
+        <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.10.0/COSMO-0.10.0-linux-x86_64.AppImage" download data-goatcounter-click="download-linux" data-goatcounter-title="0.10.0">
+          <strong>Linux</strong><span>x86_64 · Ubuntu 22.04, Debian 12, Fedora 38 or later · runs on the processor</span>
+          <em>Download · AppImage · 585 MB</em>
+        </a>
+        <a class="installer" href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.10.0/COSMO-0.10.0-linux-x86_64.tar.gz" download data-goatcounter-click="download-linux-archive" data-goatcounter-title="0.10.0">
+          <strong>Linux archive</strong><span>If the AppImage does not start: unpack it and run COSMO/COSMO</span>
+          <em>Download · .tar.gz · 622 MB</em>
+        </a>
+      </div>
     </div>
-    <p class="portable"><a href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.9.0/COSMO-0.9.0-windows-portable.zip" download data-goatcounter-click="download-windows-portable" data-goatcounter-title="0.9.0">Portable version (.zip, no installation)</a> · 485 MB</p>
-    <p class="portable"><a href="https://github.com/yonafunu/cosmo-darkroom/releases/download/v0.9.0/COSMO-0.9.0-linux-x86_64.tar.gz" download data-goatcounter-click="download-linux-archive" data-goatcounter-title="0.9.0">Archive (.tar.gz, if the AppImage does not start)</a> · 621 MB</p>
     <div class="actions"><a class="button ghost" href="guide.html">Getting started</a><a class="button ghost" href="changelog.html">What's new</a><a class="button ghost" href="https://www.facebook.com/profile.php?id=61596157228182" rel="noopener" data-goatcounter-click="follow-facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4V14h2.8v8z"/></svg>Follow on Facebook</a></div>
     <dl class="first-launch">
       <div><dt>First launch · macOS</dt><dd>The application is not signed with an Apple Developer account. The first time, right-click it in <em>Applications</em>, choose <em>Open</em>, then <em>Open</em> again. On recent macOS: <em>System Settings › Privacy &amp; Security › Open Anyway</em>.</dd></div>
@@ -495,11 +507,11 @@
       <div><dt>First launch · Linux</dt><dd>Make the file executable (<code>chmod +x COSMO-*.AppImage</code>, or <em>Properties › Allow executing</em>), then open it. If nothing happens, install FUSE 2 (<code>sudo apt install libfuse2</code> on Ubuntu) or take the archive: unpack it and run <em>COSMO/COSMO</em>.</dd></div>
     </dl>
     <details class="checksums"><summary>SHA-256 checksums</summary>
-      <p><code>f7876c313fa1a28f42eb7e63dfdc59204b6bfe576dbc1925ad2bd0b1f6440e04</code> COSMO-0.9.0-macos-arm64.dmg</p>
-      <p><code>e856c1105f5157b8d79ffe6142a9c7cf3c3cf909428ee6961e1f139f747cac16</code> COSMO-0.9.0-windows-setup.exe</p>
-      <p><code>61623ff474291372e072425767584d8b01bc834835e4c484b592ce1d8b169d42</code> COSMO-0.9.0-windows-portable.zip</p>
-      <p><code>5210fbd590186fec44dce370fe89bc9da516aacff4d0b13701d285110bfa224e</code> COSMO-0.9.0-linux-x86_64.AppImage</p>
-      <p><code>f5ab3bd710516223f8fedb983fc1bad0f782d20e8cc86612d986028a2cdded3c</code> COSMO-0.9.0-linux-x86_64.tar.gz</p>
+      <p><code>95ac6b9576bb43819cdbc20cb7b6cfe13c1fb497a057c26f8cd38a4cf49fe35b</code> COSMO-0.10.0-macos-arm64.dmg</p>
+      <p><code>9f6feb3d0dfe893c587d7640e5261c7d28761a8c2814ff691adc1e27b0b20696</code> COSMO-0.10.0-windows-setup.exe</p>
+      <p><code>6438997cbefee469ea7aa1097535d73738a47c77e45b5c37ac301e903695947f</code> COSMO-0.10.0-windows-portable.zip</p>
+      <p><code>4bbfd97b0f8b9fa52ce6a231794d4a9d4bc8fb48a73b76a61c06b3881c11a136</code> COSMO-0.10.0-linux-x86_64.AppImage</p>
+      <p><code>db567bbbf83abfebc8d5e4c3d1af74332c27a0fc9f3376cd7b23029fbe0b6286</code> COSMO-0.10.0-linux-x86_64.tar.gz</p>
     </details>
     <p class="fine">By downloading, you accept the <a href="licence.html">licence</a>: free to use; no redistribution, no use of the networks outside the application.</p>
     <p class="fine">The optional GraXpert and RC-Astro engines are not included: COSMO uses them from your own installation. RC-Astro remains subject to its publisher's licence.</p>

@@ -37,6 +37,16 @@
   <h1>Nouveautés</h1>
   <p class="lead">Ce qui change d'une version de COSMO à la suivante.</p>
   <section class="release">
+    <h2><span class="release-version">0.10.0</span> <time datetime="2026-11-06">6 novembre 2026</time></h2>
+    <ul>
+      <li><strong>One click</strong> s'ouvre dans sa propre fenêtre : dites ce que vous avez photographié, choisissez les moteurs, réglez le recadrage (les bords d'empilement plus bruités sont déjà retirés), suivez le traitement en direct, puis comparez Original / Final en plein écran et exportez. Les galaxies pour l'instant ; les nébuleuses arrivent.</li>
+      <li><strong>Ajuster une étape appliquée</strong> : changez ses réglages, voyez le résultat final recalculé avec les étapes qui suivent, puis gardez ou annulez. Un outil oublié se glisse avant une étape appliquée, et une étape se supprime, de la même façon. Les longs pipelines se replient en groupes (Préparation, Nébuleuse, Étoiles, Finitions). <strong>Appliquer jusqu'à</strong> applique maintenant aussi l'étape choisie.</li>
+      <li><strong>Revenir en arrière est plus rapide</strong> : les étapes précédentes sont gardées sur le disque pendant la session au lieu d'être recalculées, et effacées quand COSMO se ferme ; un avertissement dit quand le disque est trop plein pour les garder. <strong>Denoise</strong> (COSMO) fonctionne aussi après l'étirement.</li>
+      <li><strong>Stack</strong> : les poses dont le champ a tourné pendant la nuit (montures alt-azimutales comme le Seestar) sont maintenant alignées, et la pile garde tout le cadre au lieu de la seule partie que toutes les poses couvrent : recadrez-la à votre goût. <em>Même cible</em> réunit les panneaux numérotés d'une mosaïque Dwarf, et le bouton d'empilement compte les poses choisies.</li>
+      <li><strong>COSMOStars</strong> mis à jour. Gaia et SIMBAD passent par des serveurs miroirs quand l'un d'eux est en panne, Gaia a le temps qu'il lui faut sur les champs denses de la Voie lactée, et le Lab trouve le champ même quand la taille des pixels est un peu fausse.</li>
+    </ul>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.9.0</span> <time datetime="2026-11-03">3 novembre 2026</time></h2>
     <ul>
       <li><strong>One click</strong> (bêta) : un bouton sous le choix du pipeline. Réglez le recadrage, puis un clic applique toutes les étapes qui restent, dans l'ordre et avec leurs réglages, la dernière comprise. Il s'arrête à une étape qui a besoin de vous (une étoile à désigner) et reprend au clic suivant.</li>
@@ -46,12 +56,12 @@
       <li><strong>Après Denoise</strong> (NoiseXTerminator ou COSMO), l'affichage et l'étirement automatique ne poussent plus trop fort une image débruitée. <strong>Faint nebulosity</strong> : l'<em>Étendue</em> monte jusqu'à 1000 %. Bugs corrigés : une mosaïque échouait sous Windows tout à la fin (« WinError 32 »), un export FITS échouait quand Hα boost faisait partie des étapes, et le panneau dit maintenant quand l'aperçu <em>En direct</em> est coupé.</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.8.1</span> <time datetime="2026-11-01">1 novembre 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.8.1</span> <time datetime="2026-11-01">1 novembre 2026</time></h2></summary>
     <ul>
       <li><strong>StarNet</strong> : dans les versions installées de la 0.8.0, l'image sans étoiles rendue par StarNet ne pouvait pas être lue (erreur « lzw_decode »), pas plus qu'un TIFF compressé ouvert dans COSMO. Le décodeur manquant est maintenant inclus, et le lecteur TIFF de Qt prend le relais s'il venait à échouer.</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.8.0</span> <time datetime="2026-11-01">1 novembre 2026</time></h2></summary>
     <ul>

@@ -37,6 +37,16 @@
   <h1>Changelog</h1>
   <p class="lead">What changes from one version of COSMO to the next.</p>
   <section class="release">
+    <h2><span class="release-version">0.10.0</span> <time datetime="2026-11-06">6 November 2026</time></h2>
+    <ul>
+      <li><strong>One click</strong> opens in its own window: say what you photographed, choose the engines, set the crop (the noisier stacking edges are already trimmed), follow the processing live, then compare Original / Final full screen and export. Galaxies for now; nebulae are coming.</li>
+      <li><strong>Adjust an applied step</strong>: change its settings, see the final result recalculated with the steps after it, then keep or cancel. A forgotten tool can be dropped before an applied step, and a step deleted, the same way. Long pipelines fold into groups (Preparation, Nebula, Stars, Finishing). <strong>Apply up to</strong> now applies the chosen step too.</li>
+      <li><strong>Going back is faster</strong>: earlier steps are kept on disk during the session instead of being recalculated, and erased when COSMO quits; a warning says when the disk is too full to keep them. <strong>Denoise</strong> (COSMO) now also works after the Stretch.</li>
+      <li><strong>Stack</strong>: subs whose field turned during the night (alt-azimuth mounts such as the Seestar) are now aligned, and the stack keeps the whole frame instead of only the part every sub covers: crop it as you like. <em>Same target</em> joins the numbered panels of a Dwarf mosaic, and the Stack button counts the subs you chose.</li>
+      <li><strong>COSMOStars</strong> updated. Gaia and SIMBAD fall back on mirror servers when one is down, Gaia is given the time it needs on dense Milky Way fields, and the Lab finds the field even when the pixel size is a little off.</li>
+    </ul>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.9.0</span> <time datetime="2026-11-03">3 November 2026</time></h2>
     <ul>
       <li><strong>One click</strong> (beta): a button under the pipeline choice. Set the Crop, then one click applies every step left, in order and with its settings, the last one included. It stops at a step that needs you (a star to point at) and goes on at the next click.</li>
@@ -46,12 +56,12 @@
       <li><strong>After Denoise</strong> (NoiseXTerminator or COSMO), the screen and the automatic stretch no longer push a denoised image too hard. <strong>Faint nebulosity</strong>: <em>Range</em> goes up to 1000 %. Bug fixes: a mosaic failed on Windows at the very end ("WinError 32"), a FITS export failed when Hα boost was among the steps, and the panel now says when <em>Live</em> preview is off.</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.8.1</span> <time datetime="2026-11-01">1 November 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.8.1</span> <time datetime="2026-11-01">1 November 2026</time></h2></summary>
     <ul>
       <li><strong>StarNet</strong>: in the installed versions of 0.8.0, the starless image StarNet returns could not be read ("lzw_decode" error), and neither could a compressed TIFF opened in COSMO. The missing decoder is now included, and Qt's TIFF reader takes over if it ever fails.</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.8.0</span> <time datetime="2026-11-01">1 November 2026</time></h2></summary>
     <ul>
