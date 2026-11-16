@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07080c">
+  <meta name="description" content="COSMOSharp, COSMODenoise et COSMOStars comparés à BlurXTerminator, NoiseXTerminator et StarXTerminator sur les mêmes piles.">
+  <title>Comparaison — COSMO</title>
+  <link rel="icon" href="../assets/logo-64.png">
+  <link rel="alternate" hreflang="en" href="../comparisons.html">
+  <link rel="stylesheet" href="../style.css?v=20261116a">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#content">Aller au contenu</a>
+<header class="site-header scrolled">
+  <a class="brand" href="index.html" aria-label="COSMO, accueil">
+    <img src="../assets/logo-128.png" alt="" width="40" height="40">
+    <span>COSMO</span>
+  </a>
+  <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <nav id="menu" aria-label="Navigation principale">
+    <a href="index.html#logiciel">Fonctions</a>
+    <a href="index.html#galerie">Galerie</a>
+    <a href="guide.html">Guide</a>
+    <a href="changelog.html">Nouveautés</a>
+    <a class="nav-social" href="https://www.facebook.com/profile.php?id=61596157228182" rel="noopener" title="Facebook" aria-label="Facebook" data-goatcounter-click="follow-facebook-header"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4V14h2.8v8z"/></svg><span>Facebook</span></a>
+    <a class="nav-support" href="https://ko-fi.com/cosmoastro" rel="noopener" data-donate data-goatcounter-click="support-kofi"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4h2c.7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg>Soutenir</a>
+    <a class="nav-cta" href="index.html#telecharger">Télécharger</a>
+    <a class="lang" href="../comparisons.html" hreflang="en" lang="en">English</a>
+  </nav>
+</header>
+<main class="doc" id="content">
+  <p class="eyebrow">Comparaison</p>
+  <h1>Moteurs COSMO et RC-Astro</h1>
+  <p class="lead">Trois outils de COSMO font tourner soit un réseau maison, soit, depuis une installation sous licence, le produit RC-Astro qui fait le même travail. Chaque comparaison ci-dessous montre la même pile linéaire passée par le même outil, une fois avec chaque moteur.</p>
+  <h2>Méthode</h2>
+  <ul class="method">
+    <li>Même entrée : la pile après l'étape Background (GraXpert), à l'état linéaire.</li>
+    <li>Réglages par défaut pour les deux moteurs, tels que COSMO les met quand le moteur est choisi.</li>
+    <li>Même affichage : l'étape Stretch de COSMO (automatique) est calculée sur l'entrée et appliquée telle quelle à l'entrée et aux deux résultats, puis la même Saturation. Le retrait des étoiles est montré sur l'image étirée sur laquelle la séparation travaille, avec la même Saturation.</li>
+    <li>Recadrages à 100 % sauf mention ; les boutons passent d'un moteur à l'autre et montrent l'avant / après de chacun.</li>
+  </ul>
+  <h2>Versions</h2>
+  <dl class="settings">
+    <div><dt>COSMO</dt><dd>COSMOSharp v16, COSMODenoise v2, COSMOStars v78b</dd></div>
+    <div><dt>RC-Astro (outil en ligne de commande 2.6.9)</dt><dd>BlurXTerminator AI5, NoiseXTerminator AI3.1, StarXTerminator AI11</dd></div>
+  </dl>
+  <h2 id="sharpen">Affinage <span>COSMOSharp / BlurXTerminator</span></h2>
+  <p>Déconvolution de la pile linéaire : étoiles réduites et arrondies, structure fine de la nébuleuse rendue. <a href="tools/sharpen.html">Page de l'outil Sharpen</a>.</p>
+  <div class="compare-set">
+    <div class="compare-modes" role="group" aria-label="NGC 6888"><button type="button" aria-pressed="true" data-before="../assets/cmp-ngc6888-crescent-sharpen-blurx.jpg" data-after="../assets/cmp-ngc6888-crescent-sharpen-cosmo.jpg" data-left="BlurXTerminator AI5" data-right="COSMOSharp v16">COSMOSharp / BlurXTerminator</button><button type="button" aria-pressed="false" data-before="../assets/cmp-ngc6888-crescent-before.jpg" data-after="../assets/cmp-ngc6888-crescent-sharpen-cosmo.jpg" data-left="avant" data-right="COSMOSharp v16">Avant / après COSMOSharp</button><button type="button" aria-pressed="false" data-before="../assets/cmp-ngc6888-crescent-before.jpg" data-after="../assets/cmp-ngc6888-crescent-sharpen-blurx.jpg" data-left="avant" data-right="BlurXTerminator AI5">Avant / après BlurXTerminator</button></div>
+    <figure class="compare" style="--ratio: 560 / 560">
+      <img src="../assets/cmp-ngc6888-crescent-sharpen-cosmo.jpg" alt="COSMOSharp v16" loading="lazy">
+      <img class="compare-top" src="../assets/cmp-ngc6888-crescent-sharpen-blurx.jpg" alt="BlurXTerminator AI5" loading="lazy">
+      <span class="tag left">BlurXTerminator AI5</span><span class="tag right">COSMOSharp v16</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="NGC 6888 : BlurXTerminator AI5 / COSMOSharp v16">
+      <figcaption>NGC 6888, Seestar S50 Pro, filtre LP. Recadrage à 100 %.</figcaption>
+    </figure>
+  </div>
+  <div class="compare-set">
+    <div class="compare-modes" role="group" aria-label="M 42"><button type="button" aria-pressed="true" data-before="../assets/cmp-m42-core-sharpen-blurx.jpg" data-after="../assets/cmp-m42-core-sharpen-cosmo.jpg" data-left="BlurXTerminator AI5" data-right="COSMOSharp v16">COSMOSharp / BlurXTerminator</button><button type="button" aria-pressed="false" data-before="../assets/cmp-m42-core-before.jpg" data-after="../assets/cmp-m42-core-sharpen-cosmo.jpg" data-left="avant" data-right="COSMOSharp v16">Avant / après COSMOSharp</button><button type="button" aria-pressed="false" data-before="../assets/cmp-m42-core-before.jpg" data-after="../assets/cmp-m42-core-sharpen-blurx.jpg" data-left="avant" data-right="BlurXTerminator AI5">Avant / après BlurXTerminator</button></div>
+    <figure class="compare" style="--ratio: 560 / 560">
+      <img src="../assets/cmp-m42-core-sharpen-cosmo.jpg" alt="COSMOSharp v16" loading="lazy">
+      <img class="compare-top" src="../assets/cmp-m42-core-sharpen-blurx.jpg" alt="BlurXTerminator AI5" loading="lazy">
+      <span class="tag left">BlurXTerminator AI5</span><span class="tag right">COSMOSharp v16</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="M 42 : BlurXTerminator AI5 / COSMOSharp v16">
+      <figcaption>M 42, Seestar S50 Pro. Recadrage à 100 %.</figcaption>
+    </figure>
+  </div>
+  <div class="compare-set">
+    <div class="compare-modes" role="group" aria-label="M 33"><button type="button" aria-pressed="true" data-before="../assets/cmp-m33-ngc604-sharpen-blurx.jpg" data-after="../assets/cmp-m33-ngc604-sharpen-cosmo.jpg" data-left="BlurXTerminator AI5" data-right="COSMOSharp v16">COSMOSharp / BlurXTerminator</button><button type="button" aria-pressed="false" data-before="../assets/cmp-m33-ngc604-before.jpg" data-after="../assets/cmp-m33-ngc604-sharpen-cosmo.jpg" data-left="avant" data-right="COSMOSharp v16">Avant / après COSMOSharp</button><button type="button" aria-pressed="false" data-before="../assets/cmp-m33-ngc604-before.jpg" data-after="../assets/cmp-m33-ngc604-sharpen-blurx.jpg" data-left="avant" data-right="BlurXTerminator AI5">Avant / après BlurXTerminator</button></div>
+    <figure class="compare" style="--ratio: 560 / 560">
+      <img src="../assets/cmp-m33-ngc604-sharpen-cosmo.jpg" alt="COSMOSharp v16" loading="lazy">
+      <img class="compare-top" src="../assets/cmp-m33-ngc604-sharpen-blurx.jpg" alt="BlurXTerminator AI5" loading="lazy">
+      <span class="tag left">BlurXTerminator AI5</span><span class="tag right">COSMOSharp v16</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="M 33 : BlurXTerminator AI5 / COSMOSharp v16">
+      <figcaption>M 33, caméra mono et roue à filtres (HαLRGB), lunette de 80 mm. Recadrage à 100 %.</figcaption>
+    </figure>
+  </div>
+  <h2 id="denoise">Réduction du bruit <span>COSMODenoise / NoiseXTerminator</span></h2>
+  <p>Réduction du bruit sur la pile linéaire, avant l'étirement. <a href="tools/denoise.html">Page de l'outil Denoise</a>.</p>
+  <div class="compare-set">
+    <div class="compare-modes" role="group" aria-label="IC 1396A"><button type="button" aria-pressed="true" data-before="../assets/cmp-ic1396a-trunk-denoise-noisex.jpg" data-after="../assets/cmp-ic1396a-trunk-denoise-cosmo.jpg" data-left="NoiseXTerminator AI3.1" data-right="COSMODenoise v2">COSMODenoise / NoiseXTerminator</button><button type="button" aria-pressed="false" data-before="../assets/cmp-ic1396a-trunk-before.jpg" data-after="../assets/cmp-ic1396a-trunk-denoise-cosmo.jpg" data-left="avant" data-right="COSMODenoise v2">Avant / après COSMODenoise</button><button type="button" aria-pressed="false" data-before="../assets/cmp-ic1396a-trunk-before.jpg" data-after="../assets/cmp-ic1396a-trunk-denoise-noisex.jpg" data-left="avant" data-right="NoiseXTerminator AI3.1">Avant / après NoiseXTerminator</button></div>
+    <figure class="compare" style="--ratio: 560 / 560">
+      <img src="../assets/cmp-ic1396a-trunk-denoise-cosmo.jpg" alt="COSMODenoise v2" loading="lazy">
+      <img class="compare-top" src="../assets/cmp-ic1396a-trunk-denoise-noisex.jpg" alt="NoiseXTerminator AI3.1" loading="lazy">
+      <span class="tag left">NoiseXTerminator AI3.1</span><span class="tag right">COSMODenoise v2</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="IC 1396A : NoiseXTerminator AI3.1 / COSMODenoise v2">
+      <figcaption>IC 1396A, Seestar S50 Pro, filtre LP. Recadrage à 100 %.</figcaption>
+    </figure>
+  </div>
+  <div class="compare-set">
+    <div class="compare-modes" role="group" aria-label="M 33"><button type="button" aria-pressed="true" data-before="../assets/cmp-m33-core-denoise-noisex.jpg" data-after="../assets/cmp-m33-core-denoise-cosmo.jpg" data-left="NoiseXTerminator AI3.1" data-right="COSMODenoise v2">COSMODenoise / NoiseXTerminator</button><button type="button" aria-pressed="false" data-before="../assets/cmp-m33-core-before.jpg" data-after="../assets/cmp-m33-core-denoise-cosmo.jpg" data-left="avant" data-right="COSMODenoise v2">Avant / après COSMODenoise</button><button type="button" aria-pressed="false" data-before="../assets/cmp-m33-core-before.jpg" data-after="../assets/cmp-m33-core-denoise-noisex.jpg" data-left="avant" data-right="NoiseXTerminator AI3.1">Avant / après NoiseXTerminator</button></div>
+    <figure class="compare" style="--ratio: 560 / 560">
+      <img src="../assets/cmp-m33-core-denoise-cosmo.jpg" alt="COSMODenoise v2" loading="lazy">
+      <img class="compare-top" src="../assets/cmp-m33-core-denoise-noisex.jpg" alt="NoiseXTerminator AI3.1" loading="lazy">
+      <span class="tag left">NoiseXTerminator AI3.1</span><span class="tag right">COSMODenoise v2</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="M 33 : NoiseXTerminator AI3.1 / COSMODenoise v2">
+      <figcaption>M 33, caméra mono et roue à filtres (HαLRGB), lunette de 80 mm. Recadrage à 100 %.</figcaption>
+    </figure>
+  </div>
+  <div class="compare-set">
+    <div class="compare-modes" role="group" aria-label="M 42"><button type="button" aria-pressed="true" data-before="../assets/cmp-m42-runningman-denoise-noisex.jpg" data-after="../assets/cmp-m42-runningman-denoise-cosmo.jpg" data-left="NoiseXTerminator AI3.1" data-right="COSMODenoise v2">COSMODenoise / NoiseXTerminator</button><button type="button" aria-pressed="false" data-before="../assets/cmp-m42-runningman-before.jpg" data-after="../assets/cmp-m42-runningman-denoise-cosmo.jpg" data-left="avant" data-right="COSMODenoise v2">Avant / après COSMODenoise</button><button type="button" aria-pressed="false" data-before="../assets/cmp-m42-runningman-before.jpg" data-after="../assets/cmp-m42-runningman-denoise-noisex.jpg" data-left="avant" data-right="NoiseXTerminator AI3.1">Avant / après NoiseXTerminator</button></div>
+    <figure class="compare" style="--ratio: 560 / 560">
+      <img src="../assets/cmp-m42-runningman-denoise-cosmo.jpg" alt="COSMODenoise v2" loading="lazy">
+      <img class="compare-top" src="../assets/cmp-m42-runningman-denoise-noisex.jpg" alt="NoiseXTerminator AI3.1" loading="lazy">
+      <span class="tag left">NoiseXTerminator AI3.1</span><span class="tag right">COSMODenoise v2</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="M 42 : NoiseXTerminator AI3.1 / COSMODenoise v2">
+      <figcaption>M 42, Seestar S50 Pro. Recadrage à 100 %.</figcaption>
+    </figure>
+  </div>
+  <h2 id="stars">Retrait des étoiles <span>COSMOStars / StarXTerminator</span></h2>
+  <p>Séparation des étoiles et de la nébuleuse : la couche nébuleuse, sans ses étoiles. <a href="tools/separate-stars.html">Page de l'outil Separate stars</a>.</p>
+  <div class="compare-set">
+    <div class="compare-modes" role="group" aria-label="M 42"><button type="button" aria-pressed="true" data-before="../assets/cmp-m42-runningman-starless-starx.jpg" data-after="../assets/cmp-m42-runningman-starless-cosmo.jpg" data-left="StarXTerminator AI11" data-right="COSMOStars v78b">COSMOStars / StarXTerminator</button><button type="button" aria-pressed="false" data-before="../assets/cmp-m42-runningman-separated.jpg" data-after="../assets/cmp-m42-runningman-starless-cosmo.jpg" data-left="avant" data-right="COSMOStars v78b">Avant / après COSMOStars</button><button type="button" aria-pressed="false" data-before="../assets/cmp-m42-runningman-separated.jpg" data-after="../assets/cmp-m42-runningman-starless-starx.jpg" data-left="avant" data-right="StarXTerminator AI11">Avant / après StarXTerminator</button></div>
+    <figure class="compare" style="--ratio: 560 / 560">
+      <img src="../assets/cmp-m42-runningman-starless-cosmo.jpg" alt="COSMOStars v78b" loading="lazy">
+      <img class="compare-top" src="../assets/cmp-m42-runningman-starless-starx.jpg" alt="StarXTerminator AI11" loading="lazy">
+      <span class="tag left">StarXTerminator AI11</span><span class="tag right">COSMOStars v78b</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="M 42 : StarXTerminator AI11 / COSMOStars v78b">
+      <figcaption>M 42, Seestar S50 Pro. Recadrage à 100 %.</figcaption>
+    </figure>
+  </div>
+  <div class="compare-set">
+    <div class="compare-modes" role="group" aria-label="NGC 6888"><button type="button" aria-pressed="true" data-before="../assets/cmp-ngc6888-crescent-starless-starx.jpg" data-after="../assets/cmp-ngc6888-crescent-starless-cosmo.jpg" data-left="StarXTerminator AI11" data-right="COSMOStars v78b">COSMOStars / StarXTerminator</button><button type="button" aria-pressed="false" data-before="../assets/cmp-ngc6888-crescent-separated.jpg" data-after="../assets/cmp-ngc6888-crescent-starless-cosmo.jpg" data-left="avant" data-right="COSMOStars v78b">Avant / après COSMOStars</button><button type="button" aria-pressed="false" data-before="../assets/cmp-ngc6888-crescent-separated.jpg" data-after="../assets/cmp-ngc6888-crescent-starless-starx.jpg" data-left="avant" data-right="StarXTerminator AI11">Avant / après StarXTerminator</button></div>
+    <figure class="compare" style="--ratio: 560 / 560">
+      <img src="../assets/cmp-ngc6888-crescent-starless-cosmo.jpg" alt="COSMOStars v78b" loading="lazy">
+      <img class="compare-top" src="../assets/cmp-ngc6888-crescent-starless-starx.jpg" alt="StarXTerminator AI11" loading="lazy">
+      <span class="tag left">StarXTerminator AI11</span><span class="tag right">COSMOStars v78b</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="NGC 6888 : StarXTerminator AI11 / COSMOStars v78b">
+      <figcaption>NGC 6888, Seestar S50 Pro, filtre LP. Recadrage à 100 %.</figcaption>
+    </figure>
+  </div>
+  <div class="compare-set">
+    <div class="compare-modes" role="group" aria-label="IC 1396A"><button type="button" aria-pressed="true" data-before="../assets/cmp-ic1396a-trunk-starless-starx.jpg" data-after="../assets/cmp-ic1396a-trunk-starless-cosmo.jpg" data-left="StarXTerminator AI11" data-right="COSMOStars v78b">COSMOStars / StarXTerminator</button><button type="button" aria-pressed="false" data-before="../assets/cmp-ic1396a-trunk-separated.jpg" data-after="../assets/cmp-ic1396a-trunk-starless-cosmo.jpg" data-left="avant" data-right="COSMOStars v78b">Avant / après COSMOStars</button><button type="button" aria-pressed="false" data-before="../assets/cmp-ic1396a-trunk-separated.jpg" data-after="../assets/cmp-ic1396a-trunk-starless-starx.jpg" data-left="avant" data-right="StarXTerminator AI11">Avant / après StarXTerminator</button></div>
+    <figure class="compare" style="--ratio: 560 / 560">
+      <img src="../assets/cmp-ic1396a-trunk-starless-cosmo.jpg" alt="COSMOStars v78b" loading="lazy">
+      <img class="compare-top" src="../assets/cmp-ic1396a-trunk-starless-starx.jpg" alt="StarXTerminator AI11" loading="lazy">
+      <span class="tag left">StarXTerminator AI11</span><span class="tag right">COSMOStars v78b</span>
+      <span class="handle" aria-hidden="true"></span>
+      <input type="range" min="0" max="100" value="50" aria-label="IC 1396A : StarXTerminator AI11 / COSMOStars v78b">
+      <figcaption>IC 1396A, Seestar S50 Pro, filtre LP. Recadrage à 100 %.</figcaption>
+    </figure>
+  </div>
+  <p class="note">BlurXTerminator, NoiseXTerminator et StarXTerminator sont des produits de RC-Astro, LLC. COSMO les fait tourner par l'outil en ligne de commande de RC-Astro quand ils sont installés et sous licence sur l'ordinateur ; ils ne font pas partie de COSMO.</p>
+</main>
+<footer class="site-footer">
+  <a class="brand" href="index.html"><img src="../assets/logo-128.png" alt="" width="40" height="40"><span>COSMO</span></a>
+  <p>Empilement et traitement des images du ciel profond.<br>Gratuit.</p>
+  <nav aria-label="Pied de page">
+    <a href="guide.html">Guide de démarrage</a>
+    <a href="confidentialite.html">Confidentialité</a>
+    <a href="licence.html">Licence</a>
+    <a href="changelog.html">Nouveautés</a>
+    <a href="mailto:contact@cosmo-astro.com">Contact</a>
+    <a class="follow-link" href="https://www.facebook.com/profile.php?id=61596157228182" rel="noopener" data-goatcounter-click="follow-facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4V14h2.8v8z"/></svg>Facebook</a>
+  </nav>
+  <small>© 2026 COSMO</small>
+</footer>
+<script src="../app.js?v=20261116a"></script>
+<!-- mesure d'audience : GoatCounter, sans cookie ; les statistiques ne sont visibles que du proprietaire -->
+<script data-goatcounter="https://cosmo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

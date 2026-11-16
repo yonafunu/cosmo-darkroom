@@ -8,7 +8,7 @@
   <title>Nouveautés — COSMO</title>
   <link rel="icon" href="../assets/logo-64.png">
   <link rel="alternate" hreflang="en" href="../changelog.html">
-  <link rel="stylesheet" href="../style.css?v=20261101a">
+  <link rel="stylesheet" href="../style.css?v=20261116a">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -22,7 +22,7 @@
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
   </button>
   <nav id="menu" aria-label="Navigation principale">
-    <a href="index.html#logiciel">Le logiciel</a>
+    <a href="index.html#logiciel">Fonctions</a>
     <a href="index.html#galerie">Galerie</a>
     <a href="guide.html">Guide</a>
     <a href="changelog.html">Nouveautés</a>
@@ -37,6 +37,18 @@
   <h1>Nouveautés</h1>
   <p class="lead">Ce qui change d'une version de COSMO à la suivante.</p>
   <section class="release">
+    <h2><span class="release-version">0.11.0</span> <time datetime="2026-11-16">16 novembre 2026</time></h2>
+    <p class="release-headline">Caméras monochromes : COSMO les prend maintenant en charge des poses brutes à l'image finale</p>
+    <ul>
+      <li><strong>Caméras mono, de bout en bout</strong> : les poses d'une roue à filtres (L, R, G, B, Hα, OIII, SII) s'empilent d'un coup, chaque filtre avec sa propre calibration et la même part de meilleures poses, puis s'ouvrent ensemble et se mélangent dans une première étape, <strong>LRGB mix</strong> ou <strong>SHO mix</strong> (un atelier plein écran pour le SHO, couleurs naturelles des étoiles). En HαLRGB, la raie Hα seule va dans le rouge, sans point rouge sur les étoiles, et chaque filtre peut perdre son gradient avant le mélange. Des filtres empilés ailleurs s'ouvrent de la même façon avec <em>Ouvrir LRGB / SHO…</em>, et les fichiers <strong>XISF</strong> (PixInsight) s'ouvrent aussi, masters compris.</li>
+      <li><strong>Stack</strong> : la fenêtre dit ce que sont les poses (couleur, bi-bande, mono et ses filtres) et comment l'exposition se répartit entre les filtres. Les traînées larges et faibles (reflets, satellites) qui échappaient au rejet par pixel sont retirées des poses qui les portent. Un fichier Dwarf Draco s'ouvre avec ses deux couches HO et SO.</li>
+      <li><strong>Plus rapide, sur Mac et Windows</strong> : la fenêtre s'ouvre sans attendre les moteurs d'IA, qui se chargent en arrière-plan. La mesure des étoiles et le nettoyage de leurs cœurs utilisent tous les cœurs du processeur : <strong>Sharpen</strong> et l'étape <strong>Stars</strong> prennent moins de temps, et COSMOStars traite ses tuiles par lots. L'<strong>empilement</strong> est plusieurs fois plus rapide, surtout sur Mac et avec des poses mono, et demande moins de mémoire.</li>
+      <li><strong>Mosaïques</strong> : le vignetage commun aux panneaux est retiré et les panneaux sont placés à travers la distorsion de l'optique : plus de croix sombre aux raccords, plus d'étoiles doublées où les panneaux se rejoignent. <em>Même cible</em> s'affiche dans une carte qui nomme les cibles trouvées, et « Part 1 » compte comme un numéro de panneau. <strong>Comètes</strong> : les comètes lentes sont suivies, et une comète non trouvée se désigne en deux clics.</li>
+      <li><strong>Background</strong> (COSMO) ajuste maintenant une surface rigide sur le ciel le plus sombre, qui ne se plie plus autour d'une nébuleuse ; <em>Flexible</em> reste pour les gradients qui changent sur de courtes distances. <strong>Remove halo</strong> a une option COSMO AI (expérimentale) pour ce qu'une étoile retirée laisse derrière elle.</li>
+      <li><strong>COSMOStars</strong> mis à jour : les noyaux de galaxies sont gardés et le fond est reconstruit sous les étoiles moyennes. <strong>COSMOSharp</strong> renforce les étoiles faibles quelle que soit l'orientation de l'image, et les étoiles saturées gardent des cœurs ronds et blancs, sans aigrettes dessinées. Les curseurs se prennent plus facilement (une barre large, un clic va où il tombe, double-clic pour la valeur par défaut). Bugs corrigés : la réparation des restes d'étoiles creusait un disque sombre sur un ciel bruité, et les étapes après un HDR appliqué ne le montraient pas.</li>
+    </ul>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.10.0</span> <time datetime="2026-11-06">6 novembre 2026</time></h2>
     <ul>
       <li><strong>One click</strong> s'ouvre dans sa propre fenêtre : dites ce que vous avez photographié, choisissez les moteurs, réglez le recadrage (les bords d'empilement plus bruités sont déjà retirés), suivez le traitement en direct, puis comparez Original / Final en plein écran et exportez. Les galaxies pour l'instant ; les nébuleuses arrivent.</li>
@@ -46,8 +58,8 @@
       <li><strong>COSMOStars</strong> mis à jour. Gaia et SIMBAD passent par des serveurs miroirs quand l'un d'eux est en panne, Gaia a le temps qu'il lui faut sur les champs denses de la Voie lactée, et le Lab trouve le champ même quand la taille des pixels est un peu fausse.</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.9.0</span> <time datetime="2026-11-03">3 novembre 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.9.0</span> <time datetime="2026-11-03">3 novembre 2026</time></h2></summary>
     <ul>
       <li><strong>One click</strong> (bêta) : un bouton sous le choix du pipeline. Réglez le recadrage, puis un clic applique toutes les étapes qui restent, dans l'ordre et avec leurs réglages, la dernière comprise. Il s'arrête à une étape qui a besoin de vous (une étoile à désigner) et reprend au clic suivant.</li>
       <li><strong>Galaxie</strong>, un nouveau pipeline d'usine : étirement arcsinh, puis sur la galaxie sans ses étoiles une courbe douce, Hα boost, Détails et le bleu des bras ; les étoiles dans leurs couleurs naturelles ; une fois recombinées, les parties faibles extérieures remontées. Il utilise GraXpert et les outils RC-Astro quand ils sont installés, les moteurs de COSMO sinon.</li>
@@ -55,7 +67,7 @@
       <li><strong>Hα boost</strong> trouve les petites régions HII des bras de galaxie, qu'il manquait, et les filaments fins. Il travaille maintenant dans Nebula, sur l'image sans ses étoiles.</li>
       <li><strong>Après Denoise</strong> (NoiseXTerminator ou COSMO), l'affichage et l'étirement automatique ne poussent plus trop fort une image débruitée. <strong>Faint nebulosity</strong> : l'<em>Étendue</em> monte jusqu'à 1000 %. Bugs corrigés : une mosaïque échouait sous Windows tout à la fin (« WinError 32 »), un export FITS échouait quand Hα boost faisait partie des étapes, et le panneau dit maintenant quand l'aperçu <em>En direct</em> est coupé.</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.8.1</span> <time datetime="2026-11-01">1 novembre 2026</time></h2></summary>
     <ul>
@@ -206,7 +218,7 @@
   </nav>
   <small>© 2026 COSMO</small>
 </footer>
-<script src="../app.js?v=20261101a"></script>
+<script src="../app.js?v=20261116a"></script>
 <!-- mesure d'audience : GoatCounter, sans cookie ; les statistiques ne sont visibles que du proprietaire -->
 <script data-goatcounter="https://cosmo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

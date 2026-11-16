@@ -54,9 +54,28 @@
         top.alt = left.textContent = button.dataset.left;
         under.alt = right.textContent = button.dataset.right;
         input.setAttribute("aria-label", `${label} : ${button.dataset.left} / ${button.dataset.right}`);
+        // l'avant / après de l'accueil : chaque paire a ses proportions et sa légende
+        if (button.dataset.ratio) figure.style.setProperty("--ratio", button.dataset.ratio);
+        const caption = figure.querySelector("figcaption");
+        if (caption && button.dataset.caption) caption.textContent = button.dataset.caption;
+        input.value = 50;
+        input.dispatchEvent(new Event("input"));
+        window.dispatchEvent(new Event("resize"));
       });
     });
   });
+
+  // Le téléchargement : le système du visiteur est mis en avant (sans script, les trois boutons se valent).
+  const agent = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || "";
+  const system = /mac/i.test(agent) && !/iphone|ipad/i.test(navigator.userAgent) ? "mac"
+    : /win/i.test(agent) ? "windows" : /linux|x11/i.test(agent) && !/android/i.test(navigator.userAgent) ? "linux" : "";
+  if (system) {
+    document.querySelectorAll(`.os[data-os="${system}"]`).forEach((card) => {
+      card.classList.add("mine");
+      const main = card.querySelector(".os-main");
+      if (main) main.dataset.mine = french ? "Votre système" : "Your system";
+    });
+  }
 
   // La galerie : un clic agrandit l'image et donne sa recette.
   const lightbox = document.getElementById("lightbox");
