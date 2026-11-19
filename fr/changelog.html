@@ -37,6 +37,20 @@
   <h1>Nouveautés</h1>
   <p class="lead">Ce qui change d'une version de COSMO à la suivante.</p>
   <section class="release">
+    <h2><span class="release-version">0.12.0</span> <time datetime="2026-11-19">19 novembre 2026</time></h2>
+    <p class="release-headline">Jusqu'à 14 fois plus rapide sous Windows : les moteurs d'IA tournent maintenant sur la carte graphique</p>
+    <ul>
+      <li><strong>Carte graphique sous Windows</strong> : COSMOStars, COSMODenoise et COSMOSharp tournent maintenant sur la carte graphique du PC par DirectML, quelle que soit sa marque (NVIDIA, AMD, Intel), au lieu du processeur. Sur une RTX 4080 SUPER avec une pile Seestar de 6 Mpx : <strong>Separate stars</strong> 4,5 fois plus rapide (29,4 s → 6,5 s), <strong>Denoise</strong> 14 fois (20,9 s → 1,5 s), <strong>Sharpen</strong> 5,3 fois (23,9 s → 4,5 s). Sur un portable à deux puces graphiques, la plus puissante est utilisée, et sous Linux les moteurs vont aussi plus vite sur le processeur.</li>
+      <li><strong>Separate stars</strong> : plus de longue attente à 100 % : le ciel sous des milliers de petites étoiles est reconstruit d'un coup, et la barre de progression va jusqu'à la vraie fin. Corrigé : des zones noires sur une image étirée dont le ciel est écrêté dans une couleur, et de fines lignes aux bords des tuiles sous un étirement fort.</li>
+      <li><strong>Annotation</strong> (nouveau, la dernière étape) : quelques lignes de texte dans un coin de l'image finie, la première en larges capitales comme le logo COSMO, le logo à côté si on le souhaite ; coin, taille et opacité au choix. Les lignes sont pré-remplies depuis le fichier : objet, instrument, poses × durée, temps total, date.</li>
+      <li><strong>One Click</strong> : une fois le pipeline appliqué, la page du résultat montre quatre doses de <strong>Hα boost</strong> et de <strong>Faint nebulosity</strong> (Off, Light, Medium, Strong) en gros plans, là où chacun agit le plus ; un clic met la dose choisie dans l'image. Le réglage Range de <strong>Faint nebulosity</strong> démarre maintenant à 300 %.</li>
+      <li><strong>Astrométrie</strong> : COSMO trouve lui-même le champ, quelle que soit l'échelle, la rotation ou le miroir, mesure la distorsion et écrit le WCS dans le FITS exporté. <strong>Star colours</strong> et le <strong>Lab</strong> disent si le champ a été reconnu et où il se trouve ; sinon, on peut chercher un autre nom sur place, jusqu'à ce que SIMBAD et Gaia le reconnaissent. Le Lab localise une image à partir de l'objet, de la caméra et de la focale, et Gaia répond depuis un second serveur quand celui de l'ESA est occupé.</li>
+      <li><strong>Stack</strong> : les poses couleur déjà dématricées par un autre programme (Siril) sont empilées, et les panneaux d'une mosaïque reliés par une fine bande d'étoiles faibles sont maintenant tous empilés. Bugs corrigés : le Lab ne reste plus bloqué quand une vue échoue, et <em>Delete step</em> passe à l'étape suivante à faire.</li>
+    </ul>
+    <figure class="release-figure"><img src="../assets/release-0.12-gpu-fr.png" alt="COSMO 0.11 sur le processeur contre COSMO 0.12 sur la carte graphique, sur le même PC (RTX 4080 SUPER) et la même pile Seestar de M 42, 6 Mpx." loading="lazy"><figcaption>COSMO 0.11 sur le processeur contre COSMO 0.12 sur la carte graphique, sur le même PC (RTX 4080 SUPER) et la même pile Seestar de M 42, 6 Mpx.</figcaption></figure>
+    <figure class="release-figure"><img src="../assets/release-0.12-annotation-fr.jpg" alt="Annotation : les lignes pré-remplies depuis le fichier d'une pile Seestar de M 27, avec le logo COSMO, dans le coin en bas à droite." loading="lazy"><figcaption>Annotation : les lignes pré-remplies depuis le fichier d'une pile Seestar de M 27, avec le logo COSMO, dans le coin en bas à droite.</figcaption></figure>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.11.0</span> <time datetime="2026-11-16">16 novembre 2026</time></h2>
     <p class="release-headline">Caméras monochromes : COSMO les prend maintenant en charge des poses brutes à l'image finale</p>
     <ul>
@@ -48,8 +62,8 @@
       <li><strong>COSMOStars</strong> mis à jour : les noyaux de galaxies sont gardés et le fond est reconstruit sous les étoiles moyennes. <strong>COSMOSharp</strong> renforce les étoiles faibles quelle que soit l'orientation de l'image, et les étoiles saturées gardent des cœurs ronds et blancs, sans aigrettes dessinées. Les curseurs se prennent plus facilement (une barre large, un clic va où il tombe, double-clic pour la valeur par défaut). Bugs corrigés : la réparation des restes d'étoiles creusait un disque sombre sur un ciel bruité, et les étapes après un HDR appliqué ne le montraient pas.</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.10.0</span> <time datetime="2026-11-06">6 novembre 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.10.0</span> <time datetime="2026-11-06">6 novembre 2026</time></h2></summary>
     <ul>
       <li><strong>One click</strong> s'ouvre dans sa propre fenêtre : dites ce que vous avez photographié, choisissez les moteurs, réglez le recadrage (les bords d'empilement plus bruités sont déjà retirés), suivez le traitement en direct, puis comparez Original / Final en plein écran et exportez. Les galaxies pour l'instant ; les nébuleuses arrivent.</li>
       <li><strong>Ajuster une étape appliquée</strong> : changez ses réglages, voyez le résultat final recalculé avec les étapes qui suivent, puis gardez ou annulez. Un outil oublié se glisse avant une étape appliquée, et une étape se supprime, de la même façon. Les longs pipelines se replient en groupes (Préparation, Nébuleuse, Étoiles, Finitions). <strong>Appliquer jusqu'à</strong> applique maintenant aussi l'étape choisie.</li>
@@ -57,7 +71,7 @@
       <li><strong>Stack</strong> : les poses dont le champ a tourné pendant la nuit (montures alt-azimutales comme le Seestar) sont maintenant alignées, et la pile garde tout le cadre au lieu de la seule partie que toutes les poses couvrent : recadrez-la à votre goût. <em>Même cible</em> réunit les panneaux numérotés d'une mosaïque Dwarf, et le bouton d'empilement compte les poses choisies.</li>
       <li><strong>COSMOStars</strong> mis à jour. Gaia et SIMBAD passent par des serveurs miroirs quand l'un d'eux est en panne, Gaia a le temps qu'il lui faut sur les champs denses de la Voie lactée, et le Lab trouve le champ même quand la taille des pixels est un peu fausse.</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.9.0</span> <time datetime="2026-11-03">3 novembre 2026</time></h2></summary>
     <ul>

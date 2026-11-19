@@ -37,6 +37,20 @@
   <h1>Changelog</h1>
   <p class="lead">What changes from one version of COSMO to the next.</p>
   <section class="release">
+    <h2><span class="release-version">0.12.0</span> <time datetime="2026-11-19">19 November 2026</time></h2>
+    <p class="release-headline">Up to 14 times faster on Windows: the AI engines now run on the graphics card</p>
+    <ul>
+      <li><strong>Graphics card on Windows</strong>: COSMOStars, COSMODenoise and COSMOSharp now run on the PC's graphics card through DirectML, whatever its brand (NVIDIA, AMD, Intel), instead of the processor. On an RTX 4080 SUPER with a 6 Mpx Seestar stack: <strong>Separate stars</strong> 4.5 times faster (29.4 s → 6.5 s), <strong>Denoise</strong> 14 times (20.9 s → 1.5 s), <strong>Sharpen</strong> 5.3 times (23.9 s → 4.5 s). On a laptop with two graphics chips the more powerful one is used, and on Linux the engines are faster on the processor too.</li>
+      <li><strong>Separate stars</strong>: no more long wait at 100 %: the sky under thousands of small stars is rebuilt at once, and the progress bar runs to the real end. Fixed: black areas on a stretched image whose sky is clipped in one colour, and thin lines at the tile edges under a strong stretch.</li>
+      <li><strong>Annotation</strong> (new, the last step): lines of text in a corner of the finished image, the first in wide capitals like the COSMO logo, the logo beside them if wanted; corner, size and opacity are yours. The lines are prefilled from the file: object, instrument, subs × exposure, total time, date.</li>
+      <li><strong>One Click</strong>: once the pipeline is applied, the result page shows four doses of <strong>Hα boost</strong> and <strong>Faint nebulosity</strong> (Off, Light, Medium, Strong) in close-ups where each acts the most; a click puts the chosen dose in the image. <strong>Faint nebulosity</strong>'s Range now starts at 300 %.</li>
+      <li><strong>Astrometry</strong>: COSMO finds the field itself, whatever the scale, rotation or mirror, measures the distortion and writes the WCS in the exported FITS. <strong>Star colours</strong> and the <strong>Lab</strong> say whether the field was recognised and where it is; if not, another name can be searched right there until SIMBAD and Gaia recognise it. The Lab locates an image from the object, the camera and the focal length, and Gaia answers from a second server when ESA is busy.</li>
+      <li><strong>Stack</strong>: colour subs already demosaiced by another program (Siril) are stacked, and mosaic panels joined by a narrow strip of faint stars are now all stacked. Bug fixes: the Lab no longer hangs when a view fails, and <em>Delete step</em> moves on to the next step to do.</li>
+    </ul>
+    <figure class="release-figure"><img src="assets/release-0.12-gpu-en.png" alt="COSMO 0.11 on the processor against COSMO 0.12 on the graphics card, the same PC (RTX 4080 SUPER) and the same 6 Mpx Seestar stack of M 42." loading="lazy"><figcaption>COSMO 0.11 on the processor against COSMO 0.12 on the graphics card, the same PC (RTX 4080 SUPER) and the same 6 Mpx Seestar stack of M 42.</figcaption></figure>
+    <figure class="release-figure"><img src="assets/release-0.12-annotation-en.jpg" alt="Annotation: the lines prefilled from the file of a Seestar stack of M 27, with the COSMO logo, in the bottom right corner." loading="lazy"><figcaption>Annotation: the lines prefilled from the file of a Seestar stack of M 27, with the COSMO logo, in the bottom right corner.</figcaption></figure>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.11.0</span> <time datetime="2026-11-16">16 November 2026</time></h2>
     <p class="release-headline">Monochrome cameras: COSMO now takes them from the subs to the final image</p>
     <ul>
@@ -48,8 +62,8 @@
       <li><strong>COSMOStars</strong> updated: galaxy nuclei are kept and the background is rebuilt under medium stars. <strong>COSMOSharp</strong> sharpens faint stars whatever the orientation of the image, and saturated stars keep round white cores without drawn spikes. Sliders are easier to take (a wide bar, a click goes where it lands, double-click for the default). Bug fixes: the star remnant repair dug a dark disc on a noisy sky, and the steps after an applied HDR did not show it.</li>
     </ul>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.10.0</span> <time datetime="2026-11-06">6 November 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.10.0</span> <time datetime="2026-11-06">6 November 2026</time></h2></summary>
     <ul>
       <li><strong>One click</strong> opens in its own window: say what you photographed, choose the engines, set the crop (the noisier stacking edges are already trimmed), follow the processing live, then compare Original / Final full screen and export. Galaxies for now; nebulae are coming.</li>
       <li><strong>Adjust an applied step</strong>: change its settings, see the final result recalculated with the steps after it, then keep or cancel. A forgotten tool can be dropped before an applied step, and a step deleted, the same way. Long pipelines fold into groups (Preparation, Nebula, Stars, Finishing). <strong>Apply up to</strong> now applies the chosen step too.</li>
@@ -57,7 +71,7 @@
       <li><strong>Stack</strong>: subs whose field turned during the night (alt-azimuth mounts such as the Seestar) are now aligned, and the stack keeps the whole frame instead of only the part every sub covers: crop it as you like. <em>Same target</em> joins the numbered panels of a Dwarf mosaic, and the Stack button counts the subs you chose.</li>
       <li><strong>COSMOStars</strong> updated. Gaia and SIMBAD fall back on mirror servers when one is down, Gaia is given the time it needs on dense Milky Way fields, and the Lab finds the field even when the pixel size is a little off.</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.9.0</span> <time datetime="2026-11-03">3 November 2026</time></h2></summary>
     <ul>
