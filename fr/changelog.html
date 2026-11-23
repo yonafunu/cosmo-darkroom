@@ -37,6 +37,17 @@
   <h1>Nouveautés</h1>
   <p class="lead">Ce qui change d'une version de COSMO à la suivante.</p>
   <section class="release">
+    <h2><span class="release-version">0.13.0</span> <time datetime="2026-11-23">23 novembre 2026</time></h2>
+    <p class="release-headline">Un catalogue d'étoiles sur votre ordinateur : les champs sont reconnus partout dans le ciel, sans attendre les serveurs de Gaia</p>
+    <ul>
+      <li><strong>Catalogue d'étoiles</strong> (nouveau, <em>Outils › Catalogue d'étoiles</em>) : les étoiles de Gaia jusqu'à la magnitude 15, avec leurs distances et leurs mouvements, téléchargées une fois sur votre ordinateur, zone par zone quand un champ en a besoin ou tout le ciel d'un coup. Le <strong>Lab</strong> montre un champ en quelques secondes au lieu de plusieurs minutes, <strong>Colour calibration</strong> et <strong>Star colours</strong> le lisent en premier, et les serveurs de Gaia ne sont interrogés que lorsqu'une zone manque.</li>
+      <li><strong>Astrométrie</strong> : un champ est reconnu à partir de ses seules étoiles, n'importe où dans le ciel, même quand le fichier ne dit pas où il pointe (une recherche vide dans la recherche du champ suffit). Les panneaux d'une <strong>mosaïque</strong> sont placés sur le ciel grâce au catalogue ; les mosaïques qui ne s'assemblaient pas s'assemblent (poses secouées, nuages de passage, impacts de rayons cosmiques, panneaux de poses différentes, optiques très déformantes), et les raccords ne laissent plus de marches dans le ciel.</li>
+      <li><strong>Stack</strong> : les pixels tièdes d'une caméra utilisée sans dithering ni darks ne deviennent plus des points rouges et bleus une fois l'image affinée (BlurXTerminator, Sharpen) : ils sont maintenant repérés et réparés comme les pixels chauds. <strong>Sharpen (AI)</strong> ne lisse plus le grain du ciel par plaques à bord flou (piles des Dwarf Draco surtout) : le grain d'origine y est remis, et le compte rendu de l'étape le signale. Une étoile saturée au cœur plat n'est retouchée qu'une fois : plus de trous sombres autour de ses voisines.</li>
+      <li><strong>Fenêtre</strong> : des boutons <strong>−</strong> et <strong>+</strong> à côté du pourcentage de zoom (un clic sur le pourcentage affiche l'image à 100 %) ; sur une fenêtre étroite, les boutons de la barre du haut deviennent des icônes dont le nom s'affiche au survol, et la <strong>carte du signal sur bruit</strong> passe dans la fenêtre <strong>Analysis</strong>. Une image linéaire s'affiche comme le Stretch par défaut la rendra : la luminosité ne saute plus à l'étape Stretch. <strong>Export</strong> et <strong>Open</strong> retournent au dossier choisi la dernière fois.</li>
+      <li><strong>Remove halo</strong> retire les halos de plusieurs étoiles en une seule étape : clic droit sur chacune, elle garde ses propres cercles (<em>Oublier cette étoile</em> la retire). <strong>HDR multiscale</strong> ne creuse plus de disque sombre autour des étoiles brillantes. <strong>Star colours</strong> ne touche plus que les étoiles, et un pipeline appliqué à une autre image ne garde plus la position du ciel de la première. Quand le Stretch a été sauté, les outils de Nebula et de Stars disent comment continuer au lieu de réclamer un Stretch impossible. Bug corrigé : changer de vue sans étape sélectionnée ne provoque plus d'erreur.</li>
+    </ul>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.12.0</span> <time datetime="2026-11-19">19 novembre 2026</time></h2>
     <p class="release-headline">Jusqu'à 14 fois plus rapide sous Windows : les moteurs d'IA tournent maintenant sur la carte graphique</p>
     <ul>
@@ -50,8 +61,8 @@
     <figure class="release-figure"><img src="../assets/release-0.12-gpu-fr.png" alt="COSMO 0.11 sur le processeur contre COSMO 0.12 sur la carte graphique, sur le même PC (RTX 4080 SUPER) et la même pile Seestar de M 42, 6 Mpx." loading="lazy"><figcaption>COSMO 0.11 sur le processeur contre COSMO 0.12 sur la carte graphique, sur le même PC (RTX 4080 SUPER) et la même pile Seestar de M 42, 6 Mpx.</figcaption></figure>
     <figure class="release-figure"><img src="../assets/release-0.12-annotation-fr.jpg" alt="Annotation : les lignes pré-remplies depuis le fichier d'une pile Seestar de M 27, avec le logo COSMO, dans le coin en bas à droite." loading="lazy"><figcaption>Annotation : les lignes pré-remplies depuis le fichier d'une pile Seestar de M 27, avec le logo COSMO, dans le coin en bas à droite.</figcaption></figure>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.11.0</span> <time datetime="2026-11-16">16 novembre 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.11.0</span> <time datetime="2026-11-16">16 novembre 2026</time></h2></summary>
     <p class="release-headline">Caméras monochromes : COSMO les prend maintenant en charge des poses brutes à l'image finale</p>
     <ul>
       <li><strong>Caméras mono, de bout en bout</strong> : les poses d'une roue à filtres (L, R, G, B, Hα, OIII, SII) s'empilent d'un coup, chaque filtre avec sa propre calibration et la même part de meilleures poses, puis s'ouvrent ensemble et se mélangent dans une première étape, <strong>LRGB mix</strong> ou <strong>SHO mix</strong> (un atelier plein écran pour le SHO, couleurs naturelles des étoiles). En HαLRGB, la raie Hα seule va dans le rouge, sans point rouge sur les étoiles, et chaque filtre peut perdre son gradient avant le mélange. Des filtres empilés ailleurs s'ouvrent de la même façon avec <em>Ouvrir LRGB / SHO…</em>, et les fichiers <strong>XISF</strong> (PixInsight) s'ouvrent aussi, masters compris.</li>
@@ -61,7 +72,7 @@
       <li><strong>Background</strong> (COSMO) ajuste maintenant une surface rigide sur le ciel le plus sombre, qui ne se plie plus autour d'une nébuleuse ; <em>Flexible</em> reste pour les gradients qui changent sur de courtes distances. <strong>Remove halo</strong> a une option COSMO AI (expérimentale) pour ce qu'une étoile retirée laisse derrière elle.</li>
       <li><strong>COSMOStars</strong> mis à jour : les noyaux de galaxies sont gardés et le fond est reconstruit sous les étoiles moyennes. <strong>COSMOSharp</strong> renforce les étoiles faibles quelle que soit l'orientation de l'image, et les étoiles saturées gardent des cœurs ronds et blancs, sans aigrettes dessinées. Les curseurs se prennent plus facilement (une barre large, un clic va où il tombe, double-clic pour la valeur par défaut). Bugs corrigés : la réparation des restes d'étoiles creusait un disque sombre sur un ciel bruité, et les étapes après un HDR appliqué ne le montraient pas.</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.10.0</span> <time datetime="2026-11-06">6 novembre 2026</time></h2></summary>
     <ul>

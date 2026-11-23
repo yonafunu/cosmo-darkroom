@@ -37,6 +37,17 @@
   <h1>Changelog</h1>
   <p class="lead">What changes from one version of COSMO to the next.</p>
   <section class="release">
+    <h2><span class="release-version">0.13.0</span> <time datetime="2026-11-23">23 November 2026</time></h2>
+    <p class="release-headline">A star catalogue on your computer: fields are recognised anywhere in the sky, without waiting on the Gaia servers</p>
+    <ul>
+      <li><strong>Star catalogue</strong> (new, <em>Tools › Star catalogue</em>): the Gaia stars down to magnitude 15, with their distances and motions, downloaded once to your computer, zone by zone when a field needs it or the whole sky at once. The <strong>Lab</strong> shows a field in seconds instead of minutes, <strong>Colour calibration</strong> and <strong>Star colours</strong> read it first, and the Gaia servers are only asked when a zone is missing.</li>
+      <li><strong>Astrometry</strong>: a field is recognised from its stars alone, anywhere in the sky, even when the file says nothing of where it points (an empty Search in the field lookup does it). <strong>Mosaic</strong> panels are placed on the sky with the catalogue; mosaics that would not assemble now do (shaken subs, passing clouds, cosmic-ray spikes, panels of different exposures, strongly distorted optics), and the joins no longer leave steps in the sky.</li>
+      <li><strong>Stack</strong>: the warm pixels of a camera used without dithering or darks no longer turn into red and blue dots once the image is sharpened (BlurXTerminator, Sharpen): they are now found and repaired like the hot ones. <strong>Sharpen (AI)</strong> no longer smooths the sky's grain in soft-edged patches (Dwarf Draco stacks especially): the original grain is put back there, and the step's report says so. A saturated star with a flat core is touched up once: no more dark holes around its neighbours.</li>
+      <li><strong>Window</strong>: <strong>−</strong> and <strong>+</strong> buttons beside the zoom percentage (a click on the percentage shows the image at 100 %); on a narrow window the top bar's buttons become icons whose name shows when hovered, and the <strong>S/N map</strong> moved into the <strong>Analysis</strong> window. A linear image is shown as the default Stretch will make it: the brightness no longer jumps at the Stretch step. <strong>Export</strong> and <strong>Open</strong> go back to the folder you chose last time.</li>
+      <li><strong>Remove halo</strong> takes off the halos of several stars in one step: right-click each one, it keeps its own circles (<em>Forget this star</em> takes it out). <strong>HDR multiscale</strong> no longer digs a dark disc around bright stars. <strong>Star colours</strong> only touches the stars, and a pipeline used on another image no longer keeps the sky position of the first. When Stretch was skipped, the Nebula and Stars tools say how to go on instead of asking for an impossible Stretch. Bug fix: switching the view with no step selected no longer raises an error.</li>
+    </ul>
+  </section>
+  <section class="release">
     <h2><span class="release-version">0.12.0</span> <time datetime="2026-11-19">19 November 2026</time></h2>
     <p class="release-headline">Up to 14 times faster on Windows: the AI engines now run on the graphics card</p>
     <ul>
@@ -50,8 +61,8 @@
     <figure class="release-figure"><img src="assets/release-0.12-gpu-en.png" alt="COSMO 0.11 on the processor against COSMO 0.12 on the graphics card, the same PC (RTX 4080 SUPER) and the same 6 Mpx Seestar stack of M 42." loading="lazy"><figcaption>COSMO 0.11 on the processor against COSMO 0.12 on the graphics card, the same PC (RTX 4080 SUPER) and the same 6 Mpx Seestar stack of M 42.</figcaption></figure>
     <figure class="release-figure"><img src="assets/release-0.12-annotation-en.jpg" alt="Annotation: the lines prefilled from the file of a Seestar stack of M 27, with the COSMO logo, in the bottom right corner." loading="lazy"><figcaption>Annotation: the lines prefilled from the file of a Seestar stack of M 27, with the COSMO logo, in the bottom right corner.</figcaption></figure>
   </section>
-  <section class="release">
-    <h2><span class="release-version">0.11.0</span> <time datetime="2026-11-16">16 November 2026</time></h2>
+  <details class="release">
+    <summary><h2><span class="release-version">0.11.0</span> <time datetime="2026-11-16">16 November 2026</time></h2></summary>
     <p class="release-headline">Monochrome cameras: COSMO now takes them from the subs to the final image</p>
     <ul>
       <li><strong>Mono cameras, start to finish</strong>: the subs of a filter wheel (L, R, G, B, Hα, OIII, SII) are stacked in one go, each filter with its own calibration and the same share of best subs, then opened together and mixed in a first step, <strong>LRGB mix</strong> or <strong>SHO mix</strong> (a full-screen workshop for SHO, natural star colours). In HαLRGB the Hα line alone goes into red, without red dots on the stars, and each filter can lose its gradient before the mix. Filters stacked elsewhere open the same way with <em>Open LRGB / SHO…</em>, and <strong>XISF</strong> files (PixInsight) open too, masters included.</li>
@@ -61,7 +72,7 @@
       <li><strong>Background</strong> (COSMO) now fits a rigid surface on the darkest sky, which no longer bends around a nebula; <em>Flexible</em> stays for gradients that change over short distances. <strong>Remove halo</strong> has a COSMO AI option (experimental) for what a removed star leaves.</li>
       <li><strong>COSMOStars</strong> updated: galaxy nuclei are kept and the background is rebuilt under medium stars. <strong>COSMOSharp</strong> sharpens faint stars whatever the orientation of the image, and saturated stars keep round white cores without drawn spikes. Sliders are easier to take (a wide bar, a click goes where it lands, double-click for the default). Bug fixes: the star remnant repair dug a dark disc on a noisy sky, and the steps after an applied HDR did not show it.</li>
     </ul>
-  </section>
+  </details>
   <details class="release">
     <summary><h2><span class="release-version">0.10.0</span> <time datetime="2026-11-06">6 November 2026</time></h2></summary>
     <ul>
